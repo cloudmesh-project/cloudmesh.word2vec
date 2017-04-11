@@ -23,7 +23,7 @@ import os
 
 import ConfigParser
 config = ConfigParser.RawConfigParser()
-config.read('../config.properties')
+config.read('/opt/word2vec/config.properties')
 
 sys.path.append(os.path.abspath('../perfmonitor'))
 import monitor_spark_app

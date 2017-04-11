@@ -1,8 +1,46 @@
-Python Dependencies
+(1) Pre-requisites
+
+(1.a) You have cluster already deployed. To deploy a 3 node chameleon cluster, use the
+following:
+
+    cm reset
+
+    pip uninstall cloudmesh_client
+
+    pip install -U cloudmesh_client
+
+    cm key add --ssh
+
+    cm refresh on
+
+    cm cluster define --count 1 --image CC-Ubuntu14.04 --flavor m1.medium
+
+    cm hadoop define spark pig
+
+    cm hadoop sync
+
+    cm hadoop deploy
+
+    cm cluster cross_ssh
+
+(1.b) Python Dependencies
 Version supported - Python 2.7.13
 
 	pip install -r requirements.txt
 
+(2) update ansible-word2vec/hosts file with ip of you cluster VM. Note that on
+the cluster first node becomes master
+
+(3) execute
+
+    ansible-word2vec/install.sh
+
+This should deploy code and run the crawler for collecting the training set
+
+
+Appendix:
+
+Steps for running the crawler and spark job
 
 Setup Crawler
 1. Configure various properties in config.properties. For crawler, the
