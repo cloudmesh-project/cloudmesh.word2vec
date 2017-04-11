@@ -1,2 +1,3 @@
 #!/bin/bash
-spark-submit --master spark://usl03917.local:7077  create-word2vec-model.py
+spark_master=$1
+spark-submit --master spark://${spark_master}:7077 /opt/word2vec/code/data_process/create-word2vec-model.py

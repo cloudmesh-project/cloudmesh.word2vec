@@ -11,7 +11,7 @@ sys.setdefaultencoding('utf8')
 
 import ConfigParser
 config = ConfigParser.RawConfigParser()
-config.read('../config.properties')
+config.read('/opt/word2vec/config.properties')
 
 # get config data
 data_location = config.get('DataSection', 'data_location')
