@@ -56,6 +56,46 @@ def get_job_status(appid):
 
 
 
+def get_executor_status(appid):
+    try:
+        df = pd.DataFrame(columns=list(['id', 'hostPort', \
+                                        'isActive', \
+                                        'rddBlocks', 'memoryUsed', \
+                                        'diskUsed', 'totalCores',\
+                                        'maxTasks', 'activeTasks', \
+                                        'failedTasks', 'completedTasks',\
+                                        'totalTasks', 'totalDuration', \
+                                        'maxMemory']))
+        exec_url = hist_base_url + "/api/v1/applications/" + appid + \
+                "/allexecutors"
+        #print(exec_url)
+        response = requests.get(exec_url)
+        exec_data = response.json()
+        #print(exec_data)
+        rows = []
+        for executor in exec_data:
+            rows.append({'id': executor['id'], \
+                     'hostPort': executor['hostPort'], \
+                     'isActive': executor['isActive'],\
+                     'rddBlocks': executor['rddBlocks'], \
+                     'memoryUsed':executor['memoryUsed'], \
+                     'diskUsed':executor['diskUsed'],\
+                     'totalCores':executor['totalCores'],\
+                     'maxTasks':executor['maxTasks'],\
+                     'activeTasks':executor['activeTasks'],\
+                     'failedTasks': executor['failedTasks'], \
+                     'completedTasks': executor['completedTasks'], \
+                     'totalTasks': executor['totalTasks'], \
+                     'totalDuration': executor['totalDuration'], \
+                     'maxMemory': executor['maxMemory'] \
+                     })
+        df = df.append(rows)
+        df.to_csv('executors.csv')
+        return
+    except:
+        print("error in get_executor_status")
+        print "Unexpected error:", sys.exc_info()[0]
+
 
 
 
@@ -67,8 +107,8 @@ while app_id == '0':
     data = response.json()
     for app in data:
         if app['name'] == 'create-word2vec-model.py':
-            print("Got App ID. AppID = %s" % app_id)
             app_id = app['id']
+            print("Got App ID. AppID = %s" % app_id)
             break
     sleep(0.5)
 
@@ -90,6 +130,7 @@ while app_complete == 0:
                          'startTime':attempt['startTime'], 'endTime':attempt['endTime']})
             if attempt['completed'] == False:
                 get_job_status(app_id)
+                get_executor_status(app_id)
                 sleep(1)
             else:
                 app_complete = 1
