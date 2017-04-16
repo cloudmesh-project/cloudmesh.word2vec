@@ -1,20 +1,11 @@
-import sys
+import sys, getopt
 import requests
-import json
-from pprint import pprint
 from time import sleep
-import numpy as np
 import pandas as pd
-
 import ConfigParser
-config = ConfigParser.RawConfigParser()
-config.read('../config.properties')
+import datetime
 
-# get config data
-hist_base_url = config.get('MonitorSection', 'history_base_url')
-
-
-def get_job_status(appid):
+def get_job_status(hist_base_url, appid):
     try:
         df = pd.DataFrame(columns=list(['jobid', 'submissionTime', \
                                         'completionTime', \
@@ -56,7 +47,7 @@ def get_job_status(appid):
 
 
 
-def get_executor_status(appid):
+def get_executor_status(hist_base_url, appid):
     try:
         df = pd.DataFrame(columns=list(['id', 'hostPort', \
                                         'isActive', \
@@ -98,48 +89,126 @@ def get_executor_status(appid):
 
 
 
+def get_app_status(input_app_name):
 
-sleep(5)
-app_id = '0'
-while app_id == '0':
+    config = ConfigParser.RawConfigParser()
+    config.read('../config.properties')
+    # get config data
+    hist_base_url = config.get('MonitorSection', 'history_base_url')
+
+
+    sleep(5)
+    app_id = '0'
+    while app_id == '0':
+        app_url = hist_base_url + "/api/v1/applications"
+        response = requests.get(app_url)
+        data = response.json()
+        for app in data:
+            print(app['name'])
+            if app['name'] == input_app_name:
+                app_id = app['id']
+                print("Got App ID. AppID = %s" % app_id)
+                break
+        sleep(0.5)
+
+    #Now that the app is found, iterate till its not complete
+
+    app_complete = 0
+    app_url = hist_base_url + "/api/v1/applications/" + app_id
+
+    df = pd.DataFrame(columns=list(['attemptid', 'completed','startTime', 'endTime']))
+
+    while app_complete == 0:
+        try:
+            response = requests.get(app_url)
+            appdata = response.json()
+            attemptid = 0
+            rows = []
+            for attempt in appdata['attempts']:
+                rows.append({'attemptid':attemptid, 'completed':attempt['completed'], \
+                             'startTime':attempt['startTime'], 'endTime':attempt['endTime']})
+                if attempt['completed'] == False:
+                    get_job_status(hist_base_url, app_id)
+                    get_executor_status(hist_base_url, app_id)
+                    sleep(1)
+                else:
+                    app_complete = 1
+            df = df.append(rows)
+            attemptid = attemptid + 1
+        except:
+            print("error")
+            app_complete = 1
+            break
+    df.to_csv('app.csv')
+
+
+def get_app_status_once(input_app_name):
+
+    config = ConfigParser.RawConfigParser()
+    config.read('../config.properties')
+    # get config data
+    hist_base_url = config.get('MonitorSection', 'history_base_url')
+
     app_url = hist_base_url + "/api/v1/applications"
     response = requests.get(app_url)
     data = response.json()
+    app_id = "0"
     for app in data:
-        if app['name'] == 'create-word2vec-model.py':
+        print(app['name'])
+        if app['name'] == input_app_name:
             app_id = app['id']
             print("Got App ID. AppID = %s" % app_id)
-            break
-    sleep(0.5)
 
-#Now that the app is found, iterate till its not complete
+    if app_id == 0:
+        print("Did not get app id")
+        return
 
-app_complete = 0
-app_url = hist_base_url + "/api/v1/applications/" + app_id
+    #Now that the app is found, iterate till its not complete
+    app_url = hist_base_url + "/api/v1/applications/" + app_id
+    df = pd.DataFrame(columns=list(['attemptid','startTime', 'endTime']))
 
-df = pd.DataFrame(columns=list(['attemptid', 'completed','startTime', 'endTime']))
-
-while app_complete == 0:
     try:
         response = requests.get(app_url)
         appdata = response.json()
         attemptid = 0
         rows = []
         for attempt in appdata['attempts']:
-            rows.append({'attemptid':attemptid, 'completed':attempt['completed'], \
+            if attempt['completed'] == True:
+                rows.append({'attemptid':attemptid, \
                          'startTime':attempt['startTime'], 'endTime':attempt['endTime']})
-            if attempt['completed'] == False:
-                get_job_status(app_id)
-                get_executor_status(app_id)
-                sleep(1)
             else:
-                app_complete = 1
+                rows.append(
+                    {'attemptid': attemptid, \
+                     'startTime': attempt['startTime'],\
+                     'endTime': datetime.datetime.utcnow()})
         df = df.append(rows)
-        attemptid = attemptid + 1
+        df.to_csv('app.csv')
+        get_job_status(hist_base_url, app_id)
+        get_executor_status(hist_base_url, app_id)
     except:
-        print("error")
-        app_complete = 1
-        break
-df.to_csv('app.csv')
+        print("error in get_app_status_once")
 
+
+def get_appname_from_arg(argv):
+    appname = ""
+    if (len(argv) == 0):
+        print 'Usage: monitor_spark_app -a <appname>'
+        sys.exit(2)
+    try:
+        opts, args = getopt.getopt(argv, "ha:", ["appname="])
+    except getopt.GetoptError:
+        print 'Usage: monitor_spark_app -a <appname>'
+        sys.exit(2)
+    for opt, arg in opts:
+        if opt in ("-a", "--appname"):
+            appname = arg
+    return appname
+
+def main(argv):
+    appname = get_appname_from_arg(argv)
+    get_app_status(appname)
+
+
+if __name__ == "__main__":
+    main(sys.argv[1:])
 

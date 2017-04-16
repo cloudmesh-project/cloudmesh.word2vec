@@ -1,4 +1,12 @@
 from __future__ import print_function
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
+
+import ConfigParser
+config = ConfigParser.RawConfigParser()
+config.read('../config.properties')
+
 from pyspark import SparkConf, SparkContext
 from pyspark.sql import Row
 from pyspark.ml.feature import Tokenizer, RegexTokenizer
@@ -7,17 +15,19 @@ from pyspark.ml.feature import Word2Vec
 from pyspark.sql import SparkSession
 
 import re
-
 import sys
 
 reload(sys)
 sys.setdefaultencoding('utf8')
+import os
 
 import ConfigParser
 config = ConfigParser.RawConfigParser()
 config.read('../config.properties')
 
-
+sys.path.append(os.path.abspath('../perfmonitor'))
+import monitor_spark_app
+#from ../perfmonitor import monitor_spark_app
 
 # get config data
 data_location = config.get('DataSection', 'data_location')
@@ -57,8 +67,12 @@ word2vec.setMinCount(int(min_word_count))
 model = word2vec.fit(filteredDF)
 model.write().save(model_location)
 
+#get app stats
+monitor_spark_app.get_app_status_once("create-word2vec-model.py")
+
 if debug_flag == 1:
     synonyms = model.findSynonyms('sachin',10)
     synonyms.show()
 
 spark.stop()
+
