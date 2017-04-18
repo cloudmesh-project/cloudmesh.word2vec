@@ -16,8 +16,6 @@ config = ConfigParser.RawConfigParser()
 config.read('/opt/word2vec/config.properties')
 
 # get config data
-data_location = config.get('DataSection', 'data_location')
-model_location = config.get('DataSection', 'model_location')
 spark_master = config.get('SparkSection', 'spark_master')
 spark_executor_memory = config.get('SparkSection', 'spark_executor_memory')
 min_word_count = config.get('ModelSection', 'min_word_count')
@@ -40,7 +38,7 @@ spark = SparkSession.builder.master(spark_master) \
         .config("spark.executor.memory", spark_executor_memory) \
         .getOrCreate()
 
-model = Word2VecModel.load(model_location)
+model = Word2VecModel.load(sys.argv[1])
 
 
 
