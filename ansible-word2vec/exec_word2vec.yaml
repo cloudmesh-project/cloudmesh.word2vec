@@ -3,12 +3,40 @@
   become: yes
   become_user: hadoop
   tasks:
-    - debug: var=ansible_default_ipv4.address
-    - name: run spark job
-      command: /opt/word2vec/code/data_process/create-word2vec-model.sh ${ansible_default_ipv4.address}
+    - name: Download WordPress
+      get_url: url=http://d3kbcqa49mib13.cloudfront.net/spark-2.1.0-bin-hadoop2.6.tgz dest=/opt/spark-2.1.0-bin-hadoop2.6.tgz
       become: yes
-      become_user: hadoop
-      become_method: su
+      become_user: root
+    - name: Extract archive
+      unarchive: src=/opt/spark-2.1.0-bin-hadoop2.6.tgz
+                 dest=/opt
+                 copy=no
+      become: yes
+      become_user: root
+    - name: creat soft link
+      command: bash -lc "cd /opt && unlink spark && ln -s /opt/spark-2.1.0-bin-hadoop2.6 spark"
+      become: yes
+      become_user: root
+    #- name: Install list of apt packages
+    #  apt: name={{item}} state=installed
+    #  with_items:
+    #    - python-dev
+    #    - python-pip
+    #  become: yes
+    #  become_user: root
+    #- name: install python packages 
+    #  command: pip install -r /opt/word2vec/requirements.txt
+    #  become: yes
+    #  become_user: root
+    #- name: install pyspark 
+    #  command: bash -lc "cd /opt/spark/python && pip install -e ."
+    #  become: yes
+    #  become_user: root
+#    - debug: var=ansible_default_ipv4.address
+#    - name: run spark job
+#      command: /opt/word2vec/data_process/create-word2vec-model.sh
+#      environment:
+#        PYTHONPATH: $SPARK_HOME/python:$SPARK_HOME/python/lib/py4j-0.9-src.zip:$PYTHONPATH
 #  - name: Install pip ignoring "install-recommends"
 #    apt:
 #      name: python-pip
