@@ -12,7 +12,7 @@ from pyspark.sql import Row
 from pyspark.ml.feature import Tokenizer, RegexTokenizer
 from pyspark.ml.feature import StopWordsRemover
 from pyspark.ml.feature import Word2Vec
-from pyspark.sql import SparkSession
+#from pyspark.sql import SparkSession
 
 import re
 import sys
@@ -47,10 +47,10 @@ sc = SparkContext(conf = conf)
 
 
 # DataFrame Mechanism
-spark = SparkSession.builder.master(spark_master) \
-        .appName("WikiWord2Vec") \
-        .config("spark.executor.memory", spark_executor_memory) \
-        .getOrCreate()
+#spark = SparkSession.builder.master(spark_master) \
+#        .appName("WikiWord2Vec") \
+#        .config("spark.executor.memory", spark_executor_memory) \
+#        .getOrCreate()
 
 
 inp = sc.textFile(data_location).map(lambda text: re.sub('[^a-zA-Z0-9\n\.]',' ', text))
@@ -75,4 +75,3 @@ if debug_flag == 1:
     synonyms.show()
 
 spark.stop()
-
