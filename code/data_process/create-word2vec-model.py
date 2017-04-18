@@ -5,7 +5,7 @@ sys.setdefaultencoding('utf8')
 
 import ConfigParser
 config = ConfigParser.RawConfigParser()
-config.read('../config.properties')
+config.read('/opt/word2vec/config.properties')
 
 from pyspark import SparkConf, SparkContext
 from pyspark.sql import Row
@@ -25,7 +25,7 @@ import ConfigParser
 config = ConfigParser.RawConfigParser()
 config.read('/opt/word2vec/config.properties')
 
-sys.path.append(os.path.abspath('../perfmonitor'))
+sys.path.append(os.path.abspath('/opt/word2vec/perfmonitor'))
 import monitor_spark_app
 #from ../perfmonitor import monitor_spark_app
 

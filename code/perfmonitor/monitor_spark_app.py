@@ -39,7 +39,7 @@ def get_job_status(hist_base_url, appid):
                              'numSkippedStages': job['numSkippedStages'], \
                              'numFailedStages': job['numFailedStages']})
         df = df.append(rows)
-        df.to_csv('jobs.csv')
+        df.to_csv('/tmp/jobs.csv')
         return
     except:
         print("error in get_job_status")
@@ -81,7 +81,7 @@ def get_executor_status(hist_base_url, appid):
                      'maxMemory': executor['maxMemory'] \
                      })
         df = df.append(rows)
-        df.to_csv('executors.csv')
+        df.to_csv('/tmp/executors.csv')
         return
     except:
         print("error in get_executor_status")
@@ -92,7 +92,7 @@ def get_executor_status(hist_base_url, appid):
 def get_app_status(input_app_name):
 
     config = ConfigParser.RawConfigParser()
-    config.read('../config.properties')
+    config.read('/opt/word2vec/config.properties')
     # get config data
     hist_base_url = config.get('MonitorSection', 'history_base_url')
 
@@ -139,13 +139,13 @@ def get_app_status(input_app_name):
             print("error")
             app_complete = 1
             break
-    df.to_csv('app.csv')
+    df.to_csv('/tmp/app.csv')
 
 
 def get_app_status_once(input_app_name):
 
     config = ConfigParser.RawConfigParser()
-    config.read('../config.properties')
+    config.read('/opt/word2vec/config.properties')
     # get config data
     hist_base_url = config.get('MonitorSection', 'history_base_url')
 
@@ -182,7 +182,7 @@ def get_app_status_once(input_app_name):
                      'startTime': attempt['startTime'],\
                      'endTime': datetime.datetime.utcnow()})
         df = df.append(rows)
-        df.to_csv('app.csv')
+        df.to_csv('/tmp/app.csv')
         get_job_status(hist_base_url, app_id)
         get_executor_status(hist_base_url, app_id)
     except:

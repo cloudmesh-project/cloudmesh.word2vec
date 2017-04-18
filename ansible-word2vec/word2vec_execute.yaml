@@ -10,6 +10,9 @@
       - /opt/hadoop/bin/hdfs dfs -mkdir /word2vec
       - /opt/hadoop/bin/hdfs dfs -mkdir /word2vec/crawldb
       - /opt/hadoop/bin/hdfs dfs -put /opt/word2vec/crawldb/sachin-tendulkar.txt /word2vec/crawldb/
+# Native memory allocation (malloc) failed to allocate 103284736 bytes for
+# committing reserved memory
+#      - /opt/hadoop/bin/hdfs dfs -copyFromLocal /opt/word2vec/crawldb /word2vec/
       become: yes
       become_user: hadoop
       become_method: sudo
