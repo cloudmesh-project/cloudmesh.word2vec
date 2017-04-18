@@ -3,7 +3,7 @@
   become: yes
   become_user: hadoop
   tasks:
-    - name: Download WordPress
+    - name: Download spark
       get_url: url=http://d3kbcqa49mib13.cloudfront.net/spark-2.1.0-bin-hadoop2.6.tgz dest=/opt/spark-2.1.0-bin-hadoop2.6.tgz
       become: yes
       become_user: root
