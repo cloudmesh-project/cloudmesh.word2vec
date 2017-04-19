@@ -66,8 +66,8 @@ testDataDF = testDataDF.withColumnRenamed('vector', 'vec3')
 testDataDF.show()
 
 testDataPDDF = testDataDF.toPandas()
-testDataPDDF['vec4'] = (testDataPDDF['vec1'] - testDataPDDF['vec2'] - \
-                       testDataPDDF['vec3']) * -1
+testDataPDDF['vec4'] = (testDataPDDF['vec1'] - testDataPDDF['vec2'] + \
+                       testDataPDDF['vec3'])
 
 
 with open(relations_result_file, 'w') as rf:
