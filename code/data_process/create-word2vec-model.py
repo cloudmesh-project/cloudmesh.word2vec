@@ -63,7 +63,7 @@ model = word2vec.fit(filteredDF)
 model.write().save(sys.argv[2])
 
 #get app stats
-monitor_spark_app.get_app_status_once("create-word2vec-model.py")
+monitor_spark_app.get_app_status_once("create-word2vec-model.py", sys.argv[3])
 
 if debug_flag == 1:
     synonyms = model.findSynonyms('sachin',10)

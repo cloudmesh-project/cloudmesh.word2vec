@@ -7,7 +7,7 @@ If you have a cluster already deployed you can skip this section. To deploy a 3 
     pip install -U cloudmesh_client
     cm key add --ssh
     cm refresh on
-    cm cluster define --count 1 --image CC-Ubuntu14.04 --flavor m1.medium
+    cm cluster define --count 3 --image CC-Ubuntu14.04 --flavor m1.medium
     cm hadoop define spark pig
     cm hadoop sync
     cm hadoop deploy

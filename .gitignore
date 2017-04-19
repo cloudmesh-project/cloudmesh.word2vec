@@ -90,3 +90,6 @@ ENV/
 
 # project specific settings
 **/*.retry
+# intellij files
+.idea
+.idea/**

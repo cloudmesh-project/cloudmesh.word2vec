@@ -16,14 +16,30 @@
       become: yes
       become_user: hadoop
       become_method: sudo
-      environment:
+      tags:
+        - clean-hadoop
     - debug: var=ansible_default_ipv4.address
     - name: run spark job on training data set
       command: /opt/word2vec/data_process/create-word2vec-model.sh
       environment:
         PYTHONPATH: $SPARK_HOME/python:$SPARK_HOME/python/lib/py4j-0.9-src.zip:$PYTHONPATH
-    - name: run spark job to find synonyms
+      tags:
+        - create-word2vec-model
+    - name: run spark job to create model
       command: /opt/word2vec/data_process/use_word2vec_model.sh
       environment:
         PYTHONPATH: $SPARK_HOME/python:$SPARK_HOME/python/lib/py4j-0.9-src.zip:$PYTHONPATH
-
+      tags:
+        - use_word2vec_model
+    - name: run spark job to find synonyms
+      command: /opt/word2vec/data_process/find_relations.sh
+      environment:
+        PYTHONPATH: $SPARK_HOME/python:$SPARK_HOME/python/lib/py4j-0.9-src.zip:$PYTHONPATH
+      tags:
+        - find_relations
+    - name: Fetch result csv files from remote to local
+      synchronize:  src={{ item }} dest=/tmp/word2vec_results mode=pull
+      with_items:
+        - "/opt/word2vec/data_process/*.csv"
+      tags:
+        - get_results
