@@ -15,18 +15,32 @@
       repo=https://github.com/cloudmesh/cloudmesh.word2vec.git
       update=no
       dest=/tmp/word2vec
-      version=int
+      version=master
       accept_hostkey=yes
+    tags:
+      - clone-repo
   - name: Copy word2vec code
-    command: cp -R /tmp/word2vec/code /opt/word2vec 
+    command: cp -R /tmp/word2vec/code /opt/word2vec
+    tags:
+      - deploy-code
   - name: creates model folder
     file: path=/opt/word2vec/model state=directory
+    tags:
+      - create-model-folder
   - name: creates crawldb folder
     file: path=/opt/word2vec/crawldb state=directory
+    tags:
+      - create-crawldb-folder
   - name: install packages 
     command: pip install -r /opt/word2vec/requirements.txt
+    tags:
+      - install-python-packages
   - name: Fix 'word2vec' permissions
     file: path=/opt/word2vec owner=hadoop group=hadoop mode=0775 state=directory recurse=yes
+    tags:
+      - set-permissions
   - name: crawl pages 
     command: python /opt/word2vec/crawler/wikicrawl.py
+    tags:
+      - run-wikicrawl
 

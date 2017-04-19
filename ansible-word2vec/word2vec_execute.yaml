@@ -10,6 +10,7 @@
       - /opt/hadoop/bin/hdfs dfs -mkdir /word2vec
       - /opt/hadoop/bin/hdfs dfs -mkdir /word2vec/crawldb
       - /opt/hadoop/bin/hdfs dfs -put /opt/word2vec/crawldb/sachin-tendulkar.txt /word2vec/crawldb/
+      - /opt/hadoop/bin/hdfs dfs -put /opt/word2vec/data_process/relationstest.csv /word2vec/
 # Native memory allocation (malloc) failed to allocate 103284736 bytes for
 # committing reserved memory
 #      - /opt/hadoop/bin/hdfs dfs -copyFromLocal /opt/word2vec/crawldb /word2vec/
@@ -30,16 +31,16 @@
       environment:
         PYTHONPATH: $SPARK_HOME/python:$SPARK_HOME/python/lib/py4j-0.9-src.zip:$PYTHONPATH
       tags:
-        - use_word2vec_model
+        - use-word2vec-model
     - name: run spark job to find synonyms
       command: /opt/word2vec/data_process/find_relations.sh
       environment:
         PYTHONPATH: $SPARK_HOME/python:$SPARK_HOME/python/lib/py4j-0.9-src.zip:$PYTHONPATH
       tags:
-        - find_relations
+        - find-relations
     - name: Fetch result csv files from remote to local
       synchronize:  src={{ item }} dest=/tmp/word2vec_results mode=pull
       with_items:
         - "/opt/word2vec/data_process/*.csv"
       tags:
-        - get_results
+        - get-results

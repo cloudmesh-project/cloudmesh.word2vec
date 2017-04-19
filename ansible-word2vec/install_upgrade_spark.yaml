@@ -7,13 +7,19 @@
       get_url: url=http://d3kbcqa49mib13.cloudfront.net/spark-2.1.0-bin-hadoop2.6.tgz dest=/opt/spark-2.1.0-bin-hadoop2.6.tgz
       become: yes
       become_user: root
+      tags:
+        - download-spark
     - name: Extract archive
       unarchive: src=/opt/spark-2.1.0-bin-hadoop2.6.tgz
                  dest=/opt
                  copy=no
       become: yes
       become_user: root
+      tags:
+        - deploy-spark
     - name: creat soft link
       command: bash -lc "cd /opt && unlink spark && ln -s /opt/spark-2.1.0-bin-hadoop2.6 spark"
       become: yes
       become_user: root
+      tags:
+        - create-spark-soft-link

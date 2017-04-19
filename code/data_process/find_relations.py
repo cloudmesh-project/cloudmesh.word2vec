@@ -20,7 +20,6 @@ min_word_count = config.get('ModelSection', 'min_word_count')
 num_iterations = config.get('ModelSection', 'num_iterations')
 vector_size = config.get('ModelSection', 'vector_size')
 debug_flag = config.get('Debug', 'debug')
-relations_test_file = config.get('DataSection', 'relations_test_file')
 relations_result_file = config.get('DataSection', 'relations_result_file')
 
 
@@ -40,7 +39,7 @@ print("Total number of records in modelDF = %d" % modelDF.count())
 modelDF = modelDF.repartition(1000, 'word')
 
 
-testDataDF = spark.read.csv(relations_test_file, header=True)
+testDataDF = spark.read.csv(sys.argv[2], header=True)
 testDataDF.show()
 print("Total number of records in testDataDF = %d" % testDataDF.count())
 

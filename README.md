@@ -67,3 +67,14 @@ important parameters are A)data_location B)seed_list C)max_pages
 ```sh
     spark-submit use_word2vec_model.py
 ```
+### Manual cleanup of deployment on cluster
+login(ssh) to cluster and run the following
+
+```sh
+cd /opt
+sudo unlink spark
+sudo rm -rf spark-2.1.0-bin-hadoop2.6*
+sudo ln -s /opt/spark-1.6.0-bin-hadoop2.6 spark
+sudo rm -rf /tmp/word2vec*
+sudo rm -rf /opt/word2vec*
+```
