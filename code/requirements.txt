@@ -3,5 +3,3 @@ request
 numpy
 pandas
 google-api-python-client
-newspaper
-goose-extractor
