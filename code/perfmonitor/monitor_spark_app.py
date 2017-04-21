@@ -39,7 +39,7 @@ def get_job_status(hist_base_url, appid):
                              'numSkippedStages': job['numSkippedStages'], \
                              'numFailedStages': job['numFailedStages']})
         df = df.append(rows)
-        df.to_csv('jobs.csv')
+        df.to_csv('/opt/word2vec/data_process/jobs.csv')
         return
     except:
         print("error in get_job_status")
@@ -81,7 +81,7 @@ def get_executor_status(hist_base_url, appid):
                      'maxMemory': executor['maxMemory'] \
                      })
         df = df.append(rows)
-        df.to_csv('executors.csv')
+        df.to_csv('/opt/word2vec/data_process/executors.csv')
         return
     except:
         print("error in get_executor_status")
@@ -136,7 +136,7 @@ def get_app_status(input_app_name, hist_base_url):
             print("error")
             app_complete = 1
             break
-    df.to_csv('app.csv')
+    df.to_csv('/opt/word2vec/data_process/app.csv')
 
 
 def get_app_status_once(input_app_name, hist_base_url):
@@ -177,7 +177,7 @@ def get_app_status_once(input_app_name, hist_base_url):
                      'startTime': attempt['startTime'],\
                      'endTime': datetime.datetime.utcnow()})
         df = df.append(rows)
-        df.to_csv('app.csv')
+        df.to_csv('/opt/word2vec/data_process/app.csv')
         get_job_status(hist_base_url, app_id)
         get_executor_status(hist_base_url, app_id)
     except:
