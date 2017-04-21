@@ -48,15 +48,29 @@ run script will:
 
 ### Manual steps for running the crawler and spark job
 
-##### Setup Crawler
+##### Setup Wiki Crawler
  - Configure various properties in config.properties. For crawler, the
 important parameters are A)data_location B)seed_list C)max_pages
  -  configure the seed pages in wiki_crawl_seedlist.csv
- - create folder 'crawldb' under 'code'
+ - create folder 'crawldb' under 'code' (or the location specified in the config file)
  - execute crawler
 ```sh
     python wikicrawl.py
 ```
+
+##### Setup News Crawler
+ - Configure various properties in config.properties. For news crawler, the
+important parameters are A)data_location B)news_seed_list C)Google custom search API keys
+ - configure the seed pages in news_crawl_seedlist.csv
+ - get Google customer search API keys by following instructions in https://developers.google.com/custom-search/ 
+ - create folder 'crawldb' under 'code' (or the location specified in config file)
+ - execute crawler
+```sh
+    python newscrawl.py
+```
+
+
+
 #### Create Word2Vec Model
  - create folder 'model' under 'code' for saving the model
  - Configure various properties in config.properties
