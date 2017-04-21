@@ -8,6 +8,7 @@
     with_items:
     - python-dev
     - python-pip
+    - git-all
     become: yes
     become_user: root
   - name: clone repo

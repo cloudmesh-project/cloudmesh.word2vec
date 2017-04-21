@@ -44,6 +44,8 @@ run script will:
 
 [multinode node Chameleon](testresults/chameleon_2_node/README.md)
 
+[multinode node Jetstream](testresults/jetstream_2_nodes/README.md)
+
 ## Appendix:
 
 ### Manual steps for running the crawler and spark job

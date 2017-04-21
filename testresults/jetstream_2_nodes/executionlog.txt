@@ -1,0 +1,93 @@
+╭─abhigup4@ABHIGUP4-M-K0DR ~/Documents/Abhishek/IU/i524_bigdata/gitrepo/cloudmesh.word2vec/ansible-word2vec  ‹master*›
+╰─➤  ./run.sh
+upgrading spark ...
+
+PLAY [word2vec] ****************************************************************
+
+TASK [setup] *******************************************************************
+ok: [149.165.156.40]
+
+TASK [Download spark] **********************************************************
+changed: [149.165.156.40]
+
+TASK [Extract archive] *********************************************************
+changed: [149.165.156.40]
+
+TASK [creat soft link] *********************************************************
+changed: [149.165.156.40]
+
+PLAY RECAP *********************************************************************
+149.165.156.40             : ok=4    changed=3    unreachable=0    failed=0
+
+upgrading spark ... done
+setting up environment, copying files installing dependencies ...
+
+PLAY [word2vec] ****************************************************************
+
+TASK [setup] *******************************************************************
+ok: [149.165.156.40]
+
+TASK [Install list of apt packages] ********************************************
+ok: [149.165.156.40] => (item=[u'python-dev', u'python-pip', u'git-all'])
+
+TASK [clone repo] **************************************************************
+changed: [149.165.156.40]
+
+TASK [Copy word2vec code] ******************************************************
+changed: [149.165.156.40]
+
+TASK [creates model folder] ****************************************************
+changed: [149.165.156.40]
+
+TASK [creates crawldb folder] **************************************************
+changed: [149.165.156.40]
+
+TASK [install packages] ********************************************************
+changed: [149.165.156.40]
+
+TASK [Fix 'word2vec' permissions] **********************************************
+changed: [149.165.156.40]
+
+TASK [crawl pages] *************************************************************
+changed: [149.165.156.40]
+
+PLAY RECAP *********************************************************************
+149.165.156.40             : ok=9    changed=7    unreachable=0    failed=0
+
+setting up environment, copying files installing dependencies ... done
+running word2vec ...
+
+PLAY [word2vec] ****************************************************************
+
+TASK [setup] *******************************************************************
+ok: [149.165.156.40]
+
+TASK [setup hdfs folders] ******************************************************
+changed: [149.165.156.40] => (item=/opt/hadoop/bin/hdfs dfs -rm -r -f /word2vec)
+changed: [149.165.156.40] => (item=/opt/hadoop/bin/hdfs dfs -mkdir /word2vec)
+changed: [149.165.156.40] => (item=/opt/hadoop/bin/hdfs dfs -mkdir /word2vec/crawldb)
+changed: [149.165.156.40] => (item=/opt/hadoop/bin/hdfs dfs -put /opt/word2vec/data_process/relationstest.csv /word2vec/)
+changed: [149.165.156.40] => (item=/opt/hadoop/bin/hdfs dfs -copyFromLocal /opt/word2vec/crawldb /word2vec/)
+
+TASK [debug] *******************************************************************
+ok: [149.165.156.40] => {
+    "ansible_default_ipv4.address": "192.168.1.19"
+}
+
+TASK [run spark job on training data set] **************************************
+changed: [149.165.156.40]
+
+TASK [run spark job to create model] *******************************************
+changed: [149.165.156.40]
+
+TASK [run spark job to find synonyms] ******************************************
+changed: [149.165.156.40]
+
+TASK [Fetch result csv files from remote to local] *****************************
+changed: [149.165.156.40] => (item=/opt/word2vec/data_process/*.csv)
+
+PLAY RECAP *********************************************************************
+149.165.156.40             : ok=7    changed=5    unreachable=0    failed=0
+
+running word2vec ... done
+result csv files are located in /tmp/word2vec_results

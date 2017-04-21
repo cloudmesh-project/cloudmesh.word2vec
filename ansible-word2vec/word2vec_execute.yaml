@@ -6,7 +6,7 @@
     - name: setup hdfs folders
       command: "{{ item }} chdir=/opt/word2vec/crawldb"
       with_items:
-      - /opt/hadoop/bin/hdfs dfs -rmr /word2vec
+      - /opt/hadoop/bin/hdfs dfs -rm -r -f /word2vec
       - /opt/hadoop/bin/hdfs dfs -mkdir /word2vec
       - /opt/hadoop/bin/hdfs dfs -mkdir /word2vec/crawldb
       - /opt/hadoop/bin/hdfs dfs -put /opt/word2vec/data_process/relationstest.csv /word2vec/
