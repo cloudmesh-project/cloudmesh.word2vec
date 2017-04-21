@@ -1,19 +1,21 @@
-Cluster Details: 
-> cluster-005
-    count                         : 2,
-    image                         : CC-Ubuntu14.04,
-    key                           : abhigupt,
-    flavor                        : m1.medium,
-    secgroup                      : default,
-    assignFloatingIP              : True,
-    cloud                         : chameleon,
+### Cluster Details
 
-CrawlDB size: 1.4MB
-CrawlDB file count: 147
+| Attribute | Details |
+| --- | --- |
+|cluster-name|cluster-005|
+|count|2|
+|image|CC-Ubuntu14.04|
+|key|abhigupt|
+|flavor|m1.medium|
+|secgroup|default|
+|assignFloatingIP|True|
+|cloud|chameleon|
+|CrawlDB size|1.4MB|
+|CrawlDB file count|147|
 
-Seedlist configuration
+### Seedlist configuration
 
-Wiki seed list entries:
+#### Wiki seed list entries
 
 Sachin Tendulkar
 Rahul Dravid
@@ -26,7 +28,7 @@ Shikhar Dhawan
 Suresh Raina
 Anil Kumble
 
-News seed list entries:
+#### News seed list entries
 
 Sachin and Anjali Tendulkar
 Rahul and Vijeta Dravid

@@ -1,17 +1,20 @@
-Cluster Details: 
-One node cluster with Spark2.1
-Spark Master and Spark Worker running on same machine
+### Cluster Details
 
-OS: OSX Yosemite
-Processor: 2.4GHz Intel Core I5
-Memory: 8GB
+| Attribute | Details |
+| --- | --- |
+|cluster-name|local mac|
+|count|1|
+|description|Spark2.1 and Spark Master and Spark Worker running on same machine|
+|OS|OSX Yosemite|
+|key|avadhoot-agasti|
+|Processor|2.4GHz Intel Core I5|
+|Memory|8GB|
+|CrawlDB size|1.4MB|
+|CrawlDB file count|147|
 
-CrawlDB size: 1.4MB
-CrawlDB file count: 147
+### Seedlist configuration
 
-Seedlist configuration
-
-Wiki seed list entries:
+#### Wiki seed list entries
 
 Sachin Tendulkar
 Rahul Dravid
@@ -24,7 +27,7 @@ Shikhar Dhawan
 Suresh Raina
 Anil Kumble
 
-News seed list entries:
+#### News seed list entries
 
 Sachin and Anjali Tendulkar
 Rahul and Vijeta Dravid
