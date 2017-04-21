@@ -51,7 +51,7 @@ run script will:
 ##### Setup Wiki Crawler
  - Configure various properties in config.properties. For crawler, the
 important parameters are A)data_location B)seed_list C)max_pages
- -  configure the seed pages in wiki_crawl_seedlist.csv
+ - configure the seed pages in wiki_crawl_seedlist.csv
  - create folder 'crawldb' under 'code' (or the location specified in the config file)
  - execute crawler
 ```sh
@@ -59,7 +59,7 @@ important parameters are A)data_location B)seed_list C)max_pages
 ```
 
 ##### Setup News Crawler
- - Configure various properties in config.properties. For news crawler, the
+ - configure various properties in config.properties. For news crawler, the
 important parameters are A)data_location B)news_seed_list C)Google custom search API keys
  - configure the seed pages in news_crawl_seedlist.csv
  - get Google customer search API keys by following instructions in https://developers.google.com/custom-search/ 
@@ -73,7 +73,7 @@ important parameters are A)data_location B)news_seed_list C)Google custom search
 
 #### Create Word2Vec Model
  - create folder 'model' under 'code' for saving the model
- - Configure various properties in config.properties
+ - configure various properties in config.properties
  - start your spark cluster
  - configure the spark-master URL in create-word2vec-model.sh.
  - execute the create-word2vec-model
@@ -83,13 +83,26 @@ important parameters are A)data_location B)news_seed_list C)Google custom search
 
 #### Query Word2Vec Model
  - execute use_word2vec_model.py
- - The test file location can be defined in config.properties
+ - the test file location can be defined in config.properties
 (synonym_test_file). The default value is stest.csv
  - The generated result file will be stored in stestresult.csv by default. It
  can be changed using config.properties
 ```sh
-    spark-submit use_word2vec_model.py
+    bash use_word2vec_model.sh
 ```
+
+#### Find Relations using  Word2Vec Model
+ - execute find_relations.py
+ - the test file location can be defined in config.properties
+(relations_test_file). The default value is relationstest.csv
+ - The generated result file will be stored in relationsresult.csv by default. It
+ can be changed using config.properties
+```sh
+    bash find_relations.sh
+```
+
+
+
 ### Manual cleanup of deployment on cluster
 login(ssh) to cluster and run the following
 
