@@ -1,0 +1,101 @@
+╭─abhigup4@ABHIGUP4-M-K0DR
+~/Documents/Abhishek/IU/i524_bigdata/gitrepo/cloudmesh.word2vec/ansible-word2vec
+‹master*›
+╰─➤  ./run.sh
+upgrading spark ...
+
+PLAY [word2vec] ****************************************************************
+
+TASK [setup] *******************************************************************
+ok: [129.114.33.230]
+
+TASK [Download spark] **********************************************************
+changed: [129.114.33.230]
+
+TASK [Extract archive] *********************************************************
+changed: [129.114.33.230]
+
+TASK [creat soft link] *********************************************************
+changed: [129.114.33.230]
+
+PLAY RECAP *********************************************************************
+129.114.33.230             : ok=4    changed=3    unreachable=0    failed=0
+
+upgrading spark ... done
+setting up environment, copying files installing dependencies ...
+
+PLAY [word2vec] ****************************************************************
+
+TASK [setup] *******************************************************************
+ok: [129.114.33.230]
+
+TASK [Install list of apt packages] ********************************************
+ok: [129.114.33.230] => (item=[u'python-dev', u'python-pip'])
+
+TASK [clone repo] **************************************************************
+changed: [129.114.33.230]
+
+TASK [Copy word2vec code] ******************************************************
+changed: [129.114.33.230]
+
+TASK [creates model folder] ****************************************************
+changed: [129.114.33.230]
+
+TASK [creates crawldb folder] **************************************************
+changed: [129.114.33.230]
+
+TASK [install packages] ********************************************************
+changed: [129.114.33.230]
+
+TASK [Fix 'word2vec' permissions] **********************************************
+changed: [129.114.33.230]
+
+TASK [crawl pages] *************************************************************
+changed: [129.114.33.230]
+
+PLAY RECAP *********************************************************************
+129.114.33.230             : ok=9    changed=7    unreachable=0    failed=0
+
+setting up environment, copying files installing dependencies ... done
+running word2vec ...
+
+PLAY [word2vec] ****************************************************************
+
+TASK [setup] *******************************************************************
+ok: [129.114.33.230]
+
+TASK [setup hdfs folders] ******************************************************
+changed: [129.114.33.230] => (item=/opt/hadoop/bin/hdfs dfs -rmr /word2vec)
+changed: [129.114.33.230] => (item=/opt/hadoop/bin/hdfs dfs -mkdir /word2vec)
+changed: [129.114.33.230] => (item=/opt/hadoop/bin/hdfs dfs -mkdir
+/word2vec/crawldb)
+changed: [129.114.33.230] => (item=/opt/hadoop/bin/hdfs dfs -put
+/opt/word2vec/crawldb/sachin-tendulkar.txt /word2vec/crawldb/)
+changed: [129.114.33.230] => (item=/opt/hadoop/bin/hdfs dfs -put
+/opt/word2vec/data_process/relationstest.csv /word2vec/)
+
+TASK [debug] *******************************************************************
+ok: [129.114.33.230] => {
+        "ansible_default_ipv4.address": "192.168.0.101"
+}
+
+TASK [run spark job on training data set] **************************************
+changed: [129.114.33.230]
+
+TASK [run spark job to create model] *******************************************
+changed: [129.114.33.230]
+
+TASK [run spark job to find synonyms] ******************************************
+changed: [129.114.33.230]
+
+TASK [Fetch result csv files from remote to local] *****************************
+changed: [129.114.33.230] => (item=/opt/word2vec/data_process/*.csv)
+
+PLAY RECAP *********************************************************************
+129.114.33.230             : ok=7    changed=5    unreachable=0    failed=0
+
+running word2vec ... done
+result csv files are located in /tmp/word2vec_results
+╭─abhigup4@ABHIGUP4-M-K0DR
+~/Documents/Abhishek/IU/i524_bigdata/gitrepo/cloudmesh.word2vec/ansible-word2vec
+‹master*›
