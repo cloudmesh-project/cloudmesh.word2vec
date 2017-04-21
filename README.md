@@ -27,13 +27,22 @@ vi hosts
 
 ### execute script to deploy and run spark job
 
-    ansible-word2vec/run.sh
-
+```sh
+cd ansible-word2vec
+./run.sh
+```
 run script will: 
 - deploy code
 - run the crawler for collecting the training set
 - submit the job on spark
 
+[Execution log](testresults/chameleon_2_node/executionlog.txt)
+
+### Test results
+
+[single node](testresults/single_node/README.md)
+
+[multinode node Chameleon](testresults/chameleon_2_node/README.md)
 
 ## Appendix:
 
@@ -78,3 +87,5 @@ sudo ln -s /opt/spark-1.6.0-bin-hadoop2.6 spark
 sudo rm -rf /tmp/word2vec*
 sudo rm -rf /opt/word2vec*
 ```
+
+
