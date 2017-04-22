@@ -10,8 +10,8 @@
 |secgroup|default|
 |assignFloatingIP|True|
 |cloud|chameleon|
-|CrawlDB size|14MB|
-|CrawlDB file count|1022|
+|CrawlDB size|7.4MB|
+|CrawlDB file count|522|
 
 ### Seedlist configuration
 
