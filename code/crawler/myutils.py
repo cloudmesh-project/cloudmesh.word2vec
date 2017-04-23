@@ -23,7 +23,7 @@ def concat_files(path, filename):
         os.remove(os.path.join(path, filename))
     except:
         print("input file doesn't exist. ignoring.")
-        
+
     files = os.listdir(path)
     with open(os.path.join(path, filename), "w") as fo:
         print "outfile:" + filename
