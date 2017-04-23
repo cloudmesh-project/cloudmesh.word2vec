@@ -1,13 +1,15 @@
 ### Pre-requisites
 
-If you have a cluster already deployed you can skip this section. To deploy a 3 node chameleon cluster, use the following:
+If you have a cluster already deployed you can skip this section. To deploy a 3 node chameleon 
+cluster, use the following:
 
     cm reset
     pip uninstall cloudmesh_client
     pip install -U cloudmesh_client
     cm key add --ssh
     cm refresh on
-    cm cluster define --count 3 --image CC-Ubuntu14.04 --flavor m1.medium
+    cm cluster define --count 3 \
+        --image CC-Ubuntu14.04 --flavor m1.medium
     cm hadoop define spark pig
     cm hadoop sync
     cm hadoop deploy
@@ -15,7 +17,7 @@ If you have a cluster already deployed you can skip this section. To deploy a 3 
 
 ### clone or download repository
 
-git clone https://github.com/cloudmesh/cloudmesh.word2vec.git 
+`git clone https://github.com/cloudmesh/cloudmesh.word2vec.git`
 
 ### update hosts file with ip of your primary node on your cluster 
   (Note: On the cluster, first node becomes master)
@@ -55,6 +57,24 @@ ansible-playbook word2vec_cleanup.yaml
 
 ## Appendix:
 
+### Troubleshooting
+
+1. If the installation `run.sh` script fails in middle due to some reason, execute the 
+cleanup script before re-triggering run script again. The run script may fail due to variety of 
+reasons like failed to shh, hadoop not available etc
+
+2. If the run script fails due to spark memory errors, you can modify the spark memory setting in
+`code/config.properties` push the code to a git feature branch for example `spark_test`. Modify 
+`word2vec_setup.yaml` git section `version=master` to point to `spark_test` branch and execute the 
+run script.
+
+3. If hadoop goes into safe mode, goto the cluster namenode and execute
+```sh
+    /opt/hadoop$ bin/hadoop dfsadmin -safemode leave
+```
+This will remove the cluster from safe mode.
+
+
 ### Manual steps for running the crawler and spark job
 
 ##### Setup Wiki Crawler
@@ -77,8 +97,6 @@ important parameters are A)data_location B)news_seed_list C)Google custom search
 ```sh
     python newscrawl.py
 ```
-
-
 
 #### Create Word2Vec Model
  - create folder 'model' under 'code' for saving the model
@@ -109,8 +127,6 @@ important parameters are A)data_location B)news_seed_list C)Google custom search
 ```sh
     bash find_relations.sh
 ```
-
-
 
 ### Manual cleanup of deployment on cluster
 login(ssh) to cluster and run the following
