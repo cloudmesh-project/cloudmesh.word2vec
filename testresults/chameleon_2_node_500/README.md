@@ -1,6 +1,6 @@
 ### Cluster Details
 
-| Attribute | Details |
+| Attribute | Details | Comments | 
 | --- | --- |
 |cluster-name|cluster-005|
 |count|2|
@@ -11,7 +11,12 @@
 |assignFloatingIP|True|
 |cloud|chameleon|
 |CrawlDB size|7.4MB|
-|CrawlDB file count|522|
+|CrawlDB file count|522| All files are merged into one before copying on HDFS |
+|Spark Executor Memory|1GB|
+|Spark Driver Memory|2GB|
+
+
+
 
 ### Seedlist configuration
 
