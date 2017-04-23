@@ -51,14 +51,8 @@ spark = SparkSession.builder.master(spark_master) \
         .appName("WikiWord2Vec") \
         .config("spark.executor.memory", spark_executor_memory) \
         .config("spark.driver.memory", spark_driver_memory) \
-        .config("spark.driver.maxResultSize", max_result_size) \
         .getOrCreate()
 
-
-spark = SparkSession.builder.master(spark_master) \
-        .appName("WikiWord2Vec") \
-        .config("spark.executor.memory", spark_executor_memory) \
-        .getOrCreate()
 
 
 inp = sc.textFile(sys.argv[1]).map(lambda text: re.sub('[^a-zA-Z0-9\n\.]',' ', text))
