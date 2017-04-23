@@ -3,6 +3,7 @@ import wikipedia
 import csv
 import myutils
 import sys
+import traceback
 
 import ConfigParser
 config = ConfigParser.RawConfigParser()
@@ -10,10 +11,15 @@ config.read('/opt/word2vec/config.properties')
 
 # get config data
 data_location = config.get('DataSection', 'data_location')
-max_pages = config.get('CrawlerSection', 'max_pages')
 seed_list_file = config.get('CrawlerSection', 'seed_list')
 debug_flag = config.get('Debug', 'debug')
 
+if len(sys.argv) > 1:
+    max_pages = sys.argv[1]
+else:
+    max_pages = config.get('CrawlerSection', 'max_pages')
+
+print "max_pages:" + max_pages
 
 with open(seed_list_file, 'r') as f:
     reader = csv.reader(f)
@@ -34,5 +40,8 @@ with open(seed_list_file, 'r') as f:
                 if link not in seedlist:
                     seedlist.append(link)
         except:
+            print(traceback.format_exc())
             print("Didn't get Wiki link")
+
+myutils.concat_files(data_location, "crawler_all_data.txt")
 

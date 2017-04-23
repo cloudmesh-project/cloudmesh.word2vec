@@ -2,6 +2,8 @@
 - hosts: word2vec
   become: yes
   become_user: root
+  vars_files:
+    - setupvariables.yml
   tasks:
   - name: Install list of apt packages
     apt: name={{item}} state=installed
@@ -41,7 +43,7 @@
     tags:
       - set-permissions
   - name: crawl pages 
-    command: python /opt/word2vec/crawler/wikicrawl.py
+    command: python /opt/word2vec/crawler/wikicrawl.py {{crawler.max_pages}}
     tags:
       - run-wikicrawl
 
