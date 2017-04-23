@@ -1,0 +1,298 @@
+2017-04-22 19:43:47,664 p=52709 u=abhigup4 |  PLAY [word2vec] ****************************************************************
+2017-04-22 19:43:47,695 p=52709 u=abhigup4 |  TASK [setup] *******************************************************************
+2017-04-22 19:43:57,070 p=52709 u=abhigup4 |  ok: [149.165.156.40]
+2017-04-22 19:43:57,073 p=52709 u=abhigup4 |  TASK [crawl pages] *************************************************************
+2017-04-22 19:43:58,859 p=52709 u=abhigup4 |  fatal: [149.165.156.40]: FAILED! => {"changed": true, "cmd": ["python", "/opt/word2vec/crawler/wikicrawl.py", "4"], "delta": "0:00:00.018833", "end": "2017-04-23 02:43:58.243203", "failed": true, "rc": 2, "start": "2017-04-23 02:43:58.224370", "stderr": "python: can't open file '/opt/word2vec/crawler/wikicrawl.py': [Errno 2] No such file or directory", "stdout": "", "stdout_lines": [], "warnings": []}
+2017-04-22 19:43:58,871 p=52709 u=abhigup4 |  	to retry, use: --limit @/Users/abhigup4/Documents/Abhishek/IU/i524_bigdata/gitrepo/cloudmesh.word2vec/ansible-word2vec/word2vec_setup.retry
+
+2017-04-22 19:43:58,871 p=52709 u=abhigup4 |  PLAY RECAP *********************************************************************
+2017-04-22 19:43:58,871 p=52709 u=abhigup4 |  149.165.156.40             : ok=1    changed=0    unreachable=0    failed=1   
+2017-04-22 19:49:01,069 p=53816 u=abhigup4 |  PLAY [word2vec] ****************************************************************
+2017-04-22 19:49:01,102 p=53816 u=abhigup4 |  TASK [setup] *******************************************************************
+2017-04-22 19:49:08,861 p=53816 u=abhigup4 |  ok: [149.165.156.40]
+2017-04-22 19:49:08,865 p=53816 u=abhigup4 |  TASK [crawl pages] *************************************************************
+2017-04-22 19:49:17,643 p=53816 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 19:49:17,645 p=53816 u=abhigup4 |  PLAY RECAP *********************************************************************
+2017-04-22 19:49:17,646 p=53816 u=abhigup4 |  149.165.156.40             : ok=2    changed=1    unreachable=0    failed=0   
+2017-04-22 19:53:42,673 p=54834 u=abhigup4 |  PLAY [word2vec] ****************************************************************
+2017-04-22 19:53:42,716 p=54834 u=abhigup4 |  TASK [setup] *******************************************************************
+2017-04-22 19:53:50,262 p=54834 u=abhigup4 |  ok: [149.165.156.40]
+2017-04-22 19:53:50,267 p=54834 u=abhigup4 |  TASK [crawl pages] *************************************************************
+2017-04-22 19:56:03,986 p=54834 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 19:56:03,991 p=54834 u=abhigup4 |  PLAY RECAP *********************************************************************
+2017-04-22 19:56:03,992 p=54834 u=abhigup4 |  149.165.156.40             : ok=2    changed=1    unreachable=0    failed=0   
+2017-04-22 20:00:42,689 p=56610 u=abhigup4 |  PLAY [word2vec] ****************************************************************
+2017-04-22 20:00:42,718 p=56610 u=abhigup4 |  TASK [setup] *******************************************************************
+2017-04-22 20:00:50,802 p=56610 u=abhigup4 |  ok: [149.165.156.40]
+2017-04-22 20:00:50,804 p=56610 u=abhigup4 |  TASK [Download spark] **********************************************************
+2017-04-22 20:00:59,944 p=56610 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:00:59,947 p=56610 u=abhigup4 |  TASK [Extract archive] *********************************************************
+2017-04-22 20:01:08,934 p=56610 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:01:08,936 p=56610 u=abhigup4 |  TASK [creat soft link] *********************************************************
+2017-04-22 20:01:10,766 p=56610 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:01:10,769 p=56610 u=abhigup4 |  PLAY RECAP *********************************************************************
+2017-04-22 20:01:10,769 p=56610 u=abhigup4 |  149.165.156.40             : ok=4    changed=3    unreachable=0    failed=0   
+2017-04-22 20:01:11,540 p=56745 u=abhigup4 |  PLAY [word2vec] ****************************************************************
+2017-04-22 20:01:11,556 p=56745 u=abhigup4 |  TASK [setup] *******************************************************************
+2017-04-22 20:01:18,847 p=56745 u=abhigup4 |  ok: [149.165.156.40]
+2017-04-22 20:01:18,849 p=56745 u=abhigup4 |  TASK [Install list of apt packages] ********************************************
+2017-04-22 20:01:23,000 p=56745 u=abhigup4 |  ok: [149.165.156.40] => (item=[u'python-dev', u'python-pip', u'git-all'])
+2017-04-22 20:01:23,003 p=56745 u=abhigup4 |  TASK [clone repo] **************************************************************
+2017-04-22 20:01:27,087 p=56745 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:01:27,089 p=56745 u=abhigup4 |  TASK [Copy word2vec code] ******************************************************
+2017-04-22 20:01:28,755 p=56745 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:01:28,757 p=56745 u=abhigup4 |  TASK [creates model folder] ****************************************************
+2017-04-22 20:01:30,363 p=56745 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:01:30,366 p=56745 u=abhigup4 |  TASK [creates crawldb folder] **************************************************
+2017-04-22 20:01:31,953 p=56745 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:01:31,955 p=56745 u=abhigup4 |  TASK [install packages] ********************************************************
+2017-04-22 20:01:34,884 p=56745 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:01:34,886 p=56745 u=abhigup4 |  TASK [Fix 'word2vec' permissions] **********************************************
+2017-04-22 20:01:36,915 p=56745 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:01:36,917 p=56745 u=abhigup4 |  TASK [crawl pages] *************************************************************
+2017-04-22 20:01:53,977 p=56745 u=abhigup4 |  fatal: [149.165.156.40]: FAILED! => {"changed": true, "cmd": ["python", "/opt/word2vec/crawler/wikicrawl.py", "10"], "delta": "0:00:15.309734", "end": "2017-04-23 03:01:53.364836", "failed": true, "rc": 1, "start": "2017-04-23 03:01:38.055102", "stderr": "Traceback (most recent call last):\n  File \"/opt/word2vec/crawler/wikicrawl.py\", line 46, in <module>\n    myutils.concat_files(data_location, \"crawler_all_data.txt\")\n  File \"/opt/word2vec/crawler/myutils.py\", line 22, in concat_files\n    os.remove(os.path.join(path, filename))\nOSError: [Errno 2] No such file or directory: '/opt/word2vec/crawldb/crawler_all_data.txt'", "stdout": "max_pages:10\nInserting information of: Sachin Tendulkar\nInserting information of: Rahul Dravid\nInserting information of: 1975 Cricket World Cup\nInserting information of: 1979 Cricket World Cup\nInserting information of: 1983 Cricket World Cup\nInserting information of: 1987 Cricket World Cup\nInserting information of: 1992 Cricket World Cup\nInserting information of: 1996 Cricket World Cup\nInserting information of: 1997 Women's Cricket World Cup\nTraceback (most recent call last):\n  File \"/opt/word2vec/crawler/wikicrawl.py\", line 35, in <module>\n    print(\"Inserting information of: %s\" %w.title)\nUnicodeEncodeError: 'ascii' codec can't encode character u'\\u2013' in position 30: ordinal not in range(128)\n\nDidn't get Wiki link\nTraceback (most recent call last):\n  File \"/opt/word2vec/crawler/wikicrawl.py\", line 35, in <module>\n    print(\"Inserting information of: %s\" %w.title)\nUnicodeEncodeError: 'ascii' codec can't encode character u'\\u2013' in position 30: ordinal not in range(128)\n\nDidn't get Wiki link\nTraceback (most recent call last):\n  File \"/opt/word2vec/crawler/wikicrawl.py\", line 35, in <module>\n    print(\"Inserting information of: %s\" %w.title)\nUnicodeEncodeError: 'ascii' codec can't encode character u'\\u2013' in position 30: ordinal not in range(128)\n\nDidn't get Wiki link\nInserting information of: 1999 Cricket World Cup\nInserting information of: 1999 Cricket World Cup", "stdout_lines": ["max_pages:10", "Inserting information of: Sachin Tendulkar", "Inserting information of: Rahul Dravid", "Inserting information of: 1975 Cricket World Cup", "Inserting information of: 1979 Cricket World Cup", "Inserting information of: 1983 Cricket World Cup", "Inserting information of: 1987 Cricket World Cup", "Inserting information of: 1992 Cricket World Cup", "Inserting information of: 1996 Cricket World Cup", "Inserting information of: 1997 Women's Cricket World Cup", "Traceback (most recent call last):", "  File \"/opt/word2vec/crawler/wikicrawl.py\", line 35, in <module>", "    print(\"Inserting information of: %s\" %w.title)", "UnicodeEncodeError: 'ascii' codec can't encode character u'\\u2013' in position 30: ordinal not in range(128)", "", "Didn't get Wiki link", "Traceback (most recent call last):", "  File \"/opt/word2vec/crawler/wikicrawl.py\", line 35, in <module>", "    print(\"Inserting information of: %s\" %w.title)", "UnicodeEncodeError: 'ascii' codec can't encode character u'\\u2013' in position 30: ordinal not in range(128)", "", "Didn't get Wiki link", "Traceback (most recent call last):", "  File \"/opt/word2vec/crawler/wikicrawl.py\", line 35, in <module>", "    print(\"Inserting information of: %s\" %w.title)", "UnicodeEncodeError: 'ascii' codec can't encode character u'\\u2013' in position 30: ordinal not in range(128)", "", "Didn't get Wiki link", "Inserting information of: 1999 Cricket World Cup", "Inserting information of: 1999 Cricket World Cup"], "warnings": []}
+2017-04-22 20:01:53,983 p=56745 u=abhigup4 |  	to retry, use: --limit @/Users/abhigup4/Documents/Abhishek/IU/i524_bigdata/gitrepo/cloudmesh.word2vec/ansible-word2vec/word2vec_setup.retry
+
+2017-04-22 20:01:53,983 p=56745 u=abhigup4 |  PLAY RECAP *********************************************************************
+2017-04-22 20:01:53,983 p=56745 u=abhigup4 |  149.165.156.40             : ok=8    changed=6    unreachable=0    failed=1   
+2017-04-22 20:01:55,090 p=56951 u=abhigup4 |  PLAY [word2vec] ****************************************************************
+2017-04-22 20:01:55,121 p=56951 u=abhigup4 |  TASK [setup] *******************************************************************
+2017-04-22 20:02:01,539 p=56951 u=abhigup4 |  ok: [149.165.156.40]
+2017-04-22 20:02:01,542 p=56951 u=abhigup4 |  TASK [setup hdfs folders] ******************************************************
+2017-04-22 20:02:14,573 p=56951 u=abhigup4 |  failed: [149.165.156.40] (item=/opt/hadoop/bin/hdfs dfs -rm -r -f /word2vec) => {"changed": true, "cmd": ["/opt/hadoop/bin/hdfs", "dfs", "-rm", "-r", "-f", "/word2vec"], "delta": "0:00:11.002770", "end": "2017-04-23 03:02:13.790665", "failed": true, "item": "/opt/hadoop/bin/hdfs dfs -rm -r -f /word2vec", "rc": 1, "start": "2017-04-23 03:02:02.787895", "stderr": "17/04/23 03:02:13 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.\nrm: Cannot delete /word2vec. Name node is in safe mode.", "stdout": "", "stdout_lines": [], "warnings": []}
+2017-04-22 20:02:18,269 p=56951 u=abhigup4 |  failed: [149.165.156.40] (item=/opt/hadoop/bin/hdfs dfs -mkdir /word2vec) => {"changed": true, "cmd": ["/opt/hadoop/bin/hdfs", "dfs", "-mkdir", "/word2vec"], "delta": "0:00:01.816397", "end": "2017-04-23 03:02:17.470843", "failed": true, "item": "/opt/hadoop/bin/hdfs dfs -mkdir /word2vec", "rc": 1, "start": "2017-04-23 03:02:15.654446", "stderr": "mkdir: `/word2vec': File exists", "stdout": "", "stdout_lines": [], "warnings": []}
+2017-04-22 20:02:21,934 p=56951 u=abhigup4 |  failed: [149.165.156.40] (item=/opt/hadoop/bin/hdfs dfs -mkdir /word2vec/crawldb) => {"changed": true, "cmd": ["/opt/hadoop/bin/hdfs", "dfs", "-mkdir", "/word2vec/crawldb"], "delta": "0:00:01.900763", "end": "2017-04-23 03:02:21.161680", "failed": true, "item": "/opt/hadoop/bin/hdfs dfs -mkdir /word2vec/crawldb", "rc": 1, "start": "2017-04-23 03:02:19.260917", "stderr": "mkdir: `/word2vec/crawldb': File exists", "stdout": "", "stdout_lines": [], "warnings": []}
+2017-04-22 20:02:25,764 p=56951 u=abhigup4 |  failed: [149.165.156.40] (item=/opt/hadoop/bin/hdfs dfs -put /opt/word2vec/data_process/relationstest.csv /word2vec/) => {"changed": true, "cmd": ["/opt/hadoop/bin/hdfs", "dfs", "-put", "/opt/word2vec/data_process/relationstest.csv", "/word2vec/"], "delta": "0:00:01.838245", "end": "2017-04-23 03:02:24.888424", "failed": true, "item": "/opt/hadoop/bin/hdfs dfs -put /opt/word2vec/data_process/relationstest.csv /word2vec/", "rc": 1, "start": "2017-04-23 03:02:23.050179", "stderr": "put: `/word2vec/relationstest.csv': File exists", "stdout": "", "stdout_lines": [], "warnings": []}
+2017-04-22 20:02:29,762 p=56951 u=abhigup4 |  failed: [149.165.156.40] (item=/opt/hadoop/bin/hdfs dfs -copyFromLocal /opt/word2vec/crawldb /word2vec/) => {"changed": true, "cmd": ["/opt/hadoop/bin/hdfs", "dfs", "-copyFromLocal", "/opt/word2vec/crawldb", "/word2vec/"], "delta": "0:00:02.013448", "end": "2017-04-23 03:02:28.833668", "failed": true, "item": "/opt/hadoop/bin/hdfs dfs -copyFromLocal /opt/word2vec/crawldb /word2vec/", "rc": 1, "start": "2017-04-23 03:02:26.820220", "stderr": "copyFromLocal: `/word2vec/crawldb/1975-cricket-world-cup.txt': File exists\ncopyFromLocal: `/word2vec/crawldb/1979-cricket-world-cup.txt': File exists\ncopyFromLocal: `/word2vec/crawldb/1983-cricket-world-cup.txt': File exists\ncopyFromLocal: `/word2vec/crawldb/1987-cricket-world-cup.txt': File exists\ncopyFromLocal: `/word2vec/crawldb/1992-cricket-world-cup.txt': File exists\ncopyFromLocal: `/word2vec/crawldb/1996-cricket-world-cup.txt': File exists\ncopyFromLocal: `/word2vec/crawldb/1997-womens-cricket-world-cup.txt': File exists\ncopyFromLocal: `/word2vec/crawldb/1999-cricket-world-cup.txt': File exists\ncopyFromLocal: `/word2vec/crawldb/rahul-dravid.txt': File exists\ncopyFromLocal: `/word2vec/crawldb/sachin-tendulkar.txt': File exists", "stdout": "", "stdout_lines": [], "warnings": []}
+2017-04-22 20:02:29,769 p=56951 u=abhigup4 |  	to retry, use: --limit @/Users/abhigup4/Documents/Abhishek/IU/i524_bigdata/gitrepo/cloudmesh.word2vec/ansible-word2vec/word2vec_execute.retry
+
+2017-04-22 20:02:29,769 p=56951 u=abhigup4 |  PLAY RECAP *********************************************************************
+2017-04-22 20:02:29,769 p=56951 u=abhigup4 |  149.165.156.40             : ok=1    changed=0    unreachable=0    failed=1   
+2017-04-22 20:07:39,086 p=58070 u=abhigup4 |  PLAY [word2vec] ****************************************************************
+2017-04-22 20:07:39,117 p=58070 u=abhigup4 |  TASK [setup] *******************************************************************
+2017-04-22 20:07:49,395 p=58070 u=abhigup4 |  fatal: [149.165.156.40]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 149.165.156.40 port 22: Operation timed out\r\n", "unreachable": true}
+2017-04-22 20:07:49,400 p=58070 u=abhigup4 |  	to retry, use: --limit @/Users/abhigup4/Documents/Abhishek/IU/i524_bigdata/gitrepo/cloudmesh.word2vec/ansible-word2vec/word2vec_setup.retry
+
+2017-04-22 20:07:49,400 p=58070 u=abhigup4 |  PLAY RECAP *********************************************************************
+2017-04-22 20:07:49,401 p=58070 u=abhigup4 |  149.165.156.40             : ok=0    changed=0    unreachable=1    failed=0   
+2017-04-22 20:08:01,509 p=58147 u=abhigup4 |  PLAY [word2vec] ****************************************************************
+2017-04-22 20:08:01,542 p=58147 u=abhigup4 |  TASK [setup] *******************************************************************
+2017-04-22 20:08:11,816 p=58147 u=abhigup4 |  fatal: [149.165.156.40]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 149.165.156.40 port 22: Operation timed out\r\n", "unreachable": true}
+2017-04-22 20:08:11,822 p=58147 u=abhigup4 |  	to retry, use: --limit @/Users/abhigup4/Documents/Abhishek/IU/i524_bigdata/gitrepo/cloudmesh.word2vec/ansible-word2vec/word2vec_setup.retry
+
+2017-04-22 20:08:11,822 p=58147 u=abhigup4 |  PLAY RECAP *********************************************************************
+2017-04-22 20:08:11,822 p=58147 u=abhigup4 |  149.165.156.40             : ok=0    changed=0    unreachable=1    failed=0   
+2017-04-22 20:09:37,574 p=58556 u=abhigup4 |  PLAY [word2vec] ****************************************************************
+2017-04-22 20:09:37,601 p=58556 u=abhigup4 |  TASK [setup] *******************************************************************
+2017-04-22 20:09:47,883 p=58556 u=abhigup4 |  fatal: [149.165.156.40]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 149.165.156.40 port 22: Operation timed out\r\n", "unreachable": true}
+2017-04-22 20:09:47,888 p=58556 u=abhigup4 |  	to retry, use: --limit @/Users/abhigup4/Documents/Abhishek/IU/i524_bigdata/gitrepo/cloudmesh.word2vec/ansible-word2vec/word2vec_setup.retry
+
+2017-04-22 20:09:47,888 p=58556 u=abhigup4 |  PLAY RECAP *********************************************************************
+2017-04-22 20:09:47,889 p=58556 u=abhigup4 |  149.165.156.40             : ok=0    changed=0    unreachable=1    failed=0   
+2017-04-22 20:10:13,766 p=58710 u=abhigup4 |  PLAY [word2vec] ****************************************************************
+2017-04-22 20:10:13,801 p=58710 u=abhigup4 |  TASK [setup] *******************************************************************
+2017-04-22 20:10:21,051 p=58710 u=abhigup4 |  ok: [149.165.156.40]
+2017-04-22 20:10:21,054 p=58710 u=abhigup4 |  TASK [crawl pages] *************************************************************
+2017-04-22 20:10:38,301 p=58710 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:10:38,304 p=58710 u=abhigup4 |  PLAY RECAP *********************************************************************
+2017-04-22 20:10:38,304 p=58710 u=abhigup4 |  149.165.156.40             : ok=2    changed=1    unreachable=0    failed=0   
+2017-04-22 20:11:51,524 p=59069 u=abhigup4 |  PLAY [word2vec] ****************************************************************
+2017-04-22 20:11:51,549 p=59069 u=abhigup4 |  TASK [setup] *******************************************************************
+2017-04-22 20:11:59,165 p=59069 u=abhigup4 |  ok: [149.165.156.40]
+2017-04-22 20:11:59,167 p=59069 u=abhigup4 |  TASK [Download spark] **********************************************************
+2017-04-22 20:12:06,615 p=59069 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:12:06,618 p=59069 u=abhigup4 |  TASK [Extract archive] *********************************************************
+2017-04-22 20:12:15,984 p=59069 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:12:15,988 p=59069 u=abhigup4 |  TASK [creat soft link] *********************************************************
+2017-04-22 20:12:18,096 p=59069 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:12:18,099 p=59069 u=abhigup4 |  PLAY RECAP *********************************************************************
+2017-04-22 20:12:18,099 p=59069 u=abhigup4 |  149.165.156.40             : ok=4    changed=3    unreachable=0    failed=0   
+2017-04-22 20:12:19,495 p=59202 u=abhigup4 |  PLAY [word2vec] ****************************************************************
+2017-04-22 20:12:19,525 p=59202 u=abhigup4 |  TASK [setup] *******************************************************************
+2017-04-22 20:12:26,182 p=59202 u=abhigup4 |  ok: [149.165.156.40]
+2017-04-22 20:12:26,184 p=59202 u=abhigup4 |  TASK [Install list of apt packages] ********************************************
+2017-04-22 20:12:28,081 p=59202 u=abhigup4 |  ok: [149.165.156.40] => (item=[u'python-dev', u'python-pip', u'git-all'])
+2017-04-22 20:12:28,083 p=59202 u=abhigup4 |  TASK [clone repo] **************************************************************
+2017-04-22 20:12:31,293 p=59202 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:12:31,296 p=59202 u=abhigup4 |  TASK [Copy word2vec code] ******************************************************
+2017-04-22 20:12:33,157 p=59202 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:12:33,159 p=59202 u=abhigup4 |  TASK [creates model folder] ****************************************************
+2017-04-22 20:12:34,872 p=59202 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:12:34,874 p=59202 u=abhigup4 |  TASK [creates crawldb folder] **************************************************
+2017-04-22 20:12:36,316 p=59202 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:12:36,319 p=59202 u=abhigup4 |  TASK [install packages] ********************************************************
+2017-04-22 20:12:38,204 p=59202 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:12:38,206 p=59202 u=abhigup4 |  TASK [Fix 'word2vec' permissions] **********************************************
+2017-04-22 20:12:39,733 p=59202 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:12:39,735 p=59202 u=abhigup4 |  TASK [crawl pages] *************************************************************
+2017-04-22 20:12:56,689 p=59202 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:12:56,691 p=59202 u=abhigup4 |  PLAY RECAP *********************************************************************
+2017-04-22 20:12:56,691 p=59202 u=abhigup4 |  149.165.156.40             : ok=9    changed=7    unreachable=0    failed=0   
+2017-04-22 20:12:57,480 p=59392 u=abhigup4 |  PLAY [word2vec] ****************************************************************
+2017-04-22 20:12:57,497 p=59392 u=abhigup4 |  TASK [setup] *******************************************************************
+2017-04-22 20:13:04,546 p=59392 u=abhigup4 |  ok: [149.165.156.40]
+2017-04-22 20:13:04,548 p=59392 u=abhigup4 |  TASK [setup hdfs folders] ******************************************************
+2017-04-22 20:13:08,937 p=59392 u=abhigup4 |  failed: [149.165.156.40] (item=/opt/hadoop/bin/hdfs dfs -rm -r -f /word2vec) => {"changed": true, "cmd": ["/opt/hadoop/bin/hdfs", "dfs", "-rm", "-r", "-f", "/word2vec"], "delta": "0:00:01.938725", "end": "2017-04-23 03:13:08.007146", "failed": true, "item": "/opt/hadoop/bin/hdfs dfs -rm -r -f /word2vec", "rc": 1, "start": "2017-04-23 03:13:06.068421", "stderr": "17/04/23 03:13:07 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.\nrm: Cannot delete /word2vec. Name node is in safe mode.", "stdout": "", "stdout_lines": [], "warnings": []}
+2017-04-22 20:13:12,628 p=59392 u=abhigup4 |  failed: [149.165.156.40] (item=/opt/hadoop/bin/hdfs dfs -mkdir /word2vec) => {"changed": true, "cmd": ["/opt/hadoop/bin/hdfs", "dfs", "-mkdir", "/word2vec"], "delta": "0:00:01.827054", "end": "2017-04-23 03:13:11.691835", "failed": true, "item": "/opt/hadoop/bin/hdfs dfs -mkdir /word2vec", "rc": 1, "start": "2017-04-23 03:13:09.864781", "stderr": "mkdir: `/word2vec': File exists", "stdout": "", "stdout_lines": [], "warnings": []}
+2017-04-22 20:13:16,200 p=59392 u=abhigup4 |  failed: [149.165.156.40] (item=/opt/hadoop/bin/hdfs dfs -mkdir /word2vec/crawldb) => {"changed": true, "cmd": ["/opt/hadoop/bin/hdfs", "dfs", "-mkdir", "/word2vec/crawldb"], "delta": "0:00:01.825332", "end": "2017-04-23 03:13:15.342447", "failed": true, "item": "/opt/hadoop/bin/hdfs dfs -mkdir /word2vec/crawldb", "rc": 1, "start": "2017-04-23 03:13:13.517115", "stderr": "mkdir: `/word2vec/crawldb': File exists", "stdout": "", "stdout_lines": [], "warnings": []}
+2017-04-22 20:13:20,093 p=59392 u=abhigup4 |  failed: [149.165.156.40] (item=/opt/hadoop/bin/hdfs dfs -put /opt/word2vec/data_process/relationstest.csv /word2vec/) => {"changed": true, "cmd": ["/opt/hadoop/bin/hdfs", "dfs", "-put", "/opt/word2vec/data_process/relationstest.csv", "/word2vec/"], "delta": "0:00:01.792044", "end": "2017-04-23 03:13:19.115780", "failed": true, "item": "/opt/hadoop/bin/hdfs dfs -put /opt/word2vec/data_process/relationstest.csv /word2vec/", "rc": 1, "start": "2017-04-23 03:13:17.323736", "stderr": "put: `/word2vec/relationstest.csv': File exists", "stdout": "", "stdout_lines": [], "warnings": []}
+2017-04-22 20:13:23,822 p=59392 u=abhigup4 |  failed: [149.165.156.40] (item=/opt/hadoop/bin/hdfs dfs -copyFromLocal /opt/word2vec/crawldb /word2vec/) => {"changed": true, "cmd": ["/opt/hadoop/bin/hdfs", "dfs", "-copyFromLocal", "/opt/word2vec/crawldb", "/word2vec/"], "delta": "0:00:01.941512", "end": "2017-04-23 03:13:22.966163", "failed": true, "item": "/opt/hadoop/bin/hdfs dfs -copyFromLocal /opt/word2vec/crawldb /word2vec/", "rc": 1, "start": "2017-04-23 03:13:21.024651", "stderr": "copyFromLocal: Cannot create file/word2vec/crawldb/crawler_all_data.txt._COPYING_. Name node is in safe mode.", "stdout": "", "stdout_lines": [], "warnings": []}
+2017-04-22 20:13:23,829 p=59392 u=abhigup4 |  	to retry, use: --limit @/Users/abhigup4/Documents/Abhishek/IU/i524_bigdata/gitrepo/cloudmesh.word2vec/ansible-word2vec/word2vec_execute.retry
+
+2017-04-22 20:13:23,829 p=59392 u=abhigup4 |  PLAY RECAP *********************************************************************
+2017-04-22 20:13:23,829 p=59392 u=abhigup4 |  149.165.156.40             : ok=1    changed=0    unreachable=0    failed=1   
+2017-04-22 20:16:09,978 p=60058 u=abhigup4 |  PLAY [word2vec] ****************************************************************
+2017-04-22 20:16:10,005 p=60058 u=abhigup4 |  TASK [setup] *******************************************************************
+2017-04-22 20:16:17,408 p=60058 u=abhigup4 |  ok: [149.165.156.40]
+2017-04-22 20:16:17,410 p=60058 u=abhigup4 |  TASK [Download spark] **********************************************************
+2017-04-22 20:16:21,793 p=60058 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:16:21,796 p=60058 u=abhigup4 |  TASK [Extract archive] *********************************************************
+2017-04-22 20:16:30,876 p=60058 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:16:30,878 p=60058 u=abhigup4 |  TASK [creat soft link] *********************************************************
+2017-04-22 20:16:32,954 p=60058 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:16:32,956 p=60058 u=abhigup4 |  PLAY RECAP *********************************************************************
+2017-04-22 20:16:32,956 p=60058 u=abhigup4 |  149.165.156.40             : ok=4    changed=3    unreachable=0    failed=0   
+2017-04-22 20:16:33,726 p=60144 u=abhigup4 |  PLAY [word2vec] ****************************************************************
+2017-04-22 20:16:33,744 p=60144 u=abhigup4 |  TASK [setup] *******************************************************************
+2017-04-22 20:16:39,476 p=60144 u=abhigup4 |  ok: [149.165.156.40]
+2017-04-22 20:16:39,479 p=60144 u=abhigup4 |  TASK [Install list of apt packages] ********************************************
+2017-04-22 20:16:41,660 p=60144 u=abhigup4 |  ok: [149.165.156.40] => (item=[u'python-dev', u'python-pip', u'git-all'])
+2017-04-22 20:16:41,663 p=60144 u=abhigup4 |  TASK [clone repo] **************************************************************
+2017-04-22 20:16:44,413 p=60144 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:16:44,415 p=60144 u=abhigup4 |  TASK [Copy word2vec code] ******************************************************
+2017-04-22 20:16:46,321 p=60144 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:16:46,323 p=60144 u=abhigup4 |  TASK [creates model folder] ****************************************************
+2017-04-22 20:16:48,314 p=60144 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:16:48,317 p=60144 u=abhigup4 |  TASK [creates crawldb folder] **************************************************
+2017-04-22 20:16:50,108 p=60144 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:16:50,110 p=60144 u=abhigup4 |  TASK [install packages] ********************************************************
+2017-04-22 20:16:52,309 p=60144 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:16:52,311 p=60144 u=abhigup4 |  TASK [Fix 'word2vec' permissions] **********************************************
+2017-04-22 20:16:53,885 p=60144 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:16:53,887 p=60144 u=abhigup4 |  TASK [crawl pages] *************************************************************
+2017-04-22 20:17:10,843 p=60144 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:17:10,845 p=60144 u=abhigup4 |  PLAY RECAP *********************************************************************
+2017-04-22 20:17:10,845 p=60144 u=abhigup4 |  149.165.156.40             : ok=9    changed=7    unreachable=0    failed=0   
+2017-04-22 20:17:11,626 p=60321 u=abhigup4 |  PLAY [word2vec] ****************************************************************
+2017-04-22 20:17:11,642 p=60321 u=abhigup4 |  TASK [setup] *******************************************************************
+2017-04-22 20:17:17,695 p=60321 u=abhigup4 |  ok: [149.165.156.40]
+2017-04-22 20:17:17,697 p=60321 u=abhigup4 |  TASK [setup hdfs folders] ******************************************************
+2017-04-22 20:17:21,551 p=60321 u=abhigup4 |  failed: [149.165.156.40] (item=/opt/hadoop/bin/hdfs dfs -rm -r -f /word2vec) => {"changed": true, "cmd": ["/opt/hadoop/bin/hdfs", "dfs", "-rm", "-r", "-f", "/word2vec"], "delta": "0:00:01.912185", "end": "2017-04-23 03:17:20.694155", "failed": true, "item": "/opt/hadoop/bin/hdfs dfs -rm -r -f /word2vec", "rc": 1, "start": "2017-04-23 03:17:18.781970", "stderr": "17/04/23 03:17:20 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.\nrm: Cannot delete /word2vec. Name node is in safe mode.", "stdout": "", "stdout_lines": [], "warnings": []}
+2017-04-22 20:17:25,353 p=60321 u=abhigup4 |  failed: [149.165.156.40] (item=/opt/hadoop/bin/hdfs dfs -mkdir /word2vec) => {"changed": true, "cmd": ["/opt/hadoop/bin/hdfs", "dfs", "-mkdir", "/word2vec"], "delta": "0:00:01.843275", "end": "2017-04-23 03:17:24.587570", "failed": true, "item": "/opt/hadoop/bin/hdfs dfs -mkdir /word2vec", "rc": 1, "start": "2017-04-23 03:17:22.744295", "stderr": "mkdir: `/word2vec': File exists", "stdout": "", "stdout_lines": [], "warnings": []}
+2017-04-22 20:17:29,005 p=60321 u=abhigup4 |  failed: [149.165.156.40] (item=/opt/hadoop/bin/hdfs dfs -mkdir /word2vec/crawldb) => {"changed": true, "cmd": ["/opt/hadoop/bin/hdfs", "dfs", "-mkdir", "/word2vec/crawldb"], "delta": "0:00:02.006992", "end": "2017-04-23 03:17:28.229456", "failed": true, "item": "/opt/hadoop/bin/hdfs dfs -mkdir /word2vec/crawldb", "rc": 1, "start": "2017-04-23 03:17:26.222464", "stderr": "mkdir: `/word2vec/crawldb': File exists", "stdout": "", "stdout_lines": [], "warnings": []}
+2017-04-22 20:17:32,556 p=60321 u=abhigup4 |  failed: [149.165.156.40] (item=/opt/hadoop/bin/hdfs dfs -put /opt/word2vec/data_process/relationstest.csv /word2vec/) => {"changed": true, "cmd": ["/opt/hadoop/bin/hdfs", "dfs", "-put", "/opt/word2vec/data_process/relationstest.csv", "/word2vec/"], "delta": "0:00:01.871930", "end": "2017-04-23 03:17:31.789068", "failed": true, "item": "/opt/hadoop/bin/hdfs dfs -put /opt/word2vec/data_process/relationstest.csv /word2vec/", "rc": 1, "start": "2017-04-23 03:17:29.917138", "stderr": "put: `/word2vec/relationstest.csv': File exists", "stdout": "", "stdout_lines": [], "warnings": []}
+2017-04-22 20:17:36,296 p=60321 u=abhigup4 |  failed: [149.165.156.40] (item=/opt/hadoop/bin/hdfs dfs -copyFromLocal /opt/word2vec/crawldb /word2vec/) => {"changed": true, "cmd": ["/opt/hadoop/bin/hdfs", "dfs", "-copyFromLocal", "/opt/word2vec/crawldb", "/word2vec/"], "delta": "0:00:01.941893", "end": "2017-04-23 03:17:35.404916", "failed": true, "item": "/opt/hadoop/bin/hdfs dfs -copyFromLocal /opt/word2vec/crawldb /word2vec/", "rc": 1, "start": "2017-04-23 03:17:33.463023", "stderr": "copyFromLocal: Cannot create file/word2vec/crawldb/crawler_all_data.txt._COPYING_. Name node is in safe mode.", "stdout": "", "stdout_lines": [], "warnings": []}
+2017-04-22 20:17:36,302 p=60321 u=abhigup4 |  	to retry, use: --limit @/Users/abhigup4/Documents/Abhishek/IU/i524_bigdata/gitrepo/cloudmesh.word2vec/ansible-word2vec/word2vec_execute.retry
+
+2017-04-22 20:17:36,303 p=60321 u=abhigup4 |  PLAY RECAP *********************************************************************
+2017-04-22 20:17:36,303 p=60321 u=abhigup4 |  149.165.156.40             : ok=1    changed=0    unreachable=0    failed=1   
+2017-04-22 20:18:59,050 p=60696 u=abhigup4 |  PLAY [word2vec] ****************************************************************
+2017-04-22 20:18:59,078 p=60696 u=abhigup4 |  TASK [setup] *******************************************************************
+2017-04-22 20:19:05,906 p=60696 u=abhigup4 |  ok: [149.165.156.40]
+2017-04-22 20:19:05,908 p=60696 u=abhigup4 |  TASK [Download spark] **********************************************************
+2017-04-22 20:19:11,671 p=60696 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:19:11,674 p=60696 u=abhigup4 |  TASK [Extract archive] *********************************************************
+2017-04-22 20:19:20,337 p=60696 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:19:20,339 p=60696 u=abhigup4 |  TASK [creat soft link] *********************************************************
+2017-04-22 20:19:22,322 p=60696 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:19:22,323 p=60696 u=abhigup4 |  PLAY RECAP *********************************************************************
+2017-04-22 20:19:22,324 p=60696 u=abhigup4 |  149.165.156.40             : ok=4    changed=3    unreachable=0    failed=0   
+2017-04-22 20:19:23,026 p=60825 u=abhigup4 |  PLAY [word2vec] ****************************************************************
+2017-04-22 20:19:23,041 p=60825 u=abhigup4 |  TASK [setup] *******************************************************************
+2017-04-22 20:19:29,399 p=60825 u=abhigup4 |  ok: [149.165.156.40]
+2017-04-22 20:19:29,401 p=60825 u=abhigup4 |  TASK [Install list of apt packages] ********************************************
+2017-04-22 20:19:31,949 p=60825 u=abhigup4 |  ok: [149.165.156.40] => (item=[u'python-dev', u'python-pip', u'git-all'])
+2017-04-22 20:19:31,951 p=60825 u=abhigup4 |  TASK [clone repo] **************************************************************
+2017-04-22 20:19:35,020 p=60825 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:19:35,022 p=60825 u=abhigup4 |  TASK [Copy word2vec code] ******************************************************
+2017-04-22 20:19:36,881 p=60825 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:19:36,883 p=60825 u=abhigup4 |  TASK [creates model folder] ****************************************************
+2017-04-22 20:19:38,722 p=60825 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:19:38,724 p=60825 u=abhigup4 |  TASK [creates crawldb folder] **************************************************
+2017-04-22 20:19:40,265 p=60825 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:19:40,267 p=60825 u=abhigup4 |  TASK [install packages] ********************************************************
+2017-04-22 20:19:42,290 p=60825 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:19:42,292 p=60825 u=abhigup4 |  TASK [Fix 'word2vec' permissions] **********************************************
+2017-04-22 20:19:43,804 p=60825 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:19:43,805 p=60825 u=abhigup4 |  TASK [crawl pages] *************************************************************
+2017-04-22 20:20:00,453 p=60825 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:20:00,455 p=60825 u=abhigup4 |  PLAY RECAP *********************************************************************
+2017-04-22 20:20:00,455 p=60825 u=abhigup4 |  149.165.156.40             : ok=9    changed=7    unreachable=0    failed=0   
+2017-04-22 20:20:01,173 p=61059 u=abhigup4 |  PLAY [word2vec] ****************************************************************
+2017-04-22 20:20:01,189 p=61059 u=abhigup4 |  TASK [setup] *******************************************************************
+2017-04-22 20:20:07,646 p=61059 u=abhigup4 |  ok: [149.165.156.40]
+2017-04-22 20:20:07,648 p=61059 u=abhigup4 |  TASK [setup hdfs folders] ******************************************************
+2017-04-22 20:20:11,651 p=61059 u=abhigup4 |  changed: [149.165.156.40] => (item=/opt/hadoop/bin/hdfs dfs -rm -r -f /word2vec)
+2017-04-22 20:20:15,325 p=61059 u=abhigup4 |  changed: [149.165.156.40] => (item=/opt/hadoop/bin/hdfs dfs -mkdir /word2vec)
+2017-04-22 20:20:18,906 p=61059 u=abhigup4 |  changed: [149.165.156.40] => (item=/opt/hadoop/bin/hdfs dfs -mkdir /word2vec/crawldb)
+2017-04-22 20:20:22,809 p=61059 u=abhigup4 |  changed: [149.165.156.40] => (item=/opt/hadoop/bin/hdfs dfs -put /opt/word2vec/data_process/relationstest.csv /word2vec/)
+2017-04-22 20:20:26,871 p=61059 u=abhigup4 |  changed: [149.165.156.40] => (item=/opt/hadoop/bin/hdfs dfs -copyFromLocal /opt/word2vec/crawldb /word2vec/)
+2017-04-22 20:20:26,875 p=61059 u=abhigup4 |  TASK [debug] *******************************************************************
+2017-04-22 20:20:26,924 p=61059 u=abhigup4 |  ok: [149.165.156.40] => {
+    "ansible_default_ipv4.address": "192.168.1.19"
+}
+2017-04-22 20:20:26,926 p=61059 u=abhigup4 |  TASK [run spark job on training data set] **************************************
+2017-04-22 20:21:06,077 p=61059 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:21:06,081 p=61059 u=abhigup4 |  TASK [run spark job to create model] *******************************************
+2017-04-22 20:21:31,619 p=61059 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:21:31,621 p=61059 u=abhigup4 |  TASK [run spark job to find synonyms] ******************************************
+2017-04-22 20:22:18,414 p=61059 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:22:18,422 p=61059 u=abhigup4 |  TASK [Fetch result csv files from remote to local] *****************************
+2017-04-22 20:22:20,816 p=61059 u=abhigup4 |  changed: [149.165.156.40] => (item=/opt/word2vec/data_process/*.csv)
+2017-04-22 20:22:20,819 p=61059 u=abhigup4 |  PLAY RECAP *********************************************************************
+2017-04-22 20:22:20,819 p=61059 u=abhigup4 |  149.165.156.40             : ok=7    changed=5    unreachable=0    failed=0   
+2017-04-22 20:24:51,236 p=62043 u=abhigup4 |  PLAY [word2vec] ****************************************************************
+2017-04-22 20:24:51,267 p=62043 u=abhigup4 |  TASK [setup] *******************************************************************
+2017-04-22 20:24:59,136 p=62043 u=abhigup4 |  ok: [149.165.156.40]
+2017-04-22 20:24:59,138 p=62043 u=abhigup4 |  TASK [Download spark] **********************************************************
+2017-04-22 20:25:03,318 p=62043 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:25:03,321 p=62043 u=abhigup4 |  TASK [Extract archive] *********************************************************
+2017-04-22 20:25:12,177 p=62043 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:25:12,179 p=62043 u=abhigup4 |  TASK [creat soft link] *********************************************************
+2017-04-22 20:25:14,036 p=62043 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:25:14,038 p=62043 u=abhigup4 |  PLAY RECAP *********************************************************************
+2017-04-22 20:25:14,038 p=62043 u=abhigup4 |  149.165.156.40             : ok=4    changed=3    unreachable=0    failed=0   
+2017-04-22 20:25:14,801 p=62158 u=abhigup4 |  PLAY [word2vec] ****************************************************************
+2017-04-22 20:25:14,817 p=62158 u=abhigup4 |  TASK [setup] *******************************************************************
+2017-04-22 20:25:20,573 p=62158 u=abhigup4 |  ok: [149.165.156.40]
+2017-04-22 20:25:20,575 p=62158 u=abhigup4 |  TASK [Install list of apt packages] ********************************************
+2017-04-22 20:25:23,179 p=62158 u=abhigup4 |  ok: [149.165.156.40] => (item=[u'python-dev', u'python-pip', u'git-all'])
+2017-04-22 20:25:23,181 p=62158 u=abhigup4 |  TASK [clone repo] **************************************************************
+2017-04-22 20:25:26,454 p=62158 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:25:26,456 p=62158 u=abhigup4 |  TASK [Copy word2vec code] ******************************************************
+2017-04-22 20:25:28,275 p=62158 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:25:28,277 p=62158 u=abhigup4 |  TASK [creates model folder] ****************************************************
+2017-04-22 20:25:29,960 p=62158 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:25:29,962 p=62158 u=abhigup4 |  TASK [creates crawldb folder] **************************************************
+2017-04-22 20:25:31,892 p=62158 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:25:31,894 p=62158 u=abhigup4 |  TASK [install packages] ********************************************************
+2017-04-22 20:25:33,735 p=62158 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:25:33,737 p=62158 u=abhigup4 |  TASK [Fix 'word2vec' permissions] **********************************************
+2017-04-22 20:25:35,364 p=62158 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:25:35,366 p=62158 u=abhigup4 |  TASK [crawl pages] *************************************************************
+2017-04-22 20:37:44,449 p=62158 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:37:44,457 p=62158 u=abhigup4 |  PLAY RECAP *********************************************************************
+2017-04-22 20:37:44,459 p=62158 u=abhigup4 |  149.165.156.40             : ok=9    changed=7    unreachable=0    failed=0   
+2017-04-22 20:37:45,804 p=64800 u=abhigup4 |  PLAY [word2vec] ****************************************************************
+2017-04-22 20:37:45,833 p=64800 u=abhigup4 |  TASK [setup] *******************************************************************
+2017-04-22 20:37:52,387 p=64800 u=abhigup4 |  ok: [149.165.156.40]
+2017-04-22 20:37:52,389 p=64800 u=abhigup4 |  TASK [setup hdfs folders] ******************************************************
+2017-04-22 20:37:56,180 p=64800 u=abhigup4 |  changed: [149.165.156.40] => (item=/opt/hadoop/bin/hdfs dfs -rm -r -f /word2vec)
+2017-04-22 20:37:59,719 p=64800 u=abhigup4 |  changed: [149.165.156.40] => (item=/opt/hadoop/bin/hdfs dfs -mkdir /word2vec)
+2017-04-22 20:38:03,300 p=64800 u=abhigup4 |  changed: [149.165.156.40] => (item=/opt/hadoop/bin/hdfs dfs -mkdir /word2vec/crawldb)
+2017-04-22 20:38:06,978 p=64800 u=abhigup4 |  changed: [149.165.156.40] => (item=/opt/hadoop/bin/hdfs dfs -put /opt/word2vec/data_process/relationstest.csv /word2vec/)
+2017-04-22 20:38:11,108 p=64800 u=abhigup4 |  changed: [149.165.156.40] => (item=/opt/hadoop/bin/hdfs dfs -copyFromLocal /opt/word2vec/crawldb /word2vec/)
+2017-04-22 20:38:11,112 p=64800 u=abhigup4 |  TASK [debug] *******************************************************************
+2017-04-22 20:38:11,162 p=64800 u=abhigup4 |  ok: [149.165.156.40] => {
+    "ansible_default_ipv4.address": "192.168.1.19"
+}
+2017-04-22 20:38:11,164 p=64800 u=abhigup4 |  TASK [run spark job on training data set] **************************************
+2017-04-22 20:39:11,936 p=64800 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:39:11,939 p=64800 u=abhigup4 |  TASK [run spark job to create model] *******************************************
+2017-04-22 20:39:39,784 p=64800 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:39:39,786 p=64800 u=abhigup4 |  TASK [run spark job to find synonyms] ******************************************
+2017-04-22 20:40:43,309 p=64800 u=abhigup4 |  changed: [149.165.156.40]
+2017-04-22 20:40:43,312 p=64800 u=abhigup4 |  TASK [Fetch result csv files from remote to local] *****************************
+2017-04-22 20:40:45,913 p=64800 u=abhigup4 |  changed: [149.165.156.40] => (item=/opt/word2vec/data_process/*.csv)
+2017-04-22 20:40:45,916 p=64800 u=abhigup4 |  PLAY RECAP *********************************************************************
+2017-04-22 20:40:45,916 p=64800 u=abhigup4 |  149.165.156.40             : ok=7    changed=5    unreachable=0    failed=0   
