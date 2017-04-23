@@ -1,19 +1,19 @@
 ### Cluster Details
 
 | Attribute | Details | Comments | 
-| --- | --- |
-|cluster-name|cluster-005|
-|count|2|
-|image|CC-Ubuntu14.04|
-|key|abhigupt|
-|flavor|m1.medium|
-|secgroup|default|
-|assignFloatingIP|True|
-|cloud|chameleon|
-|CrawlDB size|7.4MB|
+| --- | --- | --- | 
+|cluster-name|cluster-005| |
+|count|2| |
+|image|CC-Ubuntu14.04| |
+|key|abhigupt| |
+|flavor|m1.medium| |
+|secgroup|default| |
+|assignFloatingIP|True| |
+|cloud|chameleon| |
+|CrawlDB size|7.4MB| |
 |CrawlDB file count|522| All files are merged into one before copying on HDFS |
-|Spark Executor Memory|1GB|
-|Spark Driver Memory|2GB|
+|Spark Executor Memory|1GB| |
+|Spark Driver Memory|2GB| |
 
 
 
