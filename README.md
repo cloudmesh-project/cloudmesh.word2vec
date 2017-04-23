@@ -46,6 +46,13 @@ run script will:
 
 [multinode node Jetstream](testresults/jetstream_2_nodes/README.md)
 
+### Cleanup
+To cleanup installation from cluster
+```sh
+cd ansible-word2vec
+ansible-playbook word2vec_cleanup.yaml
+```
+
 ## Appendix:
 
 ### Manual steps for running the crawler and spark job

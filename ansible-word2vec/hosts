@@ -1,2 +1,2 @@
 [word2vec]
-149.165.156.40 ansible_ssh_user=ubuntu
+129.114.33.230 ansible_ssh_user=cc

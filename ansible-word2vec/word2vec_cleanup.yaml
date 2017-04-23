@@ -1,0 +1,17 @@
+---
+- hosts: word2vec
+  become: yes
+  tasks:
+    - name: cleanup files
+      command: "{{ item }} chdir=/opt"
+      with_items:
+      - unlink spark
+      - rm -rf spark-2.1.0-bin-hadoop2.6*
+      - ln -s /opt/spark-1.6.0-bin-hadoop2.6 spark
+      - rm -rf /opt/word2vec
+      - rm -rf /tmp/word2vec
+      - rm -rf /tmp/code
+      become: yes
+      become_method: sudo
+      tags:
+        - clean-files

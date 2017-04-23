@@ -11,7 +11,7 @@
 |assignFloatingIP|True|
 |cloud|iujetstream|
 |CrawlDB size|1.4MB|
-|CrawlDB file count|147|
+|CrawlDB file count|150|
 
 ### Seedlist configuration
 
