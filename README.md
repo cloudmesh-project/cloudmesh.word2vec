@@ -38,15 +38,15 @@ run script will:
 - run the crawler for collecting the training set
 - submit the job on spark
 
-[Execution log](testresults/chameleon_2_node/executionlog.txt)
+[Execution log](benchmark/chameleon_2_node/executionlog.txt)
 
 ### Test results
 
-[single node](testresults/single_node/README.md)
+[single node](benchmark/single_node/README.md)
 
-[multinode node Chameleon](testresults/chameleon_2_node/README.md)
+[multinode node Chameleon](benchmark/chameleon_2_node/README.md)
 
-[multinode node Jetstream](testresults/jetstream_2_nodes/README.md)
+[multinode node Jetstream](benchmark/jetstream_2_nodes/README.md)
 
 ### Cleanup
 To cleanup installation from cluster
