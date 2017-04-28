@@ -47,5 +47,6 @@ suresh raina and priyanka
 anil kumble chethana
 
 
-
+### Enabled Dynamic Allocation in Spark ###
+spark.dynamicAllocation.enabled
 
