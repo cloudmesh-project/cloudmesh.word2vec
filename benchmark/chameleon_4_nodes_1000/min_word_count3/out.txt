@@ -1,0 +1,1255 @@
+17/04/28 21:30:15 INFO spark.SparkContext: Running Spark version 2.1.0
+17/04/28 21:30:15 WARN spark.SparkContext: Support for Java 7 is deprecated as of Spark 2.0.0
+17/04/28 21:30:16 INFO spark.SecurityManager: Changing view acls to: hadoop
+17/04/28 21:30:16 INFO spark.SecurityManager: Changing modify acls to: hadoop
+17/04/28 21:30:16 INFO spark.SecurityManager: Changing view acls groups to: 
+17/04/28 21:30:16 INFO spark.SecurityManager: Changing modify acls groups to: 
+17/04/28 21:30:16 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(hadoop); groups with view permissions: Set(); users  with modify permissions: Set(hadoop); groups with modify permissions: Set()
+17/04/28 21:30:17 INFO util.Utils: Successfully started service 'sparkDriver' on port 59317.
+17/04/28 21:30:17 INFO spark.SparkEnv: Registering MapOutputTracker
+17/04/28 21:30:17 INFO spark.SparkEnv: Registering BlockManagerMaster
+17/04/28 21:30:17 INFO storage.BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+17/04/28 21:30:17 INFO storage.BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+17/04/28 21:30:17 INFO storage.DiskBlockManager: Created local directory at /tmp/blockmgr-e05ebccc-54d7-44f8-88db-a31a3ab40e2b
+17/04/28 21:30:17 INFO memory.MemoryStore: MemoryStore started with capacity 366.3 MB
+17/04/28 21:30:17 INFO spark.SparkEnv: Registering OutputCommitCoordinator
+17/04/28 21:30:17 INFO util.log: Logging initialized @4127ms
+17/04/28 21:30:17 INFO server.Server: jetty-9.2.z-SNAPSHOT
+17/04/28 21:30:17 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@64b842ee{/jobs,null,AVAILABLE}
+17/04/28 21:30:17 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@7d324aea{/jobs/json,null,AVAILABLE}
+17/04/28 21:30:17 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@70d488dc{/jobs/job,null,AVAILABLE}
+17/04/28 21:30:17 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@11655d63{/jobs/job/json,null,AVAILABLE}
+17/04/28 21:30:17 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@15d61781{/stages,null,AVAILABLE}
+17/04/28 21:30:17 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1aa1215a{/stages/json,null,AVAILABLE}
+17/04/28 21:30:17 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@4894a95e{/stages/stage,null,AVAILABLE}
+17/04/28 21:30:17 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@17fb7f8c{/stages/stage/json,null,AVAILABLE}
+17/04/28 21:30:17 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@72cca1{/stages/pool,null,AVAILABLE}
+17/04/28 21:30:17 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@70d85e41{/stages/pool/json,null,AVAILABLE}
+17/04/28 21:30:17 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@d143748{/storage,null,AVAILABLE}
+17/04/28 21:30:17 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2a395ead{/storage/json,null,AVAILABLE}
+17/04/28 21:30:17 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1c76c583{/storage/rdd,null,AVAILABLE}
+17/04/28 21:30:17 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@39a12a0e{/storage/rdd/json,null,AVAILABLE}
+17/04/28 21:30:17 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3d01ab1{/environment,null,AVAILABLE}
+17/04/28 21:30:17 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@53885c6b{/environment/json,null,AVAILABLE}
+17/04/28 21:30:17 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1d6b9fa5{/executors,null,AVAILABLE}
+17/04/28 21:30:17 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@4be18ba{/executors/json,null,AVAILABLE}
+17/04/28 21:30:17 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5c495dc4{/executors/threadDump,null,AVAILABLE}
+17/04/28 21:30:17 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@54ab1e31{/executors/threadDump/json,null,AVAILABLE}
+17/04/28 21:30:17 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2e4b4e64{/static,null,AVAILABLE}
+17/04/28 21:30:17 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@52079efa{/,null,AVAILABLE}
+17/04/28 21:30:17 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@72565928{/api,null,AVAILABLE}
+17/04/28 21:30:17 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2f78bbd{/jobs/job/kill,null,AVAILABLE}
+17/04/28 21:30:17 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@49f726d0{/stages/stage/kill,null,AVAILABLE}
+17/04/28 21:30:17 INFO server.ServerConnector: Started ServerConnector@5a0a3068{HTTP/1.1}{0.0.0.0:4040}
+17/04/28 21:30:17 INFO server.Server: Started @4349ms
+17/04/28 21:30:17 INFO util.Utils: Successfully started service 'SparkUI' on port 4040.
+17/04/28 21:30:17 INFO ui.SparkUI: Bound SparkUI to 0.0.0.0, and started at http://192.168.0.243:4040
+17/04/28 21:30:18 INFO client.RMProxy: Connecting to ResourceManager at stack-0060/192.168.0.243:8032
+17/04/28 21:30:19 INFO yarn.Client: Requesting a new application from cluster with 1 NodeManagers
+17/04/28 21:30:19 INFO yarn.Client: Verifying our application has not requested more than the maximum memory capability of the cluster (8192 MB per container)
+17/04/28 21:30:19 INFO yarn.Client: Will allocate AM container, with 896 MB memory including 384 MB overhead
+17/04/28 21:30:19 INFO yarn.Client: Setting up container launch context for our AM
+17/04/28 21:30:19 INFO yarn.Client: Setting up the launch environment for our AM container
+17/04/28 21:30:19 INFO yarn.Client: Preparing resources for our AM container
+17/04/28 21:30:20 WARN yarn.Client: Neither spark.yarn.jars nor spark.yarn.archive is set, falling back to uploading libraries under SPARK_HOME.
+17/04/28 21:30:22 INFO yarn.Client: Uploading resource file:/tmp/spark-8c607d9c-3137-4588-8de2-ca8d4c8a292e/__spark_libs__6911697876713107400.zip -> hdfs://stack-0060/user/hadoop/.sparkStaging/application_1493187723643_0021/__spark_libs__6911697876713107400.zip
+17/04/28 21:30:23 INFO yarn.Client: Uploading resource file:/opt/spark/python/lib/pyspark.zip -> hdfs://stack-0060/user/hadoop/.sparkStaging/application_1493187723643_0021/pyspark.zip
+17/04/28 21:30:23 INFO yarn.Client: Uploading resource file:/opt/spark/python/lib/py4j-0.10.4-src.zip -> hdfs://stack-0060/user/hadoop/.sparkStaging/application_1493187723643_0021/py4j-0.10.4-src.zip
+17/04/28 21:30:23 INFO yarn.Client: Uploading resource file:/tmp/spark-8c607d9c-3137-4588-8de2-ca8d4c8a292e/__spark_conf__8233497729606387427.zip -> hdfs://stack-0060/user/hadoop/.sparkStaging/application_1493187723643_0021/__spark_conf__.zip
+17/04/28 21:30:23 INFO spark.SecurityManager: Changing view acls to: hadoop
+17/04/28 21:30:23 INFO spark.SecurityManager: Changing modify acls to: hadoop
+17/04/28 21:30:23 INFO spark.SecurityManager: Changing view acls groups to: 
+17/04/28 21:30:23 INFO spark.SecurityManager: Changing modify acls groups to: 
+17/04/28 21:30:23 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(hadoop); groups with view permissions: Set(); users  with modify permissions: Set(hadoop); groups with modify permissions: Set()
+17/04/28 21:30:23 INFO yarn.Client: Submitting application application_1493187723643_0021 to ResourceManager
+17/04/28 21:30:23 INFO impl.YarnClientImpl: Submitted application application_1493187723643_0021
+17/04/28 21:30:23 INFO cluster.SchedulerExtensionServices: Starting Yarn extension services with app application_1493187723643_0021 and attemptId None
+17/04/28 21:30:24 INFO yarn.Client: Application report for application_1493187723643_0021 (state: ACCEPTED)
+17/04/28 21:30:24 INFO yarn.Client: 
+	 client token: N/A
+	 diagnostics: N/A
+	 ApplicationMaster host: N/A
+	 ApplicationMaster RPC port: -1
+	 queue: default
+	 start time: 1493415023951
+	 final status: UNDEFINED
+	 tracking URL: http://stack-0060:8088/proxy/application_1493187723643_0021/
+	 user: hadoop
+17/04/28 21:30:25 INFO yarn.Client: Application report for application_1493187723643_0021 (state: ACCEPTED)
+17/04/28 21:30:26 INFO yarn.Client: Application report for application_1493187723643_0021 (state: ACCEPTED)
+17/04/28 21:30:27 INFO yarn.Client: Application report for application_1493187723643_0021 (state: ACCEPTED)
+17/04/28 21:30:28 INFO cluster.YarnSchedulerBackend$YarnSchedulerEndpoint: ApplicationMaster registered as NettyRpcEndpointRef(null)
+17/04/28 21:30:28 INFO cluster.YarnClientSchedulerBackend: Add WebUI Filter. org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter, Map(PROXY_HOSTS -> stack-0060, PROXY_URI_BASES -> http://stack-0060:8088/proxy/application_1493187723643_0021), /proxy/application_1493187723643_0021
+17/04/28 21:30:28 INFO ui.JettyUtils: Adding filter: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+17/04/28 21:30:29 INFO yarn.Client: Application report for application_1493187723643_0021 (state: ACCEPTED)
+17/04/28 21:30:30 INFO yarn.Client: Application report for application_1493187723643_0021 (state: RUNNING)
+17/04/28 21:30:30 INFO yarn.Client: 
+	 client token: N/A
+	 diagnostics: N/A
+	 ApplicationMaster host: 192.168.0.243
+	 ApplicationMaster RPC port: 0
+	 queue: default
+	 start time: 1493415023951
+	 final status: UNDEFINED
+	 tracking URL: http://stack-0060:8088/proxy/application_1493187723643_0021/
+	 user: hadoop
+17/04/28 21:30:30 INFO cluster.YarnClientSchedulerBackend: Application application_1493187723643_0021 has started running.
+17/04/28 21:30:30 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 49392.
+17/04/28 21:30:30 INFO netty.NettyBlockTransferService: Server created on 192.168.0.243:49392
+17/04/28 21:30:30 INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+17/04/28 21:30:30 INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 192.168.0.243, 49392, None)
+17/04/28 21:30:30 INFO storage.BlockManagerMasterEndpoint: Registering block manager 192.168.0.243:49392 with 366.3 MB RAM, BlockManagerId(driver, 192.168.0.243, 49392, None)
+17/04/28 21:30:30 INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 192.168.0.243, 49392, None)
+17/04/28 21:30:30 INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(driver, 192.168.0.243, 49392, None)
+17/04/28 21:30:30 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5e9601b5{/metrics/json,null,AVAILABLE}
+17/04/28 21:30:33 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(null) (192.168.0.243:46352) with ID 1
+17/04/28 21:30:33 INFO storage.BlockManagerMasterEndpoint: Registering block manager stack-0060.local:38105 with 366.3 MB RAM, BlockManagerId(1, stack-0060.local, 38105, None)
+17/04/28 21:30:35 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(null) (192.168.0.243:46354) with ID 2
+17/04/28 21:30:35 INFO cluster.YarnClientSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.8
+17/04/28 21:30:35 INFO storage.BlockManagerMasterEndpoint: Registering block manager stack-0060.local:42249 with 366.3 MB RAM, BlockManagerId(2, stack-0060.local, 42249, None)
+17/04/28 21:30:35 INFO internal.SharedState: Warehouse path is 'file:/opt/word2vec/data_process/spark-warehouse/'.
+17/04/28 21:30:35 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@4c658160{/SQL,null,AVAILABLE}
+17/04/28 21:30:35 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1b2b186e{/SQL/json,null,AVAILABLE}
+17/04/28 21:30:35 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@de07c49{/SQL/execution,null,AVAILABLE}
+17/04/28 21:30:35 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6356d3f5{/SQL/execution/json,null,AVAILABLE}
+17/04/28 21:30:35 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@614a1ee7{/static/sql,null,AVAILABLE}
+17/04/28 21:30:35 INFO memory.MemoryStore: Block broadcast_0 stored as values in memory (estimated size 234.0 KB, free 366.1 MB)
+17/04/28 21:30:35 INFO memory.MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 20.5 KB, free 366.1 MB)
+17/04/28 21:30:35 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on 192.168.0.243:49392 (size: 20.5 KB, free: 366.3 MB)
+17/04/28 21:30:35 INFO spark.SparkContext: Created broadcast 0 from textFile at NativeMethodAccessorImpl.java:0
+17/04/28 21:30:35 INFO mapred.FileInputFormat: Total input paths to process : 1
+17/04/28 21:30:35 INFO spark.SparkContext: Starting job: runJob at PythonRDD.scala:441
+17/04/28 21:30:35 INFO scheduler.DAGScheduler: Got job 0 (runJob at PythonRDD.scala:441) with 1 output partitions
+17/04/28 21:30:35 INFO scheduler.DAGScheduler: Final stage: ResultStage 0 (runJob at PythonRDD.scala:441)
+17/04/28 21:30:35 INFO scheduler.DAGScheduler: Parents of final stage: List()
+17/04/28 21:30:35 INFO scheduler.DAGScheduler: Missing parents: List()
+17/04/28 21:30:35 INFO scheduler.DAGScheduler: Submitting ResultStage 0 (PythonRDD[3] at RDD at PythonRDD.scala:48), which has no missing parents
+17/04/28 21:30:36 INFO memory.MemoryStore: Block broadcast_1 stored as values in memory (estimated size 7.0 KB, free 366.0 MB)
+17/04/28 21:30:36 INFO memory.MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 4.2 KB, free 366.0 MB)
+17/04/28 21:30:36 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on 192.168.0.243:49392 (size: 4.2 KB, free: 366.3 MB)
+17/04/28 21:30:36 INFO spark.SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:996
+17/04/28 21:30:36 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (PythonRDD[3] at RDD at PythonRDD.scala:48)
+17/04/28 21:30:36 INFO cluster.YarnScheduler: Adding task set 0.0 with 1 tasks
+17/04/28 21:30:36 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, stack-0060.local, executor 2, partition 0, NODE_LOCAL, 5938 bytes)
+17/04/28 21:30:36 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on stack-0060.local:42249 (size: 4.2 KB, free: 366.3 MB)
+17/04/28 21:30:36 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on stack-0060.local:42249 (size: 20.5 KB, free: 366.3 MB)
+17/04/28 21:30:38 INFO storage.BlockManagerInfo: Added rdd_2_0 in memory on stack-0060.local:42249 (size: 3.7 MB, free: 362.5 MB)
+17/04/28 21:30:38 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 2486 ms on stack-0060.local (executor 2) (1/1)
+17/04/28 21:30:38 INFO cluster.YarnScheduler: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+17/04/28 21:30:38 INFO scheduler.DAGScheduler: ResultStage 0 (runJob at PythonRDD.scala:441) finished in 2.505 s
+17/04/28 21:30:38 INFO scheduler.DAGScheduler: Job 0 finished: runJob at PythonRDD.scala:441, took 2.628563 s
+17/04/28 21:30:41 INFO storage.BlockManagerInfo: Removed broadcast_1_piece0 on stack-0060.local:42249 in memory (size: 4.2 KB, free: 362.5 MB)
+17/04/28 21:30:41 INFO storage.BlockManagerInfo: Removed broadcast_1_piece0 on 192.168.0.243:49392 in memory (size: 4.2 KB, free: 366.3 MB)
+17/04/28 21:30:42 INFO codegen.CodeGenerator: Code generated in 340.839944 ms
+=========tokDF============
+17/04/28 21:30:42 INFO spark.SparkContext: Starting job: showString at NativeMethodAccessorImpl.java:0
+17/04/28 21:30:42 INFO scheduler.DAGScheduler: Got job 1 (showString at NativeMethodAccessorImpl.java:0) with 1 output partitions
+17/04/28 21:30:42 INFO scheduler.DAGScheduler: Final stage: ResultStage 1 (showString at NativeMethodAccessorImpl.java:0)
+17/04/28 21:30:42 INFO scheduler.DAGScheduler: Parents of final stage: List()
+17/04/28 21:30:42 INFO scheduler.DAGScheduler: Missing parents: List()
+17/04/28 21:30:42 INFO scheduler.DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[14] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+17/04/28 21:30:42 INFO memory.MemoryStore: Block broadcast_2 stored as values in memory (estimated size 23.9 KB, free 366.0 MB)
+17/04/28 21:30:42 INFO memory.MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 11.9 KB, free 366.0 MB)
+17/04/28 21:30:42 INFO storage.BlockManagerInfo: Added broadcast_2_piece0 in memory on 192.168.0.243:49392 (size: 11.9 KB, free: 366.3 MB)
+17/04/28 21:30:42 INFO spark.SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:996
+17/04/28 21:30:42 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[14] at showString at NativeMethodAccessorImpl.java:0)
+17/04/28 21:30:42 INFO cluster.YarnScheduler: Adding task set 1.0 with 1 tasks
+17/04/28 21:30:42 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1, stack-0060.local, executor 2, partition 0, PROCESS_LOCAL, 5967 bytes)
+17/04/28 21:30:42 INFO storage.BlockManagerInfo: Added broadcast_2_piece0 in memory on stack-0060.local:42249 (size: 11.9 KB, free: 362.5 MB)
+17/04/28 21:30:45 INFO storage.BlockManagerInfo: Added rdd_9_0 in memory on stack-0060.local:42249 (size: 3.6 MB, free: 358.9 MB)
+17/04/28 21:30:46 INFO storage.BlockManagerInfo: Added rdd_12_0 in memory on stack-0060.local:42249 (size: 13.9 MB, free: 345.0 MB)
+17/04/28 21:30:46 INFO scheduler.DAGScheduler: ResultStage 1 (showString at NativeMethodAccessorImpl.java:0) finished in 4.522 s
+17/04/28 21:30:46 INFO scheduler.DAGScheduler: Job 1 finished: showString at NativeMethodAccessorImpl.java:0, took 4.573374 s
+17/04/28 21:30:46 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 4525 ms on stack-0060.local (executor 2) (1/1)
+17/04/28 21:30:46 INFO cluster.YarnScheduler: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+17/04/28 21:30:47 INFO codegen.CodeGenerator: Code generated in 39.33894 ms
++--------------------+--------------------+
+|                text|               words|
++--------------------+--------------------+
+|Andre Dwayne Russ...|[andre, dwayne, r...|
+|                    |                  []|
+|                    |                  []|
+|   Style of Batti...|[, , , style, of,...|
+|Russell has a uni...|[russell, has, a,...|
+|                    |                  []|
+|                    |                  []|
+|   Domestic caree...|[, , , domestic, ...|
+|In the season 201...|[in, the, season,...|
+|                    |                  []|
+|                    |                  []|
+|   International ...|[, , , internatio...|
+|A fast bowling al...|[a, fast, bowling...|
+|He made his ODI d...|[he, made, his, o...|
+|After a poor home...|[after, a, poor, ...|
+|                    |                  []|
+|                    |                  []|
+|   Indian Premier...|[, , , indian, pr...|
+|During the 2012 I...|[during, the, 201...|
+|On 21 September 2...|[on, 21, septembe...|
++--------------------+--------------------+
+only showing top 20 rows
+
+17/04/28 21:30:47 INFO spark.SparkContext: Starting job: collect at Word2Vec.scala:195
+17/04/28 21:30:47 INFO scheduler.DAGScheduler: Registering RDD 20 (map at Word2Vec.scala:186)
+17/04/28 21:30:47 INFO scheduler.DAGScheduler: Got job 2 (collect at Word2Vec.scala:195) with 2 output partitions
+17/04/28 21:30:47 INFO scheduler.DAGScheduler: Final stage: ResultStage 3 (collect at Word2Vec.scala:195)
+17/04/28 21:30:47 INFO scheduler.DAGScheduler: Parents of final stage: List(ShuffleMapStage 2)
+17/04/28 21:30:47 INFO scheduler.DAGScheduler: Missing parents: List(ShuffleMapStage 2)
+17/04/28 21:30:47 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 2 (MapPartitionsRDD[20] at map at Word2Vec.scala:186), which has no missing parents
+17/04/28 21:30:47 INFO memory.MemoryStore: Block broadcast_3 stored as values in memory (estimated size 27.5 KB, free 366.0 MB)
+17/04/28 21:30:47 INFO memory.MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 13.6 KB, free 366.0 MB)
+17/04/28 21:30:47 INFO storage.BlockManagerInfo: Added broadcast_3_piece0 in memory on 192.168.0.243:49392 (size: 13.6 KB, free: 366.3 MB)
+17/04/28 21:30:47 INFO spark.SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:996
+17/04/28 21:30:47 INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 2 (MapPartitionsRDD[20] at map at Word2Vec.scala:186)
+17/04/28 21:30:47 INFO cluster.YarnScheduler: Adding task set 2.0 with 2 tasks
+17/04/28 21:30:47 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 2.0 (TID 2, stack-0060.local, executor 2, partition 0, PROCESS_LOCAL, 6012 bytes)
+17/04/28 21:30:47 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 2.0 (TID 3, stack-0060.local, executor 1, partition 1, NODE_LOCAL, 6012 bytes)
+17/04/28 21:30:47 INFO storage.BlockManagerInfo: Added broadcast_3_piece0 in memory on stack-0060.local:42249 (size: 13.6 KB, free: 345.0 MB)
+17/04/28 21:30:47 INFO storage.BlockManagerInfo: Added broadcast_3_piece0 in memory on stack-0060.local:38105 (size: 13.6 KB, free: 366.3 MB)
+17/04/28 21:30:48 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on stack-0060.local:38105 (size: 20.5 KB, free: 366.3 MB)
+17/04/28 21:30:49 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 2.0 (TID 2) in 2136 ms on stack-0060.local (executor 2) (1/2)
+17/04/28 21:30:51 INFO storage.BlockManagerInfo: Added rdd_2_1 in memory on stack-0060.local:38105 (size: 3.7 MB, free: 362.5 MB)
+17/04/28 21:30:52 INFO storage.BlockManagerInfo: Added rdd_9_1 in memory on stack-0060.local:38105 (size: 3.6 MB, free: 358.9 MB)
+17/04/28 21:30:53 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Disabling executor 1.
+17/04/28 21:30:53 INFO scheduler.DAGScheduler: Executor lost: 1 (epoch 0)
+17/04/28 21:30:53 INFO storage.BlockManagerMasterEndpoint: Trying to remove executor 1 from BlockManagerMaster.
+17/04/28 21:30:53 INFO storage.BlockManagerMasterEndpoint: Removing block manager BlockManagerId(1, stack-0060.local, 38105, None)
+17/04/28 21:30:53 INFO storage.BlockManagerMaster: Removed 1 successfully in removeExecutor
+17/04/28 21:30:53 INFO scheduler.DAGScheduler: Shuffle files lost for executor: 1 (epoch 0)
+17/04/28 21:30:54 WARN cluster.YarnSchedulerBackend$YarnSchedulerEndpoint: Container marked as failed: container_1493187723643_0021_01_000002 on host: stack-0060.local. Exit status: 1. Diagnostics: Exception from container-launch.
+Container id: container_1493187723643_0021_01_000002
+Exit code: 1
+Stack trace: ExitCodeException exitCode=1: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:545)
+	at org.apache.hadoop.util.Shell.run(Shell.java:456)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:722)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 1
+
+17/04/28 21:30:54 ERROR cluster.YarnScheduler: Lost executor 1 on stack-0060.local: Container marked as failed: container_1493187723643_0021_01_000002 on host: stack-0060.local. Exit status: 1. Diagnostics: Exception from container-launch.
+Container id: container_1493187723643_0021_01_000002
+Exit code: 1
+Stack trace: ExitCodeException exitCode=1: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:545)
+	at org.apache.hadoop.util.Shell.run(Shell.java:456)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:722)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 1
+
+17/04/28 21:30:54 WARN scheduler.TaskSetManager: Lost task 1.0 in stage 2.0 (TID 3, stack-0060.local, executor 1): ExecutorLostFailure (executor 1 exited caused by one of the running tasks) Reason: Container marked as failed: container_1493187723643_0021_01_000002 on host: stack-0060.local. Exit status: 1. Diagnostics: Exception from container-launch.
+Container id: container_1493187723643_0021_01_000002
+Exit code: 1
+Stack trace: ExitCodeException exitCode=1: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:545)
+	at org.apache.hadoop.util.Shell.run(Shell.java:456)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:722)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 1
+
+17/04/28 21:30:54 INFO storage.BlockManagerMasterEndpoint: Trying to remove executor 1 from BlockManagerMaster.
+17/04/28 21:30:54 INFO storage.BlockManagerMaster: Removal of executor 1 requested
+17/04/28 21:30:54 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Asked to remove non-existent executor 1
+17/04/28 21:30:54 INFO scheduler.TaskSetManager: Starting task 1.1 in stage 2.0 (TID 4, stack-0060.local, executor 2, partition 1, NODE_LOCAL, 6012 bytes)
+17/04/28 21:30:55 INFO storage.BlockManagerInfo: Added rdd_2_1 in memory on stack-0060.local:42249 (size: 3.7 MB, free: 341.2 MB)
+17/04/28 21:30:56 INFO storage.BlockManagerInfo: Added rdd_9_1 in memory on stack-0060.local:42249 (size: 3.6 MB, free: 337.6 MB)
+17/04/28 21:30:56 INFO storage.BlockManagerInfo: Added rdd_12_1 in memory on stack-0060.local:42249 (size: 13.9 MB, free: 323.8 MB)
+17/04/28 21:30:57 INFO scheduler.DAGScheduler: ShuffleMapStage 2 (map at Word2Vec.scala:186) finished in 9.828 s
+17/04/28 21:30:57 INFO scheduler.DAGScheduler: looking for newly runnable stages
+17/04/28 21:30:57 INFO scheduler.TaskSetManager: Finished task 1.1 in stage 2.0 (TID 4) in 2343 ms on stack-0060.local (executor 2) (2/2)
+17/04/28 21:30:57 INFO cluster.YarnScheduler: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+17/04/28 21:30:57 INFO scheduler.DAGScheduler: running: Set()
+17/04/28 21:30:57 INFO scheduler.DAGScheduler: waiting: Set(ResultStage 3)
+17/04/28 21:30:57 INFO scheduler.DAGScheduler: failed: Set()
+17/04/28 21:30:57 INFO scheduler.DAGScheduler: Submitting ResultStage 3 (MapPartitionsRDD[23] at map at Word2Vec.scala:189), which has no missing parents
+17/04/28 21:30:57 INFO memory.MemoryStore: Block broadcast_4 stored as values in memory (estimated size 4.8 KB, free 366.0 MB)
+17/04/28 21:30:57 INFO memory.MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 2.6 KB, free 366.0 MB)
+17/04/28 21:30:57 INFO storage.BlockManagerInfo: Added broadcast_4_piece0 in memory on 192.168.0.243:49392 (size: 2.6 KB, free: 366.3 MB)
+17/04/28 21:30:57 INFO spark.SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:996
+17/04/28 21:30:57 INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ResultStage 3 (MapPartitionsRDD[23] at map at Word2Vec.scala:189)
+17/04/28 21:30:57 INFO cluster.YarnScheduler: Adding task set 3.0 with 2 tasks
+17/04/28 21:30:57 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 3.0 (TID 5, stack-0060.local, executor 2, partition 0, NODE_LOCAL, 5762 bytes)
+17/04/28 21:30:57 INFO storage.BlockManagerInfo: Added broadcast_4_piece0 in memory on stack-0060.local:42249 (size: 2.6 KB, free: 323.8 MB)
+17/04/28 21:30:57 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 0 to 192.168.0.243:46354
+17/04/28 21:30:57 INFO spark.MapOutputTrackerMaster: Size of output statuses for shuffle 0 is 159 bytes
+17/04/28 21:30:58 INFO storage.BlockManagerInfo: Added taskresult_5 in memory on stack-0060.local:42249 (size: 5.3 MB, free: 318.5 MB)
+17/04/28 21:30:58 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 3.0 (TID 6, stack-0060.local, executor 2, partition 1, NODE_LOCAL, 5762 bytes)
+17/04/28 21:30:58 INFO client.TransportClientFactory: Successfully created connection to stack-0060.local/192.168.0.243:42249 after 7 ms (0 ms spent in bootstraps)
+17/04/28 21:30:58 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 3.0 (TID 5) in 1029 ms on stack-0060.local (executor 2) (1/2)
+17/04/28 21:30:58 INFO storage.BlockManagerInfo: Removed taskresult_5 on stack-0060.local:42249 in memory (size: 5.3 MB, free: 323.8 MB)
+17/04/28 21:30:58 INFO storage.BlockManagerInfo: Added taskresult_6 in memory on stack-0060.local:42249 (size: 5.3 MB, free: 318.5 MB)
+17/04/28 21:30:58 INFO spark.ContextCleaner: Cleaned accumulator 54
+17/04/28 21:30:58 INFO storage.BlockManagerInfo: Removed broadcast_2_piece0 on stack-0060.local:42249 in memory (size: 11.9 KB, free: 318.5 MB)
+17/04/28 21:30:58 INFO storage.BlockManagerInfo: Removed broadcast_2_piece0 on 192.168.0.243:49392 in memory (size: 11.9 KB, free: 366.3 MB)
+17/04/28 21:30:58 INFO storage.BlockManagerInfo: Removed broadcast_3_piece0 on 192.168.0.243:49392 in memory (size: 13.6 KB, free: 366.3 MB)
+17/04/28 21:30:58 INFO storage.BlockManagerInfo: Removed broadcast_3_piece0 on stack-0060.local:42249 in memory (size: 13.6 KB, free: 318.5 MB)
+17/04/28 21:30:58 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 3.0 (TID 6) in 805 ms on stack-0060.local (executor 2) (2/2)
+17/04/28 21:30:58 INFO cluster.YarnScheduler: Removed TaskSet 3.0, whose tasks have all completed, from pool 
+17/04/28 21:30:58 INFO scheduler.DAGScheduler: ResultStage 3 (collect at Word2Vec.scala:195) finished in 1.535 s
+17/04/28 21:30:58 INFO scheduler.DAGScheduler: Job 2 finished: collect at Word2Vec.scala:195, took 11.695776 s
+17/04/28 21:30:58 INFO storage.BlockManagerInfo: Removed taskresult_6 on stack-0060.local:42249 in memory (size: 5.3 MB, free: 323.8 MB)
+17/04/28 21:30:59 INFO feature.Word2Vec: vocabSize = 30194, trainWordsCount = 2280460
+17/04/28 21:30:59 INFO memory.MemoryStore: Block broadcast_5 stored as values in memory (estimated size 3.9 KB, free 366.0 MB)
+17/04/28 21:30:59 INFO memory.MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 4.0 KB, free 366.0 MB)
+17/04/28 21:30:59 INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on 192.168.0.243:49392 (size: 4.0 KB, free: 366.3 MB)
+17/04/28 21:30:59 INFO spark.SparkContext: Created broadcast 5 from broadcast at Word2Vec.scala:314
+17/04/28 21:30:59 INFO memory.MemoryStore: Block broadcast_6 stored as values in memory (estimated size 12.8 MB, free 353.3 MB)
+17/04/28 21:30:59 INFO memory.MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 1197.5 KB, free 352.1 MB)
+17/04/28 21:30:59 INFO storage.BlockManagerInfo: Added broadcast_6_piece0 in memory on 192.168.0.243:49392 (size: 1197.5 KB, free: 365.1 MB)
+17/04/28 21:30:59 INFO spark.SparkContext: Created broadcast 6 from broadcast at Word2Vec.scala:315
+17/04/28 21:30:59 INFO memory.MemoryStore: Block broadcast_7 stored as values in memory (estimated size 2.4 MB, free 349.7 MB)
+17/04/28 21:30:59 INFO memory.MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 349.0 KB, free 349.4 MB)
+17/04/28 21:30:59 INFO storage.BlockManagerInfo: Added broadcast_7_piece0 in memory on 192.168.0.243:49392 (size: 349.0 KB, free: 364.8 MB)
+17/04/28 21:30:59 INFO spark.SparkContext: Created broadcast 7 from broadcast at Word2Vec.scala:316
+17/04/28 21:30:59 INFO memory.MemoryStore: Block broadcast_8 stored as values in memory (estimated size 11.5 MB, free 337.8 MB)
+17/04/28 21:30:59 INFO memory.MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 4.0 MB, free 333.8 MB)
+17/04/28 21:30:59 INFO storage.BlockManagerInfo: Added broadcast_8_piece0 in memory on 192.168.0.243:49392 (size: 4.0 MB, free: 360.8 MB)
+17/04/28 21:30:59 INFO memory.MemoryStore: Block broadcast_8_piece1 stored as bytes in memory (estimated size 4.0 MB, free 329.8 MB)
+17/04/28 21:30:59 INFO storage.BlockManagerInfo: Added broadcast_8_piece1 in memory on 192.168.0.243:49392 (size: 4.0 MB, free: 356.8 MB)
+17/04/28 21:30:59 INFO memory.MemoryStore: Block broadcast_8_piece2 stored as bytes in memory (estimated size 3.5 MB, free 326.3 MB)
+17/04/28 21:30:59 INFO storage.BlockManagerInfo: Added broadcast_8_piece2 in memory on 192.168.0.243:49392 (size: 3.5 MB, free: 353.2 MB)
+17/04/28 21:30:59 INFO spark.SparkContext: Created broadcast 8 from broadcast at Word2Vec.scala:344
+17/04/28 21:30:59 INFO memory.MemoryStore: Block broadcast_9 stored as values in memory (estimated size 11.5 MB, free 314.8 MB)
+17/04/28 21:30:59 INFO memory.MemoryStore: Block broadcast_9_piece0 stored as bytes in memory (estimated size 57.7 KB, free 314.7 MB)
+17/04/28 21:30:59 INFO storage.BlockManagerInfo: Added broadcast_9_piece0 in memory on 192.168.0.243:49392 (size: 57.7 KB, free: 353.2 MB)
+17/04/28 21:30:59 INFO spark.SparkContext: Created broadcast 9 from broadcast at Word2Vec.scala:345
+17/04/28 21:30:59 INFO spark.SparkContext: Starting job: collect at Word2Vec.scala:423
+17/04/28 21:30:59 INFO scheduler.DAGScheduler: Registering RDD 25 (repartition at Word2Vec.scala:329)
+17/04/28 21:30:59 INFO scheduler.DAGScheduler: Registering RDD 29 (mapPartitionsWithIndex at Word2Vec.scala:346)
+17/04/28 21:30:59 INFO scheduler.DAGScheduler: Got job 3 (collect at Word2Vec.scala:423) with 1 output partitions
+17/04/28 21:30:59 INFO scheduler.DAGScheduler: Final stage: ResultStage 6 (collect at Word2Vec.scala:423)
+17/04/28 21:30:59 INFO scheduler.DAGScheduler: Parents of final stage: List(ShuffleMapStage 5)
+17/04/28 21:30:59 INFO scheduler.DAGScheduler: Missing parents: List(ShuffleMapStage 5)
+17/04/28 21:31:00 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 4 (MapPartitionsRDD[25] at repartition at Word2Vec.scala:329), which has no missing parents
+17/04/28 21:31:00 INFO memory.MemoryStore: Block broadcast_10 stored as values in memory (estimated size 28.3 KB, free 314.7 MB)
+17/04/28 21:31:00 INFO memory.MemoryStore: Block broadcast_10_piece0 stored as bytes in memory (estimated size 13.9 KB, free 314.7 MB)
+17/04/28 21:31:00 INFO storage.BlockManagerInfo: Added broadcast_10_piece0 in memory on 192.168.0.243:49392 (size: 13.9 KB, free: 353.2 MB)
+17/04/28 21:31:00 INFO spark.SparkContext: Created broadcast 10 from broadcast at DAGScheduler.scala:996
+17/04/28 21:31:00 INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 4 (MapPartitionsRDD[25] at repartition at Word2Vec.scala:329)
+17/04/28 21:31:00 INFO cluster.YarnScheduler: Adding task set 4.0 with 2 tasks
+17/04/28 21:31:00 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 4.0 (TID 7, stack-0060.local, executor 2, partition 0, PROCESS_LOCAL, 6012 bytes)
+17/04/28 21:31:00 INFO storage.BlockManagerInfo: Added broadcast_10_piece0 in memory on stack-0060.local:42249 (size: 13.9 KB, free: 323.8 MB)
+17/04/28 21:31:00 INFO storage.BlockManagerInfo: Added broadcast_7_piece0 in memory on stack-0060.local:42249 (size: 349.0 KB, free: 323.4 MB)
+17/04/28 21:31:01 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 4.0 (TID 8, stack-0060.local, executor 2, partition 1, PROCESS_LOCAL, 6012 bytes)
+17/04/28 21:31:01 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 4.0 (TID 7) in 1820 ms on stack-0060.local (executor 2) (1/2)
+17/04/28 21:31:02 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 4.0 (TID 8) in 780 ms on stack-0060.local (executor 2) (2/2)
+17/04/28 21:31:02 INFO cluster.YarnScheduler: Removed TaskSet 4.0, whose tasks have all completed, from pool 
+17/04/28 21:31:02 INFO scheduler.DAGScheduler: ShuffleMapStage 4 (repartition at Word2Vec.scala:329) finished in 2.599 s
+17/04/28 21:31:02 INFO scheduler.DAGScheduler: looking for newly runnable stages
+17/04/28 21:31:02 INFO scheduler.DAGScheduler: running: Set()
+17/04/28 21:31:02 INFO scheduler.DAGScheduler: waiting: Set(ShuffleMapStage 5, ResultStage 6)
+17/04/28 21:31:02 INFO scheduler.DAGScheduler: failed: Set()
+17/04/28 21:31:02 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 5 (MapPartitionsRDD[29] at mapPartitionsWithIndex at Word2Vec.scala:346), which has no missing parents
+17/04/28 21:31:02 INFO memory.MemoryStore: Block broadcast_11 stored as values in memory (estimated size 6.3 KB, free 314.7 MB)
+17/04/28 21:31:02 INFO memory.MemoryStore: Block broadcast_11_piece0 stored as bytes in memory (estimated size 3.4 KB, free 314.7 MB)
+17/04/28 21:31:02 INFO storage.BlockManagerInfo: Added broadcast_11_piece0 in memory on 192.168.0.243:49392 (size: 3.4 KB, free: 353.2 MB)
+17/04/28 21:31:02 INFO spark.SparkContext: Created broadcast 11 from broadcast at DAGScheduler.scala:996
+17/04/28 21:31:02 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 5 (MapPartitionsRDD[29] at mapPartitionsWithIndex at Word2Vec.scala:346)
+17/04/28 21:31:02 INFO cluster.YarnScheduler: Adding task set 5.0 with 1 tasks
+17/04/28 21:31:02 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 5.0 (TID 9, stack-0060.local, executor 2, partition 0, NODE_LOCAL, 6027 bytes)
+17/04/28 21:31:02 INFO storage.BlockManagerInfo: Added broadcast_11_piece0 in memory on stack-0060.local:42249 (size: 3.4 KB, free: 323.4 MB)
+17/04/28 21:31:02 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 1 to 192.168.0.243:46354
+17/04/28 21:31:02 INFO spark.MapOutputTrackerMaster: Size of output statuses for shuffle 1 is 156 bytes
+17/04/28 21:31:03 INFO storage.BlockManagerInfo: Added rdd_28_0 in memory on stack-0060.local:42249 (size: 11.3 MB, free: 312.1 MB)
+17/04/28 21:31:03 INFO storage.BlockManagerInfo: Added broadcast_8_piece2 in memory on stack-0060.local:42249 (size: 3.5 MB, free: 308.6 MB)
+17/04/28 21:31:03 INFO storage.BlockManagerInfo: Added broadcast_8_piece0 in memory on stack-0060.local:42249 (size: 4.0 MB, free: 304.6 MB)
+17/04/28 21:31:03 INFO storage.BlockManagerInfo: Added broadcast_8_piece1 in memory on stack-0060.local:42249 (size: 4.0 MB, free: 300.6 MB)
+17/04/28 21:31:03 INFO storage.BlockManagerInfo: Added broadcast_9_piece0 in memory on stack-0060.local:42249 (size: 57.7 KB, free: 300.5 MB)
+17/04/28 21:31:03 INFO storage.BlockManagerInfo: Added broadcast_6_piece0 in memory on stack-0060.local:42249 (size: 1197.5 KB, free: 299.3 MB)
+17/04/28 21:31:03 INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on stack-0060.local:42249 (size: 4.0 KB, free: 299.3 MB)
+17/04/28 21:31:03 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(null) (192.168.0.243:46373) with ID 3
+17/04/28 21:31:03 INFO storage.BlockManagerMasterEndpoint: Registering block manager stack-0060.local:48108 with 366.3 MB RAM, BlockManagerId(3, stack-0060.local, 48108, None)
+17/04/28 21:31:05 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Disabling executor 2.
+17/04/28 21:31:05 INFO scheduler.DAGScheduler: Executor lost: 2 (epoch 3)
+17/04/28 21:31:05 INFO storage.BlockManagerMasterEndpoint: Trying to remove executor 2 from BlockManagerMaster.
+17/04/28 21:31:05 INFO storage.BlockManagerMasterEndpoint: Removing block manager BlockManagerId(2, stack-0060.local, 42249, None)
+17/04/28 21:31:05 INFO storage.BlockManagerMaster: Removed 2 successfully in removeExecutor
+17/04/28 21:31:05 INFO scheduler.DAGScheduler: Shuffle files lost for executor: 2 (epoch 3)
+17/04/28 21:31:05 INFO scheduler.ShuffleMapStage: ShuffleMapStage 4 is now unavailable on executor 2 (0/2, false)
+17/04/28 21:31:06 ERROR cluster.YarnScheduler: Lost executor 2 on stack-0060.local: Container marked as failed: container_1493187723643_0021_01_000003 on host: stack-0060.local. Exit status: 1. Diagnostics: Exception from container-launch.
+Container id: container_1493187723643_0021_01_000003
+Exit code: 1
+Stack trace: ExitCodeException exitCode=1: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:545)
+	at org.apache.hadoop.util.Shell.run(Shell.java:456)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:722)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 1
+
+17/04/28 21:31:06 WARN scheduler.TaskSetManager: Lost task 0.0 in stage 5.0 (TID 9, stack-0060.local, executor 2): ExecutorLostFailure (executor 2 exited caused by one of the running tasks) Reason: Container marked as failed: container_1493187723643_0021_01_000003 on host: stack-0060.local. Exit status: 1. Diagnostics: Exception from container-launch.
+Container id: container_1493187723643_0021_01_000003
+Exit code: 1
+Stack trace: ExitCodeException exitCode=1: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:545)
+	at org.apache.hadoop.util.Shell.run(Shell.java:456)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:722)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 1
+
+17/04/28 21:31:06 WARN cluster.YarnSchedulerBackend$YarnSchedulerEndpoint: Container marked as failed: container_1493187723643_0021_01_000003 on host: stack-0060.local. Exit status: 1. Diagnostics: Exception from container-launch.
+Container id: container_1493187723643_0021_01_000003
+Exit code: 1
+Stack trace: ExitCodeException exitCode=1: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:545)
+	at org.apache.hadoop.util.Shell.run(Shell.java:456)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:722)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 1
+
+17/04/28 21:31:06 INFO storage.BlockManagerMaster: Removal of executor 2 requested
+17/04/28 21:31:06 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Asked to remove non-existent executor 2
+17/04/28 21:31:06 INFO storage.BlockManagerMasterEndpoint: Trying to remove executor 2 from BlockManagerMaster.
+17/04/28 21:31:06 INFO scheduler.TaskSetManager: Starting task 0.1 in stage 5.0 (TID 10, stack-0060.local, executor 3, partition 0, NODE_LOCAL, 6027 bytes)
+17/04/28 21:31:07 INFO storage.BlockManagerInfo: Added broadcast_11_piece0 in memory on stack-0060.local:48108 (size: 3.4 KB, free: 366.3 MB)
+17/04/28 21:31:07 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 1 to 192.168.0.243:46373
+17/04/28 21:31:07 INFO spark.MapOutputTrackerMaster: Size of output statuses for shuffle 1 is 86 bytes
+17/04/28 21:31:07 WARN scheduler.TaskSetManager: Lost task 0.1 in stage 5.0 (TID 10, stack-0060.local, executor 3): FetchFailed(null, shuffleId=1, mapId=-1, reduceId=0, message=
+org.apache.spark.shuffle.MetadataFetchFailedException: Missing an output location for shuffle 1
+	at org.apache.spark.MapOutputTracker$$anonfun$org$apache$spark$MapOutputTracker$$convertMapStatuses$2.apply(MapOutputTracker.scala:697)
+	at org.apache.spark.MapOutputTracker$$anonfun$org$apache$spark$MapOutputTracker$$convertMapStatuses$2.apply(MapOutputTracker.scala:693)
+	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:733)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:186)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:732)
+	at org.apache.spark.MapOutputTracker$.org$apache$spark$MapOutputTracker$$convertMapStatuses(MapOutputTracker.scala:693)
+	at org.apache.spark.MapOutputTracker.getMapSizesByExecutorId(MapOutputTracker.scala:147)
+	at org.apache.spark.shuffle.BlockStoreShuffleReader.read(BlockStoreShuffleReader.scala:49)
+	at org.apache.spark.rdd.ShuffledRDD.compute(ShuffledRDD.scala:109)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.rdd.CoalescedRDD$$anonfun$compute$1.apply(CoalescedRDD.scala:100)
+	at org.apache.spark.rdd.CoalescedRDD$$anonfun$compute$1.apply(CoalescedRDD.scala:99)
+	at scala.collection.Iterator$$anon$12.nextCur(Iterator.scala:434)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:440)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:408)
+	at org.apache.spark.storage.memory.MemoryStore.putIteratorAsValues(MemoryStore.scala:215)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:957)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:948)
+	at org.apache.spark.storage.BlockManager.doPut(BlockManager.scala:888)
+	at org.apache.spark.storage.BlockManager.doPutIterator(BlockManager.scala:948)
+	at org.apache.spark.storage.BlockManager.getOrElseUpdate(BlockManager.scala:694)
+	at org.apache.spark.rdd.RDD.getOrCompute(RDD.scala:334)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:285)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:96)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:53)
+	at org.apache.spark.scheduler.Task.run(Task.scala:99)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:282)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+)
+17/04/28 21:31:07 INFO scheduler.DAGScheduler: Marking ShuffleMapStage 5 (mapPartitionsWithIndex at Word2Vec.scala:346) as failed due to a fetch failure from ShuffleMapStage 4 (repartition at Word2Vec.scala:329)
+17/04/28 21:31:07 INFO scheduler.DAGScheduler: ShuffleMapStage 5 (mapPartitionsWithIndex at Word2Vec.scala:346) failed in 4.992 s due to org.apache.spark.shuffle.MetadataFetchFailedException: Missing an output location for shuffle 1
+	at org.apache.spark.MapOutputTracker$$anonfun$org$apache$spark$MapOutputTracker$$convertMapStatuses$2.apply(MapOutputTracker.scala:697)
+	at org.apache.spark.MapOutputTracker$$anonfun$org$apache$spark$MapOutputTracker$$convertMapStatuses$2.apply(MapOutputTracker.scala:693)
+	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:733)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:186)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:732)
+	at org.apache.spark.MapOutputTracker$.org$apache$spark$MapOutputTracker$$convertMapStatuses(MapOutputTracker.scala:693)
+	at org.apache.spark.MapOutputTracker.getMapSizesByExecutorId(MapOutputTracker.scala:147)
+	at org.apache.spark.shuffle.BlockStoreShuffleReader.read(BlockStoreShuffleReader.scala:49)
+	at org.apache.spark.rdd.ShuffledRDD.compute(ShuffledRDD.scala:109)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.rdd.CoalescedRDD$$anonfun$compute$1.apply(CoalescedRDD.scala:100)
+	at org.apache.spark.rdd.CoalescedRDD$$anonfun$compute$1.apply(CoalescedRDD.scala:99)
+	at scala.collection.Iterator$$anon$12.nextCur(Iterator.scala:434)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:440)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:408)
+	at org.apache.spark.storage.memory.MemoryStore.putIteratorAsValues(MemoryStore.scala:215)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:957)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:948)
+	at org.apache.spark.storage.BlockManager.doPut(BlockManager.scala:888)
+	at org.apache.spark.storage.BlockManager.doPutIterator(BlockManager.scala:948)
+	at org.apache.spark.storage.BlockManager.getOrElseUpdate(BlockManager.scala:694)
+	at org.apache.spark.rdd.RDD.getOrCompute(RDD.scala:334)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:285)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:96)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:53)
+	at org.apache.spark.scheduler.Task.run(Task.scala:99)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:282)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+17/04/28 21:31:07 INFO scheduler.DAGScheduler: Resubmitting ShuffleMapStage 4 (repartition at Word2Vec.scala:329) and ShuffleMapStage 5 (mapPartitionsWithIndex at Word2Vec.scala:346) due to fetch failure
+17/04/28 21:31:07 INFO scheduler.TaskSetManager: Task 0.1 in stage 5.0 (TID 10) failed, but another instance of the task has already succeeded, so not re-queuing the task to be re-executed.
+17/04/28 21:31:07 INFO cluster.YarnScheduler: Removed TaskSet 5.0, whose tasks have all completed, from pool 
+17/04/28 21:31:07 INFO scheduler.DAGScheduler: Resubmitting failed stages
+17/04/28 21:31:07 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 4 (MapPartitionsRDD[25] at repartition at Word2Vec.scala:329), which has no missing parents
+17/04/28 21:31:07 INFO memory.MemoryStore: Block broadcast_12 stored as values in memory (estimated size 28.3 KB, free 314.7 MB)
+17/04/28 21:31:07 INFO memory.MemoryStore: Block broadcast_12_piece0 stored as bytes in memory (estimated size 13.9 KB, free 314.6 MB)
+17/04/28 21:31:07 INFO storage.BlockManagerInfo: Added broadcast_12_piece0 in memory on 192.168.0.243:49392 (size: 13.9 KB, free: 353.2 MB)
+17/04/28 21:31:07 INFO spark.SparkContext: Created broadcast 12 from broadcast at DAGScheduler.scala:996
+17/04/28 21:31:07 INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 4 (MapPartitionsRDD[25] at repartition at Word2Vec.scala:329)
+17/04/28 21:31:07 INFO cluster.YarnScheduler: Adding task set 4.1 with 2 tasks
+17/04/28 21:31:07 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 4.1 (TID 11, stack-0060.local, executor 3, partition 0, NODE_LOCAL, 6012 bytes)
+17/04/28 21:31:07 INFO storage.BlockManagerInfo: Added broadcast_12_piece0 in memory on stack-0060.local:48108 (size: 13.9 KB, free: 366.3 MB)
+17/04/28 21:31:08 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on stack-0060.local:48108 (size: 20.5 KB, free: 366.3 MB)
+17/04/28 21:31:11 INFO storage.BlockManagerInfo: Added rdd_2_0 in memory on stack-0060.local:48108 (size: 3.7 MB, free: 362.5 MB)
+17/04/28 21:31:13 INFO storage.BlockManagerInfo: Added rdd_9_0 in memory on stack-0060.local:48108 (size: 3.6 MB, free: 358.9 MB)
+17/04/28 21:31:14 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(null) (192.168.0.243:46380) with ID 4
+17/04/28 21:31:14 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 4.1 (TID 12, stack-0060.local, executor 4, partition 1, NODE_LOCAL, 6012 bytes)
+17/04/28 21:31:14 INFO storage.BlockManagerMasterEndpoint: Registering block manager stack-0060.local:48195 with 366.3 MB RAM, BlockManagerId(4, stack-0060.local, 48195, None)
+17/04/28 21:31:14 INFO storage.BlockManagerInfo: Added broadcast_12_piece0 in memory on stack-0060.local:48195 (size: 13.9 KB, free: 366.3 MB)
+17/04/28 21:31:15 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on stack-0060.local:48195 (size: 20.5 KB, free: 366.3 MB)
+17/04/28 21:31:15 INFO storage.BlockManagerInfo: Added rdd_12_0 in memory on stack-0060.local:48108 (size: 13.9 MB, free: 345.0 MB)
+17/04/28 21:31:15 INFO storage.BlockManagerInfo: Added broadcast_7_piece0 in memory on stack-0060.local:48108 (size: 349.0 KB, free: 344.6 MB)
+17/04/28 21:31:17 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Disabling executor 3.
+17/04/28 21:31:17 INFO scheduler.DAGScheduler: Executor lost: 3 (epoch 5)
+17/04/28 21:31:17 INFO storage.BlockManagerMasterEndpoint: Trying to remove executor 3 from BlockManagerMaster.
+17/04/28 21:31:17 INFO storage.BlockManagerMasterEndpoint: Removing block manager BlockManagerId(3, stack-0060.local, 48108, None)
+17/04/28 21:31:17 INFO storage.BlockManagerMaster: Removed 3 successfully in removeExecutor
+17/04/28 21:31:17 INFO scheduler.DAGScheduler: Shuffle files lost for executor: 3 (epoch 5)
+17/04/28 21:31:18 INFO storage.BlockManagerInfo: Added rdd_2_1 in memory on stack-0060.local:48195 (size: 3.7 MB, free: 362.5 MB)
+17/04/28 21:31:18 ERROR cluster.YarnScheduler: Lost executor 3 on stack-0060.local: Container marked as failed: container_1493187723643_0021_01_000005 on host: stack-0060.local. Exit status: 1. Diagnostics: Exception from container-launch.
+Container id: container_1493187723643_0021_01_000005
+Exit code: 1
+Stack trace: ExitCodeException exitCode=1: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:545)
+	at org.apache.hadoop.util.Shell.run(Shell.java:456)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:722)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 1
+
+17/04/28 21:31:18 WARN scheduler.TaskSetManager: Lost task 0.0 in stage 4.1 (TID 11, stack-0060.local, executor 3): ExecutorLostFailure (executor 3 exited caused by one of the running tasks) Reason: Container marked as failed: container_1493187723643_0021_01_000005 on host: stack-0060.local. Exit status: 1. Diagnostics: Exception from container-launch.
+Container id: container_1493187723643_0021_01_000005
+Exit code: 1
+Stack trace: ExitCodeException exitCode=1: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:545)
+	at org.apache.hadoop.util.Shell.run(Shell.java:456)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:722)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 1
+
+17/04/28 21:31:18 WARN cluster.YarnSchedulerBackend$YarnSchedulerEndpoint: Container marked as failed: container_1493187723643_0021_01_000005 on host: stack-0060.local. Exit status: 1. Diagnostics: Exception from container-launch.
+Container id: container_1493187723643_0021_01_000005
+Exit code: 1
+Stack trace: ExitCodeException exitCode=1: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:545)
+	at org.apache.hadoop.util.Shell.run(Shell.java:456)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:722)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 1
+
+17/04/28 21:31:18 INFO storage.BlockManagerMaster: Removal of executor 3 requested
+17/04/28 21:31:18 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Asked to remove non-existent executor 3
+17/04/28 21:31:18 INFO storage.BlockManagerMasterEndpoint: Trying to remove executor 3 from BlockManagerMaster.
+17/04/28 21:31:19 INFO storage.BlockManagerInfo: Added rdd_9_1 in memory on stack-0060.local:48195 (size: 3.6 MB, free: 358.9 MB)
+17/04/28 21:31:20 INFO storage.BlockManagerInfo: Added rdd_12_1 in memory on stack-0060.local:48195 (size: 13.9 MB, free: 345.1 MB)
+17/04/28 21:31:21 INFO storage.BlockManagerInfo: Added broadcast_7_piece0 in memory on stack-0060.local:48195 (size: 349.0 KB, free: 344.7 MB)
+17/04/28 21:31:22 INFO scheduler.TaskSetManager: Starting task 0.1 in stage 4.1 (TID 13, stack-0060.local, executor 4, partition 0, NODE_LOCAL, 6012 bytes)
+17/04/28 21:31:22 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 4.1 (TID 12) in 8126 ms on stack-0060.local (executor 4) (1/2)
+17/04/28 21:31:23 INFO storage.BlockManagerInfo: Added rdd_2_0 in memory on stack-0060.local:48195 (size: 3.7 MB, free: 341.0 MB)
+17/04/28 21:31:23 INFO storage.BlockManagerInfo: Added rdd_9_0 in memory on stack-0060.local:48195 (size: 3.6 MB, free: 337.3 MB)
+17/04/28 21:31:24 INFO storage.BlockManagerInfo: Added rdd_12_0 in memory on stack-0060.local:48195 (size: 13.9 MB, free: 323.4 MB)
+17/04/28 21:31:25 INFO scheduler.TaskSetManager: Finished task 0.1 in stage 4.1 (TID 13) in 2523 ms on stack-0060.local (executor 4) (2/2)
+17/04/28 21:31:25 INFO cluster.YarnScheduler: Removed TaskSet 4.1, whose tasks have all completed, from pool 
+17/04/28 21:31:25 INFO scheduler.DAGScheduler: ShuffleMapStage 4 (repartition at Word2Vec.scala:329) finished in 17.157 s
+17/04/28 21:31:25 INFO scheduler.DAGScheduler: looking for newly runnable stages
+17/04/28 21:31:25 INFO scheduler.DAGScheduler: running: Set()
+17/04/28 21:31:25 INFO scheduler.DAGScheduler: waiting: Set(ShuffleMapStage 5, ResultStage 6)
+17/04/28 21:31:25 INFO scheduler.DAGScheduler: failed: Set()
+17/04/28 21:31:25 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 5 (MapPartitionsRDD[29] at mapPartitionsWithIndex at Word2Vec.scala:346), which has no missing parents
+17/04/28 21:31:25 INFO memory.MemoryStore: Block broadcast_13 stored as values in memory (estimated size 6.3 KB, free 314.6 MB)
+17/04/28 21:31:25 INFO memory.MemoryStore: Block broadcast_13_piece0 stored as bytes in memory (estimated size 3.4 KB, free 314.6 MB)
+17/04/28 21:31:25 INFO storage.BlockManagerInfo: Added broadcast_13_piece0 in memory on 192.168.0.243:49392 (size: 3.4 KB, free: 353.1 MB)
+17/04/28 21:31:25 INFO spark.SparkContext: Created broadcast 13 from broadcast at DAGScheduler.scala:996
+17/04/28 21:31:25 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 5 (MapPartitionsRDD[29] at mapPartitionsWithIndex at Word2Vec.scala:346)
+17/04/28 21:31:25 INFO cluster.YarnScheduler: Adding task set 5.1 with 1 tasks
+17/04/28 21:31:25 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 5.1 (TID 14, stack-0060.local, executor 4, partition 0, NODE_LOCAL, 6027 bytes)
+17/04/28 21:31:25 INFO storage.BlockManagerInfo: Added broadcast_13_piece0 in memory on stack-0060.local:48195 (size: 3.4 KB, free: 323.4 MB)
+17/04/28 21:31:25 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 1 to 192.168.0.243:46380
+17/04/28 21:31:25 INFO spark.MapOutputTrackerMaster: Size of output statuses for shuffle 1 is 156 bytes
+17/04/28 21:31:25 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Disabling executor 4.
+17/04/28 21:31:25 INFO scheduler.DAGScheduler: Executor lost: 4 (epoch 8)
+17/04/28 21:31:25 INFO storage.BlockManagerMasterEndpoint: Trying to remove executor 4 from BlockManagerMaster.
+17/04/28 21:31:25 INFO storage.BlockManagerMasterEndpoint: Removing block manager BlockManagerId(4, stack-0060.local, 48195, None)
+17/04/28 21:31:25 INFO storage.BlockManagerMaster: Removed 4 successfully in removeExecutor
+17/04/28 21:31:25 INFO scheduler.DAGScheduler: Shuffle files lost for executor: 4 (epoch 8)
+17/04/28 21:31:25 INFO scheduler.ShuffleMapStage: ShuffleMapStage 4 is now unavailable on executor 4 (0/2, false)
+17/04/28 21:31:25 ERROR client.TransportClient: Failed to send RPC 8479939539100141355 to /192.168.0.243:46347: java.nio.channels.ClosedChannelException
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+17/04/28 21:31:25 WARN cluster.YarnSchedulerBackend$YarnSchedulerEndpoint: Attempted to get executor loss reason for executor id 4 at RPC address 192.168.0.243:46380, but got no response. Marking as slave lost.
+java.io.IOException: Failed to send RPC 8479939539100141355 to /192.168.0.243:46347: java.nio.channels.ClosedChannelException
+	at org.apache.spark.network.client.TransportClient$3.operationComplete(TransportClient.java:249)
+	at org.apache.spark.network.client.TransportClient$3.operationComplete(TransportClient.java:233)
+	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:514)
+	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:488)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:427)
+	at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:129)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.safeSetFailure(AbstractChannel.java:852)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(AbstractChannel.java:738)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.write(DefaultChannelPipeline.java:1251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeWrite0(AbstractChannelHandlerContext.java:743)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeWrite(AbstractChannelHandlerContext.java:735)
+	at io.netty.channel.AbstractChannelHandlerContext.access$1900(AbstractChannelHandlerContext.java:36)
+	at io.netty.channel.AbstractChannelHandlerContext$AbstractWriteTask.write(AbstractChannelHandlerContext.java:1072)
+	at io.netty.channel.AbstractChannelHandlerContext$WriteAndFlushTask.write(AbstractChannelHandlerContext.java:1126)
+	at io.netty.channel.AbstractChannelHandlerContext$AbstractWriteTask.run(AbstractChannelHandlerContext.java:1061)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:408)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:455)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+17/04/28 21:31:25 ERROR cluster.YarnScheduler: Lost executor 4 on stack-0060.local: Slave lost
+17/04/28 21:31:25 WARN scheduler.TaskSetManager: Lost task 0.0 in stage 5.1 (TID 14, stack-0060.local, executor 4): ExecutorLostFailure (executor 4 exited caused by one of the running tasks) Reason: Slave lost
+17/04/28 21:31:30 INFO cluster.YarnSchedulerBackend$YarnSchedulerEndpoint: ApplicationMaster registered as NettyRpcEndpointRef(null)
+17/04/28 21:31:30 INFO cluster.YarnClientSchedulerBackend: Add WebUI Filter. org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter, Map(PROXY_HOSTS -> stack-0060, PROXY_URI_BASES -> http://stack-0060:8088/proxy/application_1493187723643_0021), /proxy/application_1493187723643_0021
+17/04/28 21:31:30 INFO ui.JettyUtils: Adding filter: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+17/04/28 21:31:35 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(null) (192.168.0.243:46396) with ID 5
+17/04/28 21:31:35 INFO scheduler.TaskSetManager: Starting task 0.1 in stage 5.1 (TID 15, stack-0060.local, executor 5, partition 0, NODE_LOCAL, 6027 bytes)
+17/04/28 21:31:35 INFO storage.BlockManagerMasterEndpoint: Registering block manager stack-0060.local:37817 with 366.3 MB RAM, BlockManagerId(5, stack-0060.local, 37817, None)
+17/04/28 21:31:36 INFO storage.BlockManagerInfo: Added broadcast_13_piece0 in memory on stack-0060.local:37817 (size: 3.4 KB, free: 366.3 MB)
+17/04/28 21:31:36 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(null) (192.168.0.243:46398) with ID 6
+17/04/28 21:31:36 INFO storage.BlockManagerMasterEndpoint: Registering block manager stack-0060.local:59047 with 366.3 MB RAM, BlockManagerId(6, stack-0060.local, 59047, None)
+17/04/28 21:31:36 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 1 to 192.168.0.243:46396
+17/04/28 21:31:36 INFO spark.MapOutputTrackerMaster: Size of output statuses for shuffle 1 is 86 bytes
+17/04/28 21:31:36 WARN scheduler.TaskSetManager: Lost task 0.1 in stage 5.1 (TID 15, stack-0060.local, executor 5): FetchFailed(null, shuffleId=1, mapId=-1, reduceId=0, message=
+org.apache.spark.shuffle.MetadataFetchFailedException: Missing an output location for shuffle 1
+	at org.apache.spark.MapOutputTracker$$anonfun$org$apache$spark$MapOutputTracker$$convertMapStatuses$2.apply(MapOutputTracker.scala:697)
+	at org.apache.spark.MapOutputTracker$$anonfun$org$apache$spark$MapOutputTracker$$convertMapStatuses$2.apply(MapOutputTracker.scala:693)
+	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:733)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:186)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:732)
+	at org.apache.spark.MapOutputTracker$.org$apache$spark$MapOutputTracker$$convertMapStatuses(MapOutputTracker.scala:693)
+	at org.apache.spark.MapOutputTracker.getMapSizesByExecutorId(MapOutputTracker.scala:147)
+	at org.apache.spark.shuffle.BlockStoreShuffleReader.read(BlockStoreShuffleReader.scala:49)
+	at org.apache.spark.rdd.ShuffledRDD.compute(ShuffledRDD.scala:109)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.rdd.CoalescedRDD$$anonfun$compute$1.apply(CoalescedRDD.scala:100)
+	at org.apache.spark.rdd.CoalescedRDD$$anonfun$compute$1.apply(CoalescedRDD.scala:99)
+	at scala.collection.Iterator$$anon$12.nextCur(Iterator.scala:434)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:440)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:408)
+	at org.apache.spark.storage.memory.MemoryStore.putIteratorAsValues(MemoryStore.scala:215)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:957)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:948)
+	at org.apache.spark.storage.BlockManager.doPut(BlockManager.scala:888)
+	at org.apache.spark.storage.BlockManager.doPutIterator(BlockManager.scala:948)
+	at org.apache.spark.storage.BlockManager.getOrElseUpdate(BlockManager.scala:694)
+	at org.apache.spark.rdd.RDD.getOrCompute(RDD.scala:334)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:285)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:96)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:53)
+	at org.apache.spark.scheduler.Task.run(Task.scala:99)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:282)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+)
+17/04/28 21:31:36 INFO scheduler.TaskSetManager: Task 0.1 in stage 5.1 (TID 15) failed, but another instance of the task has already succeeded, so not re-queuing the task to be re-executed.
+17/04/28 21:31:36 INFO cluster.YarnScheduler: Removed TaskSet 5.1, whose tasks have all completed, from pool 
+17/04/28 21:31:36 INFO scheduler.DAGScheduler: Marking ShuffleMapStage 5 (mapPartitionsWithIndex at Word2Vec.scala:346) as failed due to a fetch failure from ShuffleMapStage 4 (repartition at Word2Vec.scala:329)
+17/04/28 21:31:36 INFO scheduler.DAGScheduler: ShuffleMapStage 5 (mapPartitionsWithIndex at Word2Vec.scala:346) failed in 11.398 s due to org.apache.spark.shuffle.MetadataFetchFailedException: Missing an output location for shuffle 1
+	at org.apache.spark.MapOutputTracker$$anonfun$org$apache$spark$MapOutputTracker$$convertMapStatuses$2.apply(MapOutputTracker.scala:697)
+	at org.apache.spark.MapOutputTracker$$anonfun$org$apache$spark$MapOutputTracker$$convertMapStatuses$2.apply(MapOutputTracker.scala:693)
+	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:733)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:186)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:732)
+	at org.apache.spark.MapOutputTracker$.org$apache$spark$MapOutputTracker$$convertMapStatuses(MapOutputTracker.scala:693)
+	at org.apache.spark.MapOutputTracker.getMapSizesByExecutorId(MapOutputTracker.scala:147)
+	at org.apache.spark.shuffle.BlockStoreShuffleReader.read(BlockStoreShuffleReader.scala:49)
+	at org.apache.spark.rdd.ShuffledRDD.compute(ShuffledRDD.scala:109)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.rdd.CoalescedRDD$$anonfun$compute$1.apply(CoalescedRDD.scala:100)
+	at org.apache.spark.rdd.CoalescedRDD$$anonfun$compute$1.apply(CoalescedRDD.scala:99)
+	at scala.collection.Iterator$$anon$12.nextCur(Iterator.scala:434)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:440)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:408)
+	at org.apache.spark.storage.memory.MemoryStore.putIteratorAsValues(MemoryStore.scala:215)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:957)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:948)
+	at org.apache.spark.storage.BlockManager.doPut(BlockManager.scala:888)
+	at org.apache.spark.storage.BlockManager.doPutIterator(BlockManager.scala:948)
+	at org.apache.spark.storage.BlockManager.getOrElseUpdate(BlockManager.scala:694)
+	at org.apache.spark.rdd.RDD.getOrCompute(RDD.scala:334)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:285)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:96)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:53)
+	at org.apache.spark.scheduler.Task.run(Task.scala:99)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:282)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+17/04/28 21:31:36 INFO scheduler.DAGScheduler: Resubmitting ShuffleMapStage 4 (repartition at Word2Vec.scala:329) and ShuffleMapStage 5 (mapPartitionsWithIndex at Word2Vec.scala:346) due to fetch failure
+17/04/28 21:31:36 INFO scheduler.DAGScheduler: Resubmitting failed stages
+17/04/28 21:31:36 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 4 (MapPartitionsRDD[25] at repartition at Word2Vec.scala:329), which has no missing parents
+17/04/28 21:31:36 INFO memory.MemoryStore: Block broadcast_14 stored as values in memory (estimated size 28.3 KB, free 314.6 MB)
+17/04/28 21:31:36 INFO memory.MemoryStore: Block broadcast_14_piece0 stored as bytes in memory (estimated size 13.9 KB, free 314.6 MB)
+17/04/28 21:31:36 INFO storage.BlockManagerInfo: Added broadcast_14_piece0 in memory on 192.168.0.243:49392 (size: 13.9 KB, free: 353.1 MB)
+17/04/28 21:31:36 INFO spark.SparkContext: Created broadcast 14 from broadcast at DAGScheduler.scala:996
+17/04/28 21:31:36 INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 4 (MapPartitionsRDD[25] at repartition at Word2Vec.scala:329)
+17/04/28 21:31:36 INFO cluster.YarnScheduler: Adding task set 4.2 with 2 tasks
+17/04/28 21:31:36 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 4.2 (TID 16, stack-0060.local, executor 6, partition 0, NODE_LOCAL, 6012 bytes)
+17/04/28 21:31:36 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 4.2 (TID 17, stack-0060.local, executor 5, partition 1, NODE_LOCAL, 6012 bytes)
+17/04/28 21:31:36 INFO storage.BlockManagerInfo: Added broadcast_14_piece0 in memory on stack-0060.local:37817 (size: 13.9 KB, free: 366.3 MB)
+17/04/28 21:31:36 INFO storage.BlockManagerInfo: Added broadcast_14_piece0 in memory on stack-0060.local:59047 (size: 13.9 KB, free: 366.3 MB)
+17/04/28 21:31:37 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on stack-0060.local:37817 (size: 20.5 KB, free: 366.3 MB)
+17/04/28 21:31:37 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on stack-0060.local:59047 (size: 20.5 KB, free: 366.3 MB)
+17/04/28 21:31:39 INFO storage.BlockManagerInfo: Added rdd_2_0 in memory on stack-0060.local:59047 (size: 3.7 MB, free: 362.5 MB)
+17/04/28 21:31:39 INFO storage.BlockManagerInfo: Added rdd_2_1 in memory on stack-0060.local:37817 (size: 3.7 MB, free: 362.5 MB)
+17/04/28 21:31:41 INFO storage.BlockManagerInfo: Added rdd_9_1 in memory on stack-0060.local:37817 (size: 3.6 MB, free: 358.9 MB)
+17/04/28 21:31:41 INFO storage.BlockManagerInfo: Added rdd_9_0 in memory on stack-0060.local:59047 (size: 3.6 MB, free: 358.9 MB)
+17/04/28 21:31:43 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Disabling executor 5.
+17/04/28 21:31:43 INFO scheduler.DAGScheduler: Executor lost: 5 (epoch 10)
+17/04/28 21:31:43 INFO storage.BlockManagerMasterEndpoint: Trying to remove executor 5 from BlockManagerMaster.
+17/04/28 21:31:43 INFO storage.BlockManagerMasterEndpoint: Removing block manager BlockManagerId(5, stack-0060.local, 37817, None)
+17/04/28 21:31:43 INFO storage.BlockManagerMaster: Removed 5 successfully in removeExecutor
+17/04/28 21:31:43 INFO scheduler.DAGScheduler: Shuffle files lost for executor: 5 (epoch 10)
+17/04/28 21:31:43 INFO storage.BlockManagerInfo: Added rdd_12_0 in memory on stack-0060.local:59047 (size: 13.9 MB, free: 345.0 MB)
+17/04/28 21:31:43 ERROR cluster.YarnScheduler: Lost executor 5 on stack-0060.local: Container marked as failed: container_1493187723643_0021_02_000002 on host: stack-0060.local. Exit status: 1. Diagnostics: Exception from container-launch.
+Container id: container_1493187723643_0021_02_000002
+Exit code: 1
+Stack trace: ExitCodeException exitCode=1: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:545)
+	at org.apache.hadoop.util.Shell.run(Shell.java:456)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:722)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 1
+
+17/04/28 21:31:43 WARN scheduler.TaskSetManager: Lost task 1.0 in stage 4.2 (TID 17, stack-0060.local, executor 5): ExecutorLostFailure (executor 5 exited caused by one of the running tasks) Reason: Container marked as failed: container_1493187723643_0021_02_000002 on host: stack-0060.local. Exit status: 1. Diagnostics: Exception from container-launch.
+Container id: container_1493187723643_0021_02_000002
+Exit code: 1
+Stack trace: ExitCodeException exitCode=1: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:545)
+	at org.apache.hadoop.util.Shell.run(Shell.java:456)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:722)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 1
+
+17/04/28 21:31:43 WARN cluster.YarnSchedulerBackend$YarnSchedulerEndpoint: Container marked as failed: container_1493187723643_0021_02_000002 on host: stack-0060.local. Exit status: 1. Diagnostics: Exception from container-launch.
+Container id: container_1493187723643_0021_02_000002
+Exit code: 1
+Stack trace: ExitCodeException exitCode=1: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:545)
+	at org.apache.hadoop.util.Shell.run(Shell.java:456)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:722)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 1
+
+17/04/28 21:31:43 INFO storage.BlockManagerMaster: Removal of executor 5 requested
+17/04/28 21:31:43 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Asked to remove non-existent executor 5
+17/04/28 21:31:43 INFO storage.BlockManagerMasterEndpoint: Trying to remove executor 5 from BlockManagerMaster.
+17/04/28 21:31:43 INFO storage.BlockManagerInfo: Added broadcast_7_piece0 in memory on stack-0060.local:59047 (size: 349.0 KB, free: 344.6 MB)
+17/04/28 21:31:45 INFO scheduler.TaskSetManager: Starting task 1.1 in stage 4.2 (TID 18, stack-0060.local, executor 6, partition 1, NODE_LOCAL, 6012 bytes)
+17/04/28 21:31:45 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 4.2 (TID 16) in 8542 ms on stack-0060.local (executor 6) (1/2)
+17/04/28 21:31:45 INFO storage.BlockManagerInfo: Added rdd_2_1 in memory on stack-0060.local:59047 (size: 3.7 MB, free: 340.9 MB)
+17/04/28 21:31:46 INFO storage.BlockManagerInfo: Added rdd_9_1 in memory on stack-0060.local:59047 (size: 3.6 MB, free: 337.3 MB)
+17/04/28 21:31:46 INFO storage.BlockManagerInfo: Added rdd_12_1 in memory on stack-0060.local:59047 (size: 13.9 MB, free: 323.4 MB)
+17/04/28 21:31:47 INFO scheduler.TaskSetManager: Finished task 1.1 in stage 4.2 (TID 18) in 2599 ms on stack-0060.local (executor 6) (2/2)
+17/04/28 21:31:47 INFO cluster.YarnScheduler: Removed TaskSet 4.2, whose tasks have all completed, from pool 
+17/04/28 21:31:47 INFO scheduler.DAGScheduler: ShuffleMapStage 4 (repartition at Word2Vec.scala:329) finished in 11.140 s
+17/04/28 21:31:47 INFO scheduler.DAGScheduler: looking for newly runnable stages
+17/04/28 21:31:47 INFO scheduler.DAGScheduler: running: Set()
+17/04/28 21:31:47 INFO scheduler.DAGScheduler: waiting: Set(ShuffleMapStage 5, ResultStage 6)
+17/04/28 21:31:47 INFO scheduler.DAGScheduler: failed: Set()
+17/04/28 21:31:47 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 5 (MapPartitionsRDD[29] at mapPartitionsWithIndex at Word2Vec.scala:346), which has no missing parents
+17/04/28 21:31:47 INFO memory.MemoryStore: Block broadcast_15 stored as values in memory (estimated size 6.3 KB, free 314.6 MB)
+17/04/28 21:31:47 INFO memory.MemoryStore: Block broadcast_15_piece0 stored as bytes in memory (estimated size 3.4 KB, free 314.6 MB)
+17/04/28 21:31:47 INFO storage.BlockManagerInfo: Added broadcast_15_piece0 in memory on 192.168.0.243:49392 (size: 3.4 KB, free: 353.1 MB)
+17/04/28 21:31:47 INFO spark.SparkContext: Created broadcast 15 from broadcast at DAGScheduler.scala:996
+17/04/28 21:31:47 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 5 (MapPartitionsRDD[29] at mapPartitionsWithIndex at Word2Vec.scala:346)
+17/04/28 21:31:47 INFO cluster.YarnScheduler: Adding task set 5.2 with 1 tasks
+17/04/28 21:31:47 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 5.2 (TID 19, stack-0060.local, executor 6, partition 0, NODE_LOCAL, 6027 bytes)
+17/04/28 21:31:47 INFO storage.BlockManagerInfo: Added broadcast_15_piece0 in memory on stack-0060.local:59047 (size: 3.4 KB, free: 323.4 MB)
+17/04/28 21:31:47 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 1 to 192.168.0.243:46398
+17/04/28 21:31:47 INFO spark.MapOutputTrackerMaster: Size of output statuses for shuffle 1 is 156 bytes
+17/04/28 21:31:48 INFO storage.BlockManagerInfo: Added rdd_28_0 in memory on stack-0060.local:59047 (size: 11.3 MB, free: 312.1 MB)
+17/04/28 21:31:48 INFO storage.BlockManagerInfo: Added broadcast_8_piece1 in memory on stack-0060.local:59047 (size: 4.0 MB, free: 308.1 MB)
+17/04/28 21:31:48 INFO storage.BlockManagerInfo: Added broadcast_8_piece0 in memory on stack-0060.local:59047 (size: 4.0 MB, free: 304.1 MB)
+17/04/28 21:31:48 INFO storage.BlockManagerInfo: Added broadcast_8_piece2 in memory on stack-0060.local:59047 (size: 3.5 MB, free: 300.6 MB)
+17/04/28 21:31:48 INFO storage.BlockManagerInfo: Added broadcast_9_piece0 in memory on stack-0060.local:59047 (size: 57.7 KB, free: 300.5 MB)
+17/04/28 21:31:48 INFO storage.BlockManagerInfo: Added broadcast_6_piece0 in memory on stack-0060.local:59047 (size: 1197.5 KB, free: 299.3 MB)
+17/04/28 21:31:49 INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on stack-0060.local:59047 (size: 4.0 KB, free: 299.3 MB)
+17/04/28 21:31:53 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(null) (192.168.0.243:46411) with ID 7
+17/04/28 21:31:53 INFO storage.BlockManagerMasterEndpoint: Registering block manager stack-0060.local:47431 with 366.3 MB RAM, BlockManagerId(7, stack-0060.local, 47431, None)
+17/04/28 21:32:32 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 5.2 (TID 19) in 44438 ms on stack-0060.local (executor 6) (1/1)
+17/04/28 21:32:32 INFO cluster.YarnScheduler: Removed TaskSet 5.2, whose tasks have all completed, from pool 
+17/04/28 21:32:32 INFO scheduler.DAGScheduler: ShuffleMapStage 5 (mapPartitionsWithIndex at Word2Vec.scala:346) finished in 44.440 s
+17/04/28 21:32:32 INFO scheduler.DAGScheduler: looking for newly runnable stages
+17/04/28 21:32:32 INFO scheduler.DAGScheduler: running: Set()
+17/04/28 21:32:32 INFO scheduler.DAGScheduler: waiting: Set(ResultStage 6)
+17/04/28 21:32:32 INFO scheduler.DAGScheduler: failed: Set()
+17/04/28 21:32:32 INFO scheduler.DAGScheduler: Submitting ResultStage 6 (ShuffledRDD[30] at reduceByKey at Word2Vec.scala:420), which has no missing parents
+17/04/28 21:32:32 INFO memory.MemoryStore: Block broadcast_16 stored as values in memory (estimated size 4.4 KB, free 314.6 MB)
+17/04/28 21:32:32 INFO memory.MemoryStore: Block broadcast_16_piece0 stored as bytes in memory (estimated size 2.4 KB, free 314.6 MB)
+17/04/28 21:32:32 INFO storage.BlockManagerInfo: Added broadcast_16_piece0 in memory on 192.168.0.243:49392 (size: 2.4 KB, free: 353.1 MB)
+17/04/28 21:32:32 INFO spark.SparkContext: Created broadcast 16 from broadcast at DAGScheduler.scala:996
+17/04/28 21:32:32 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 6 (ShuffledRDD[30] at reduceByKey at Word2Vec.scala:420)
+17/04/28 21:32:32 INFO cluster.YarnScheduler: Adding task set 6.0 with 1 tasks
+17/04/28 21:32:32 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 6.0 (TID 20, stack-0060.local, executor 7, partition 0, NODE_LOCAL, 5762 bytes)
+17/04/28 21:32:32 INFO storage.BlockManagerInfo: Added broadcast_16_piece0 in memory on stack-0060.local:47431 (size: 2.4 KB, free: 366.3 MB)
+17/04/28 21:32:32 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 2 to 192.168.0.243:46411
+17/04/28 21:32:32 INFO spark.MapOutputTrackerMaster: Size of output statuses for shuffle 2 is 147 bytes
+17/04/28 21:32:33 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Disabling executor 7.
+17/04/28 21:32:33 INFO scheduler.DAGScheduler: Executor lost: 7 (epoch 14)
+17/04/28 21:32:33 INFO storage.BlockManagerMasterEndpoint: Trying to remove executor 7 from BlockManagerMaster.
+17/04/28 21:32:33 INFO storage.BlockManagerMasterEndpoint: Removing block manager BlockManagerId(7, stack-0060.local, 47431, None)
+17/04/28 21:32:33 INFO storage.BlockManagerMaster: Removed 7 successfully in removeExecutor
+17/04/28 21:32:33 INFO scheduler.DAGScheduler: Shuffle files lost for executor: 7 (epoch 14)
+17/04/28 21:32:35 ERROR cluster.YarnScheduler: Lost executor 7 on stack-0060.local: Container marked as failed: container_1493187723643_0021_02_000005 on host: stack-0060.local. Exit status: 1. Diagnostics: Exception from container-launch.
+Container id: container_1493187723643_0021_02_000005
+Exit code: 1
+Stack trace: ExitCodeException exitCode=1: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:545)
+	at org.apache.hadoop.util.Shell.run(Shell.java:456)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:722)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 1
+
+17/04/28 21:32:35 WARN scheduler.TaskSetManager: Lost task 0.0 in stage 6.0 (TID 20, stack-0060.local, executor 7): ExecutorLostFailure (executor 7 exited caused by one of the running tasks) Reason: Container marked as failed: container_1493187723643_0021_02_000005 on host: stack-0060.local. Exit status: 1. Diagnostics: Exception from container-launch.
+Container id: container_1493187723643_0021_02_000005
+Exit code: 1
+Stack trace: ExitCodeException exitCode=1: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:545)
+	at org.apache.hadoop.util.Shell.run(Shell.java:456)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:722)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 1
+
+17/04/28 21:32:35 WARN cluster.YarnSchedulerBackend$YarnSchedulerEndpoint: Container marked as failed: container_1493187723643_0021_02_000005 on host: stack-0060.local. Exit status: 1. Diagnostics: Exception from container-launch.
+Container id: container_1493187723643_0021_02_000005
+Exit code: 1
+Stack trace: ExitCodeException exitCode=1: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:545)
+	at org.apache.hadoop.util.Shell.run(Shell.java:456)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:722)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 1
+
+17/04/28 21:32:35 INFO storage.BlockManagerMaster: Removal of executor 7 requested
+17/04/28 21:32:35 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Asked to remove non-existent executor 7
+17/04/28 21:32:35 INFO storage.BlockManagerMasterEndpoint: Trying to remove executor 7 from BlockManagerMaster.
+17/04/28 21:32:35 INFO scheduler.TaskSetManager: Starting task 0.1 in stage 6.0 (TID 21, stack-0060.local, executor 6, partition 0, NODE_LOCAL, 5762 bytes)
+17/04/28 21:32:36 INFO storage.BlockManagerInfo: Added broadcast_16_piece0 in memory on stack-0060.local:59047 (size: 2.4 KB, free: 299.3 MB)
+17/04/28 21:32:36 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 2 to 192.168.0.243:46398
+17/04/28 21:32:36 INFO spark.MapOutputTrackerMaster: Size of output statuses for shuffle 2 is 147 bytes
+17/04/28 21:32:36 INFO storage.BlockManagerInfo: Added taskresult_21 in memory on stack-0060.local:59047 (size: 24.7 MB, free: 274.7 MB)
+17/04/28 21:32:36 INFO client.TransportClientFactory: Successfully created connection to stack-0060.local/192.168.0.243:59047 after 2 ms (0 ms spent in bootstraps)
+17/04/28 21:32:37 INFO storage.BlockManagerInfo: Removed broadcast_15_piece0 on 192.168.0.243:49392 in memory (size: 3.4 KB, free: 353.1 MB)
+17/04/28 21:32:37 INFO storage.BlockManagerInfo: Removed broadcast_15_piece0 on stack-0060.local:59047 in memory (size: 3.4 KB, free: 274.7 MB)
+17/04/28 21:32:37 INFO storage.BlockManagerInfo: Removed broadcast_14_piece0 on 192.168.0.243:49392 in memory (size: 13.9 KB, free: 353.1 MB)
+17/04/28 21:32:37 INFO storage.BlockManagerInfo: Removed broadcast_14_piece0 on stack-0060.local:59047 in memory (size: 13.9 KB, free: 274.7 MB)
+17/04/28 21:32:37 INFO storage.BlockManagerInfo: Removed broadcast_13_piece0 on 192.168.0.243:49392 in memory (size: 3.4 KB, free: 353.1 MB)
+17/04/28 21:32:37 INFO storage.BlockManagerInfo: Removed broadcast_12_piece0 on 192.168.0.243:49392 in memory (size: 13.9 KB, free: 353.2 MB)
+17/04/28 21:32:37 INFO storage.BlockManagerInfo: Removed broadcast_11_piece0 on 192.168.0.243:49392 in memory (size: 3.4 KB, free: 353.2 MB)
+17/04/28 21:32:37 INFO storage.BlockManagerInfo: Removed broadcast_10_piece0 on 192.168.0.243:49392 in memory (size: 13.9 KB, free: 353.2 MB)
+17/04/28 21:32:37 INFO storage.BlockManagerInfo: Removed broadcast_4_piece0 on 192.168.0.243:49392 in memory (size: 2.6 KB, free: 353.2 MB)
+17/04/28 21:32:37 INFO spark.ContextCleaner: Cleaned shuffle 0
+17/04/28 21:32:37 INFO scheduler.DAGScheduler: ResultStage 6 (collect at Word2Vec.scala:423) finished in 5.140 s
+17/04/28 21:32:37 INFO scheduler.DAGScheduler: Job 3 finished: collect at Word2Vec.scala:423, took 97.412653 s
+17/04/28 21:32:37 INFO storage.BlockManagerInfo: Removed taskresult_21 on stack-0060.local:59047 in memory (size: 24.7 MB, free: 299.3 MB)
+17/04/28 21:32:37 INFO scheduler.TaskSetManager: Finished task 0.1 in stage 6.0 (TID 21) in 1418 ms on stack-0060.local (executor 6) (1/1)
+17/04/28 21:32:37 INFO cluster.YarnScheduler: Removed TaskSet 6.0, whose tasks have all completed, from pool 
+17/04/28 21:32:37 INFO broadcast.TorrentBroadcast: Destroying Broadcast(8) (from destroy at Word2Vec.scala:434)
+17/04/28 21:32:37 INFO storage.BlockManagerInfo: Removed broadcast_8_piece0 on stack-0060.local:59047 in memory (size: 4.0 MB, free: 303.3 MB)
+17/04/28 21:32:37 INFO storage.BlockManagerInfo: Removed broadcast_8_piece0 on 192.168.0.243:49392 in memory (size: 4.0 MB, free: 357.2 MB)
+17/04/28 21:32:37 INFO storage.BlockManagerInfo: Removed broadcast_8_piece2 on 192.168.0.243:49392 in memory (size: 3.5 MB, free: 360.7 MB)
+17/04/28 21:32:37 INFO storage.BlockManagerInfo: Removed broadcast_8_piece2 on stack-0060.local:59047 in memory (size: 3.5 MB, free: 306.9 MB)
+17/04/28 21:32:37 INFO storage.BlockManagerInfo: Removed broadcast_8_piece1 on 192.168.0.243:49392 in memory (size: 4.0 MB, free: 364.7 MB)
+17/04/28 21:32:37 INFO broadcast.TorrentBroadcast: Destroying Broadcast(9) (from destroy at Word2Vec.scala:435)
+17/04/28 21:32:37 INFO storage.BlockManagerInfo: Removed broadcast_8_piece1 on stack-0060.local:59047 in memory (size: 4.0 MB, free: 310.9 MB)
+17/04/28 21:32:37 INFO storage.BlockManagerInfo: Removed broadcast_9_piece0 on 192.168.0.243:49392 in memory (size: 57.7 KB, free: 364.8 MB)
+17/04/28 21:32:37 INFO rdd.MapPartitionsRDD: Removing RDD 28 from persistence list
+17/04/28 21:32:37 INFO storage.BlockManagerInfo: Removed broadcast_9_piece0 on stack-0060.local:59047 in memory (size: 57.7 KB, free: 322.3 MB)
+17/04/28 21:32:37 INFO storage.BlockManager: Removing RDD 28
+17/04/28 21:32:37 INFO broadcast.TorrentBroadcast: Destroying Broadcast(5) (from destroy at Word2Vec.scala:438)
+17/04/28 21:32:37 INFO storage.BlockManagerInfo: Removed broadcast_5_piece0 on 192.168.0.243:49392 in memory (size: 4.0 KB, free: 364.8 MB)
+17/04/28 21:32:37 INFO storage.BlockManagerInfo: Removed broadcast_5_piece0 on stack-0060.local:59047 in memory (size: 4.0 KB, free: 322.3 MB)
+17/04/28 21:32:37 INFO broadcast.TorrentBroadcast: Destroying Broadcast(6) (from destroy at Word2Vec.scala:439)
+17/04/28 21:32:37 INFO broadcast.TorrentBroadcast: Destroying Broadcast(7) (from destroy at Word2Vec.scala:440)
+17/04/28 21:32:37 INFO storage.BlockManagerInfo: Removed broadcast_7_piece0 on 192.168.0.243:49392 in memory (size: 349.0 KB, free: 365.1 MB)
+17/04/28 21:32:37 INFO storage.BlockManagerInfo: Removed broadcast_6_piece0 on 192.168.0.243:49392 in memory (size: 1197.5 KB, free: 366.3 MB)
+17/04/28 21:32:37 INFO storage.BlockManagerInfo: Removed broadcast_6_piece0 on stack-0060.local:59047 in memory (size: 1197.5 KB, free: 323.4 MB)
+17/04/28 21:32:37 INFO storage.BlockManagerInfo: Removed broadcast_7_piece0 on stack-0060.local:59047 in memory (size: 349.0 KB, free: 323.8 MB)
+17/04/28 21:32:37 WARN netlib.BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+17/04/28 21:32:37 WARN netlib.BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+==========word2vec========
+17/04/28 21:32:39 INFO storage.BlockManagerInfo: Removed broadcast_16_piece0 on 192.168.0.243:49392 in memory (size: 2.4 KB, free: 366.3 MB)
+17/04/28 21:32:39 INFO storage.BlockManagerInfo: Removed broadcast_16_piece0 on stack-0060.local:59047 in memory (size: 2.4 KB, free: 323.8 MB)
+17/04/28 21:32:39 INFO spark.ContextCleaner: Cleaned shuffle 2
+17/04/28 21:32:39 INFO spark.ContextCleaner: Cleaned shuffle 1
+17/04/28 21:32:39 INFO storage.BlockManager: Removing RDD 28
+17/04/28 21:32:39 INFO spark.ContextCleaner: Cleaned RDD 28
+17/04/28 21:32:39 INFO spark.ContextCleaner: Cleaned accumulator 103
+17/04/28 21:32:39 INFO codegen.CodeGenerator: Code generated in 27.239984 ms
+17/04/28 21:32:40 INFO codegen.CodeGenerator: Code generated in 14.43675 ms
++------------+--------------------+
+|        word|              vector|
++------------+--------------------+
+|   debutant.|[0.03263321891427...|
+|     bairaag|[6.6089176107198E...|
+|      khaliq|[-0.0196465216577...|
+|    herself.|[-0.0431375093758...|
+|   dellacqua|[-0.0711749568581...|
+|    incident|[-0.1289093643426...|
+|     serious|[0.02506403438746...|
+|       brink|[0.00509535567834...|
+|     acronym|[-0.0019883378408...|
+|    youthful|[-0.0228302609175...|
+|      comply|[-0.0201528128236...|
+|      breaks|[-0.0352002717554...|
+|        marr|[-0.0627159550786...|
+|   forgotten|[-0.0026950957253...|
+|    precious|[-0.0101403854787...|
+|       mario|[-0.0341551974415...|
+|      boxers|[-0.0669961124658...|
+|   dynasties|[-0.0308568272739...|
+|        37th|[0.02236374467611...|
+|inflammatory|[-0.0225969906896...|
++------------+--------------------+
+only showing top 20 rows
+
+17/04/28 21:32:40 INFO codegen.CodeGenerator: Code generated in 7.91806 ms
+17/04/28 21:32:40 INFO codegen.CodeGenerator: Code generated in 19.701354 ms
+17/04/28 21:32:40 INFO codegen.CodeGenerator: Code generated in 24.766278 ms
+17/04/28 21:32:40 INFO spark.SparkContext: Starting job: count at NativeMethodAccessorImpl.java:0
+17/04/28 21:32:40 INFO scheduler.DAGScheduler: Registering RDD 34 (count at NativeMethodAccessorImpl.java:0)
+17/04/28 21:32:40 INFO scheduler.DAGScheduler: Got job 4 (count at NativeMethodAccessorImpl.java:0) with 1 output partitions
+17/04/28 21:32:40 INFO scheduler.DAGScheduler: Final stage: ResultStage 8 (count at NativeMethodAccessorImpl.java:0)
+17/04/28 21:32:40 INFO scheduler.DAGScheduler: Parents of final stage: List(ShuffleMapStage 7)
+17/04/28 21:32:40 INFO scheduler.DAGScheduler: Missing parents: List(ShuffleMapStage 7)
+17/04/28 21:32:40 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 7 (MapPartitionsRDD[34] at count at NativeMethodAccessorImpl.java:0), which has no missing parents
+17/04/28 21:32:40 INFO memory.MemoryStore: Block broadcast_17 stored as values in memory (estimated size 7.8 KB, free 366.0 MB)
+17/04/28 21:32:40 INFO memory.MemoryStore: Block broadcast_17_piece0 stored as bytes in memory (estimated size 4.2 KB, free 366.0 MB)
+17/04/28 21:32:40 INFO storage.BlockManagerInfo: Added broadcast_17_piece0 in memory on 192.168.0.243:49392 (size: 4.2 KB, free: 366.3 MB)
+17/04/28 21:32:40 INFO spark.SparkContext: Created broadcast 17 from broadcast at DAGScheduler.scala:996
+17/04/28 21:32:40 INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 7 (MapPartitionsRDD[34] at count at NativeMethodAccessorImpl.java:0)
+17/04/28 21:32:40 INFO cluster.YarnScheduler: Adding task set 7.0 with 2 tasks
+17/04/28 21:32:41 WARN scheduler.TaskSetManager: Stage 7 contains a task of very large size (256 KB). The maximum recommended task size is 100 KB.
+17/04/28 21:32:41 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 7.0 (TID 22, stack-0060.local, executor 6, partition 0, PROCESS_LOCAL, 262778 bytes)
+17/04/28 21:32:41 INFO storage.BlockManagerInfo: Added broadcast_17_piece0 in memory on stack-0060.local:59047 (size: 4.2 KB, free: 323.8 MB)
+17/04/28 21:32:41 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 7.0 (TID 23, stack-0060.local, executor 6, partition 1, PROCESS_LOCAL, 262778 bytes)
+17/04/28 21:32:41 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 7.0 (TID 22) in 393 ms on stack-0060.local (executor 6) (1/2)
+17/04/28 21:32:41 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 7.0 (TID 23) in 91 ms on stack-0060.local (executor 6) (2/2)
+17/04/28 21:32:41 INFO cluster.YarnScheduler: Removed TaskSet 7.0, whose tasks have all completed, from pool 
+17/04/28 21:32:41 INFO scheduler.DAGScheduler: ShuffleMapStage 7 (count at NativeMethodAccessorImpl.java:0) finished in 0.471 s
+17/04/28 21:32:41 INFO scheduler.DAGScheduler: looking for newly runnable stages
+17/04/28 21:32:41 INFO scheduler.DAGScheduler: running: Set()
+17/04/28 21:32:41 INFO scheduler.DAGScheduler: waiting: Set(ResultStage 8)
+17/04/28 21:32:41 INFO scheduler.DAGScheduler: failed: Set()
+17/04/28 21:32:41 INFO scheduler.DAGScheduler: Submitting ResultStage 8 (MapPartitionsRDD[37] at count at NativeMethodAccessorImpl.java:0), which has no missing parents
+17/04/28 21:32:41 INFO memory.MemoryStore: Block broadcast_18 stored as values in memory (estimated size 7.0 KB, free 366.0 MB)
+17/04/28 21:32:41 INFO memory.MemoryStore: Block broadcast_18_piece0 stored as bytes in memory (estimated size 3.7 KB, free 366.0 MB)
+17/04/28 21:32:41 INFO storage.BlockManagerInfo: Added broadcast_18_piece0 in memory on 192.168.0.243:49392 (size: 3.7 KB, free: 366.3 MB)
+17/04/28 21:32:41 INFO spark.SparkContext: Created broadcast 18 from broadcast at DAGScheduler.scala:996
+17/04/28 21:32:41 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 8 (MapPartitionsRDD[37] at count at NativeMethodAccessorImpl.java:0)
+17/04/28 21:32:41 INFO cluster.YarnScheduler: Adding task set 8.0 with 1 tasks
+17/04/28 21:32:41 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 8.0 (TID 24, stack-0060.local, executor 6, partition 0, NODE_LOCAL, 5896 bytes)
+17/04/28 21:32:41 INFO storage.BlockManagerInfo: Added broadcast_18_piece0 in memory on stack-0060.local:59047 (size: 3.7 KB, free: 323.8 MB)
+17/04/28 21:32:41 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 3 to 192.168.0.243:46398
+17/04/28 21:32:41 INFO spark.MapOutputTrackerMaster: Size of output statuses for shuffle 3 is 156 bytes
+17/04/28 21:32:41 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 8.0 (TID 24) in 100 ms on stack-0060.local (executor 6) (1/1)
+17/04/28 21:32:41 INFO cluster.YarnScheduler: Removed TaskSet 8.0, whose tasks have all completed, from pool 
+17/04/28 21:32:41 INFO scheduler.DAGScheduler: ResultStage 8 (count at NativeMethodAccessorImpl.java:0) finished in 0.101 s
+17/04/28 21:32:41 INFO scheduler.DAGScheduler: Job 4 finished: count at NativeMethodAccessorImpl.java:0, took 0.626214 s
+17/04/28 21:32:41 INFO codegen.CodeGenerator: Code generated in 10.927187 ms
+word2vec size = 30194 
+17/04/28 21:32:41 INFO Configuration.deprecation: mapred.tip.id is deprecated. Instead, use mapreduce.task.id
+17/04/28 21:32:41 INFO Configuration.deprecation: mapred.task.id is deprecated. Instead, use mapreduce.task.attempt.id
+17/04/28 21:32:41 INFO Configuration.deprecation: mapred.task.is.map is deprecated. Instead, use mapreduce.task.ismap
+17/04/28 21:32:41 INFO Configuration.deprecation: mapred.task.partition is deprecated. Instead, use mapreduce.task.partition
+17/04/28 21:32:41 INFO Configuration.deprecation: mapred.job.id is deprecated. Instead, use mapreduce.job.id
+17/04/28 21:32:41 INFO spark.SparkContext: Starting job: saveAsTextFile at ReadWrite.scala:275
+17/04/28 21:32:41 INFO scheduler.DAGScheduler: Got job 5 (saveAsTextFile at ReadWrite.scala:275) with 1 output partitions
+17/04/28 21:32:41 INFO scheduler.DAGScheduler: Final stage: ResultStage 9 (saveAsTextFile at ReadWrite.scala:275)
+17/04/28 21:32:41 INFO scheduler.DAGScheduler: Parents of final stage: List()
+17/04/28 21:32:41 INFO scheduler.DAGScheduler: Missing parents: List()
+17/04/28 21:32:41 INFO scheduler.DAGScheduler: Submitting ResultStage 9 (MapPartitionsRDD[39] at saveAsTextFile at ReadWrite.scala:275), which has no missing parents
+17/04/28 21:32:41 INFO memory.MemoryStore: Block broadcast_19 stored as values in memory (estimated size 64.2 KB, free 366.0 MB)
+17/04/28 21:32:41 INFO memory.MemoryStore: Block broadcast_19_piece0 stored as bytes in memory (estimated size 22.6 KB, free 365.9 MB)
+17/04/28 21:32:41 INFO storage.BlockManagerInfo: Added broadcast_19_piece0 in memory on 192.168.0.243:49392 (size: 22.6 KB, free: 366.3 MB)
+17/04/28 21:32:41 INFO spark.SparkContext: Created broadcast 19 from broadcast at DAGScheduler.scala:996
+17/04/28 21:32:41 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 9 (MapPartitionsRDD[39] at saveAsTextFile at ReadWrite.scala:275)
+17/04/28 21:32:41 INFO cluster.YarnScheduler: Adding task set 9.0 with 1 tasks
+17/04/28 21:32:41 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 9.0 (TID 25, stack-0060.local, executor 6, partition 0, PROCESS_LOCAL, 6316 bytes)
+17/04/28 21:32:41 INFO storage.BlockManagerInfo: Added broadcast_19_piece0 in memory on stack-0060.local:59047 (size: 22.6 KB, free: 323.7 MB)
+17/04/28 21:32:42 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 9.0 (TID 25) in 417 ms on stack-0060.local (executor 6) (1/1)
+17/04/28 21:32:42 INFO cluster.YarnScheduler: Removed TaskSet 9.0, whose tasks have all completed, from pool 
+17/04/28 21:32:42 INFO scheduler.DAGScheduler: ResultStage 9 (saveAsTextFile at ReadWrite.scala:275) finished in 0.419 s
+17/04/28 21:32:42 INFO scheduler.DAGScheduler: Job 5 finished: saveAsTextFile at ReadWrite.scala:275, took 0.469939 s
+17/04/28 21:32:42 INFO spark.ContextCleaner: Cleaned accumulator 800
+17/04/28 21:32:42 INFO spark.ContextCleaner: Cleaned accumulator 801
+17/04/28 21:32:42 INFO spark.ContextCleaner: Cleaned accumulator 802
+17/04/28 21:32:42 INFO spark.ContextCleaner: Cleaned accumulator 803
+17/04/28 21:32:42 INFO spark.ContextCleaner: Cleaned accumulator 804
+17/04/28 21:32:42 INFO spark.ContextCleaner: Cleaned accumulator 805
+17/04/28 21:32:42 INFO spark.ContextCleaner: Cleaned accumulator 806
+17/04/28 21:32:42 INFO spark.ContextCleaner: Cleaned accumulator 807
+17/04/28 21:32:42 INFO spark.ContextCleaner: Cleaned accumulator 808
+17/04/28 21:32:42 INFO spark.ContextCleaner: Cleaned accumulator 809
+17/04/28 21:32:42 INFO spark.ContextCleaner: Cleaned accumulator 810
+17/04/28 21:32:42 INFO spark.ContextCleaner: Cleaned accumulator 811
+17/04/28 21:32:42 INFO spark.ContextCleaner: Cleaned accumulator 812
+17/04/28 21:32:42 INFO spark.ContextCleaner: Cleaned accumulator 813
+17/04/28 21:32:42 INFO spark.ContextCleaner: Cleaned shuffle 3
+17/04/28 21:32:42 INFO storage.BlockManagerInfo: Removed broadcast_17_piece0 on 192.168.0.243:49392 in memory (size: 4.2 KB, free: 366.3 MB)
+17/04/28 21:32:42 INFO storage.BlockManagerInfo: Removed broadcast_17_piece0 on stack-0060.local:59047 in memory (size: 4.2 KB, free: 323.8 MB)
+17/04/28 21:32:42 INFO storage.BlockManagerInfo: Removed broadcast_19_piece0 on 192.168.0.243:49392 in memory (size: 22.6 KB, free: 366.3 MB)
+17/04/28 21:32:42 INFO storage.BlockManagerInfo: Removed broadcast_19_piece0 on stack-0060.local:59047 in memory (size: 22.6 KB, free: 323.8 MB)
+17/04/28 21:32:42 INFO storage.BlockManagerInfo: Removed broadcast_18_piece0 on 192.168.0.243:49392 in memory (size: 3.7 KB, free: 366.3 MB)
+17/04/28 21:32:42 INFO storage.BlockManagerInfo: Removed broadcast_18_piece0 on stack-0060.local:59047 in memory (size: 3.7 KB, free: 323.8 MB)
+17/04/28 21:32:42 INFO parquet.ParquetFileFormat: Using default output committer for Parquet: org.apache.parquet.hadoop.ParquetOutputCommitter
+17/04/28 21:32:43 INFO codegen.CodeGenerator: Code generated in 41.983472 ms
+17/04/28 21:32:43 INFO datasources.SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+17/04/28 21:32:43 INFO datasources.SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+17/04/28 21:32:43 INFO spark.SparkContext: Starting job: parquet at Word2Vec.scala:314
+17/04/28 21:32:43 INFO scheduler.DAGScheduler: Registering RDD 42 (parquet at Word2Vec.scala:314)
+17/04/28 21:32:43 INFO scheduler.DAGScheduler: Got job 6 (parquet at Word2Vec.scala:314) with 1 output partitions
+17/04/28 21:32:43 INFO scheduler.DAGScheduler: Final stage: ResultStage 11 (parquet at Word2Vec.scala:314)
+17/04/28 21:32:43 INFO scheduler.DAGScheduler: Parents of final stage: List(ShuffleMapStage 10)
+17/04/28 21:32:43 INFO scheduler.DAGScheduler: Missing parents: List(ShuffleMapStage 10)
+17/04/28 21:32:43 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 10 (MapPartitionsRDD[42] at parquet at Word2Vec.scala:314), which has no missing parents
+17/04/28 21:32:43 INFO memory.MemoryStore: Block broadcast_20 stored as values in memory (estimated size 5.0 KB, free 366.0 MB)
+17/04/28 21:32:43 INFO memory.MemoryStore: Block broadcast_20_piece0 stored as bytes in memory (estimated size 3.0 KB, free 366.0 MB)
+17/04/28 21:32:43 INFO storage.BlockManagerInfo: Added broadcast_20_piece0 in memory on 192.168.0.243:49392 (size: 3.0 KB, free: 366.3 MB)
+17/04/28 21:32:43 INFO spark.SparkContext: Created broadcast 20 from broadcast at DAGScheduler.scala:996
+17/04/28 21:32:43 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 10 (MapPartitionsRDD[42] at parquet at Word2Vec.scala:314)
+17/04/28 21:32:43 INFO cluster.YarnScheduler: Adding task set 10.0 with 1 tasks
+17/04/28 21:32:43 INFO spark.ContextCleaner: Cleaned accumulator 982
+17/04/28 21:32:43 WARN scheduler.TaskSetManager: Stage 10 contains a task of very large size (12895 KB). The maximum recommended task size is 100 KB.
+17/04/28 21:32:43 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 10.0 (TID 26, stack-0060.local, executor 6, partition 0, PROCESS_LOCAL, 13205241 bytes)
+17/04/28 21:32:43 INFO storage.BlockManagerInfo: Added broadcast_20_piece0 in memory on stack-0060.local:59047 (size: 3.0 KB, free: 323.8 MB)
+17/04/28 21:32:43 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 10.0 (TID 26) in 397 ms on stack-0060.local (executor 6) (1/1)
+17/04/28 21:32:43 INFO cluster.YarnScheduler: Removed TaskSet 10.0, whose tasks have all completed, from pool 
+17/04/28 21:32:43 INFO scheduler.DAGScheduler: ShuffleMapStage 10 (parquet at Word2Vec.scala:314) finished in 0.398 s
+17/04/28 21:32:43 INFO scheduler.DAGScheduler: looking for newly runnable stages
+17/04/28 21:32:43 INFO scheduler.DAGScheduler: running: Set()
+17/04/28 21:32:43 INFO scheduler.DAGScheduler: waiting: Set(ResultStage 11)
+17/04/28 21:32:43 INFO scheduler.DAGScheduler: failed: Set()
+17/04/28 21:32:43 INFO scheduler.DAGScheduler: Submitting ResultStage 11 (ShuffledRowRDD[43] at parquet at Word2Vec.scala:314), which has no missing parents
+17/04/28 21:32:43 INFO memory.MemoryStore: Block broadcast_21 stored as values in memory (estimated size 69.8 KB, free 366.0 MB)
+17/04/28 21:32:43 INFO memory.MemoryStore: Block broadcast_21_piece0 stored as bytes in memory (estimated size 26.2 KB, free 365.9 MB)
+17/04/28 21:32:43 INFO storage.BlockManagerInfo: Added broadcast_21_piece0 in memory on 192.168.0.243:49392 (size: 26.2 KB, free: 366.3 MB)
+17/04/28 21:32:43 INFO spark.SparkContext: Created broadcast 21 from broadcast at DAGScheduler.scala:996
+17/04/28 21:32:43 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 11 (ShuffledRowRDD[43] at parquet at Word2Vec.scala:314)
+17/04/28 21:32:43 INFO cluster.YarnScheduler: Adding task set 11.0 with 1 tasks
+17/04/28 21:32:43 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 11.0 (TID 27, stack-0060.local, executor 6, partition 0, NODE_LOCAL, 5904 bytes)
+17/04/28 21:32:43 INFO storage.BlockManagerInfo: Added broadcast_21_piece0 in memory on stack-0060.local:59047 (size: 26.2 KB, free: 323.8 MB)
+17/04/28 21:32:43 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 4 to 192.168.0.243:46398
+17/04/28 21:32:43 INFO spark.MapOutputTrackerMaster: Size of output statuses for shuffle 4 is 147 bytes
+17/04/28 21:32:44 WARN cluster.YarnSchedulerBackend$YarnSchedulerEndpoint: Container marked as failed: container_1493187723643_0021_02_000006 on host: stack-0060.local. Exit status: 1. Diagnostics: Exception from container-launch.
+Container id: container_1493187723643_0021_02_000006
+Exit code: 1
+Stack trace: ExitCodeException exitCode=1: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:545)
+	at org.apache.hadoop.util.Shell.run(Shell.java:456)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:722)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 1
+
+17/04/28 21:32:44 INFO storage.BlockManagerMaster: Removal of executor 8 requested
+17/04/28 21:32:44 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Asked to remove non-existent executor 8
+17/04/28 21:32:44 INFO storage.BlockManagerMasterEndpoint: Trying to remove executor 8 from BlockManagerMaster.
+17/04/28 21:32:45 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 11.0 (TID 27) in 2048 ms on stack-0060.local (executor 6) (1/1)
+17/04/28 21:32:45 INFO scheduler.DAGScheduler: ResultStage 11 (parquet at Word2Vec.scala:314) finished in 2.049 s
+17/04/28 21:32:45 INFO scheduler.DAGScheduler: Job 6 finished: parquet at Word2Vec.scala:314, took 2.490422 s
+17/04/28 21:32:45 INFO cluster.YarnScheduler: Removed TaskSet 11.0, whose tasks have all completed, from pool 
+17/04/28 21:32:45 INFO datasources.FileFormatWriter: Job null committed.
+17/04/28 21:32:46 INFO storage.BlockManagerInfo: Removed broadcast_21_piece0 on 192.168.0.243:49392 in memory (size: 26.2 KB, free: 366.3 MB)
+17/04/28 21:32:46 INFO storage.BlockManagerInfo: Removed broadcast_21_piece0 on stack-0060.local:59047 in memory (size: 26.2 KB, free: 323.8 MB)
+17/04/28 21:32:47 WARN amfilter.AmIpFilter: Could not find proxy-user cookie, so user will not be set
+17/04/28 21:32:47 WARN amfilter.AmIpFilter: Could not find proxy-user cookie, so user will not be set
+create-word2vec-model.py
+Got App ID. AppID = application_1493187723643_0021
+17/04/28 21:32:47 WARN amfilter.AmIpFilter: Could not find proxy-user cookie, so user will not be set
+17/04/28 21:32:47 WARN amfilter.AmIpFilter: Could not find proxy-user cookie, so user will not be set
+17/04/28 21:32:47 WARN amfilter.AmIpFilter: Could not find proxy-user cookie, so user will not be set
+17/04/28 21:32:47 WARN amfilter.AmIpFilter: Could not find proxy-user cookie, so user will not be set
+17/04/28 21:32:47 WARN amfilter.AmIpFilter: Could not find proxy-user cookie, so user will not be set
+17/04/28 21:32:47 WARN amfilter.AmIpFilter: Could not find proxy-user cookie, so user will not be set
+17/04/28 21:32:47 INFO server.ServerConnector: Stopped ServerConnector@5a0a3068{HTTP/1.1}{0.0.0.0:4040}
+17/04/28 21:32:47 INFO handler.ContextHandler: Stopped o.s.j.s.ServletContextHandler@49f726d0{/stages/stage/kill,null,UNAVAILABLE}
+17/04/28 21:32:47 INFO handler.ContextHandler: Stopped o.s.j.s.ServletContextHandler@2f78bbd{/jobs/job/kill,null,UNAVAILABLE}
+17/04/28 21:32:47 INFO handler.ContextHandler: Stopped o.s.j.s.ServletContextHandler@72565928{/api,null,UNAVAILABLE}
+17/04/28 21:32:47 INFO handler.ContextHandler: Stopped o.s.j.s.ServletContextHandler@52079efa{/,null,UNAVAILABLE}
+17/04/28 21:32:47 INFO handler.ContextHandler: Stopped o.s.j.s.ServletContextHandler@2e4b4e64{/static,null,UNAVAILABLE}
+17/04/28 21:32:47 INFO handler.ContextHandler: Stopped o.s.j.s.ServletContextHandler@54ab1e31{/executors/threadDump/json,null,UNAVAILABLE}
+17/04/28 21:32:47 INFO handler.ContextHandler: Stopped o.s.j.s.ServletContextHandler@5c495dc4{/executors/threadDump,null,UNAVAILABLE}
+17/04/28 21:32:47 INFO handler.ContextHandler: Stopped o.s.j.s.ServletContextHandler@4be18ba{/executors/json,null,UNAVAILABLE}
+17/04/28 21:32:47 INFO handler.ContextHandler: Stopped o.s.j.s.ServletContextHandler@1d6b9fa5{/executors,null,UNAVAILABLE}
+17/04/28 21:32:47 INFO handler.ContextHandler: Stopped o.s.j.s.ServletContextHandler@53885c6b{/environment/json,null,UNAVAILABLE}
+17/04/28 21:32:47 INFO handler.ContextHandler: Stopped o.s.j.s.ServletContextHandler@3d01ab1{/environment,null,UNAVAILABLE}
+17/04/28 21:32:47 INFO handler.ContextHandler: Stopped o.s.j.s.ServletContextHandler@39a12a0e{/storage/rdd/json,null,UNAVAILABLE}
+17/04/28 21:32:47 INFO handler.ContextHandler: Stopped o.s.j.s.ServletContextHandler@1c76c583{/storage/rdd,null,UNAVAILABLE}
+17/04/28 21:32:47 INFO handler.ContextHandler: Stopped o.s.j.s.ServletContextHandler@2a395ead{/storage/json,null,UNAVAILABLE}
+17/04/28 21:32:47 INFO handler.ContextHandler: Stopped o.s.j.s.ServletContextHandler@d143748{/storage,null,UNAVAILABLE}
+17/04/28 21:32:47 INFO handler.ContextHandler: Stopped o.s.j.s.ServletContextHandler@70d85e41{/stages/pool/json,null,UNAVAILABLE}
+17/04/28 21:32:47 INFO handler.ContextHandler: Stopped o.s.j.s.ServletContextHandler@72cca1{/stages/pool,null,UNAVAILABLE}
+17/04/28 21:32:47 INFO handler.ContextHandler: Stopped o.s.j.s.ServletContextHandler@17fb7f8c{/stages/stage/json,null,UNAVAILABLE}
+17/04/28 21:32:47 INFO handler.ContextHandler: Stopped o.s.j.s.ServletContextHandler@4894a95e{/stages/stage,null,UNAVAILABLE}
+17/04/28 21:32:47 INFO handler.ContextHandler: Stopped o.s.j.s.ServletContextHandler@1aa1215a{/stages/json,null,UNAVAILABLE}
+17/04/28 21:32:47 INFO handler.ContextHandler: Stopped o.s.j.s.ServletContextHandler@15d61781{/stages,null,UNAVAILABLE}
+17/04/28 21:32:47 INFO handler.ContextHandler: Stopped o.s.j.s.ServletContextHandler@11655d63{/jobs/job/json,null,UNAVAILABLE}
+17/04/28 21:32:47 INFO handler.ContextHandler: Stopped o.s.j.s.ServletContextHandler@70d488dc{/jobs/job,null,UNAVAILABLE}
+17/04/28 21:32:47 INFO handler.ContextHandler: Stopped o.s.j.s.ServletContextHandler@7d324aea{/jobs/json,null,UNAVAILABLE}
+17/04/28 21:32:47 INFO handler.ContextHandler: Stopped o.s.j.s.ServletContextHandler@64b842ee{/jobs,null,UNAVAILABLE}
+17/04/28 21:32:47 INFO ui.SparkUI: Stopped Spark web UI at http://192.168.0.243:4040
+17/04/28 21:32:47 INFO cluster.YarnClientSchedulerBackend: Interrupting monitor thread
+17/04/28 21:32:47 INFO cluster.YarnClientSchedulerBackend: Shutting down all executors
+17/04/28 21:32:47 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Asking each executor to shut down
+17/04/28 21:32:47 INFO cluster.SchedulerExtensionServices: Stopping SchedulerExtensionServices
+(serviceOption=None,
+ services=List(),
+ started=false)
+17/04/28 21:32:47 INFO cluster.YarnClientSchedulerBackend: Stopped
+17/04/28 21:32:47 INFO spark.MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+17/04/28 21:32:48 INFO memory.MemoryStore: MemoryStore cleared
+17/04/28 21:32:48 INFO storage.BlockManager: BlockManager stopped
+17/04/28 21:32:48 INFO storage.BlockManagerMaster: BlockManagerMaster stopped
+17/04/28 21:32:48 INFO scheduler.OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+17/04/28 21:32:48 INFO spark.SparkContext: Successfully stopped SparkContext
+17/04/28 21:32:48 INFO util.ShutdownHookManager: Shutdown hook called
+17/04/28 21:32:48 INFO util.ShutdownHookManager: Deleting directory /tmp/spark-8c607d9c-3137-4588-8de2-ca8d4c8a292e/pyspark-ea232ac9-4cf9-4040-a51b-a7bef24187c0
+17/04/28 21:32:48 INFO util.ShutdownHookManager: Deleting directory /tmp/spark-8c607d9c-3137-4588-8de2-ca8d4c8a292e

@@ -1,0 +1,6 @@
+,id,hostPort,isActive,rddBlocks,memoryUsed,diskUsed,totalCores,maxTasks,activeTasks,failedTasks,completedTasks,totalTasks,totalDuration,maxMemory
+0,driver,192.168.0.243:39783,True,2.0,24006.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,384093388.0
+1,2,stack-0060.local:49068,False,5.0,22253701.0,0.0,1.0,1.0,0.0,0.0,2.0,2.0,13599.0,384093388.0
+2,3,stack-0060.local:37269,False,7.0,15692589.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,6820.0,384093388.0
+3,4,stack-0060.local:56180,False,1.0,26846.0,0.0,1.0,1.0,0.0,0.0,3.0,3.0,5033.0,384093388.0
+4,1,stack-0060.local:48293,False,8.0,44589061.0,0.0,1.0,1.0,0.0,0.0,15.0,15.0,73265.0,384093388.0
