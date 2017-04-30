@@ -18,7 +18,7 @@
       repo=https://github.com/cloudmesh/cloudmesh.word2vec.git
       update=no
       dest=/tmp/word2vec
-      version=master
+      version=externalize_params
       accept_hostkey=yes
     tags:
       - clone-repo
@@ -43,7 +43,7 @@
     tags:
       - set-permissions
   - name: crawl pages 
-    command: python /opt/word2vec/crawler/wikicrawl.py {{crawler.max_pages}}
+    command: python /opt/word2vec/crawler/wikicrawl.py {{crawler.max_pages}} {{mode.debug}}
     tags:
       - run-wikicrawl
 

@@ -5,4 +5,5 @@ spark-submit --master yarn --deploy-mode client  \
 --conf "spark.app.id=word2vec" /opt/word2vec/data_process/create-word2vec-model.py \
 hdfs://${spark_master}:8020/word2vec/crawldb \
 hdfs://${spark_master}:8020/word2vec/model \
-http://${spark_master}:4040
+http://${spark_master}:4040 \
+$1 $2 $3 $4 $5 $6 $7 $8

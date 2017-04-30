@@ -17,11 +17,11 @@ config.read('/opt/word2vec/config.properties')
 
 # get config data
 spark_master = config.get('SparkSection', 'spark_master')
-spark_executor_memory = config.get('SparkSection', 'spark_executor_memory')
-min_word_count = config.get('ModelSection', 'min_word_count')
-num_iterations = config.get('ModelSection', 'num_iterations')
-vector_size = config.get('ModelSection', 'vector_size')
-debug_flag = config.get('Debug', 'debug')
+spark_executor_memory = sys.argv[2]
+min_word_count = sys.argv[3]
+num_iterations = sys.argv[4]
+vector_size = sys.argv[5]
+debug_flag = sys.argv[6]
 synonym_test_file = config.get('DataSection', 'synonym_test_file')
 synonym_result_file = config.get('DataSection', 'synonym_result_file')
 
