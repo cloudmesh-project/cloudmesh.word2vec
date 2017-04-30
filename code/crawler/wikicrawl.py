@@ -12,7 +12,7 @@ config.read('/opt/word2vec/config.properties')
 # get config data
 data_location = config.get('DataSection', 'data_location')
 seed_list_file = config.get('CrawlerSection', 'seed_list')
-debug_flag = config.get('Debug', 'debug')
+debug_flag = sys.argv[2]
 
 if len(sys.argv) > 1:
     max_pages = sys.argv[1]

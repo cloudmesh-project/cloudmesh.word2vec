@@ -43,7 +43,7 @@
     tags:
       - set-permissions
   - name: crawl pages 
-    command: python /opt/word2vec/crawler/wikicrawl.py {{crawler.max_pages}}
+    command: python /opt/word2vec/crawler/wikicrawl.py {{crawler.max_pages}} {{mode.debug}}
     tags:
       - run-wikicrawl
 

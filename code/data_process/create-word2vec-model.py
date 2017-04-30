@@ -32,15 +32,15 @@ import monitor_spark_app
 
 # get config data
 spark_master = config.get('SparkSection', 'spark_master')
-spark_executor_memory = config.get('SparkSection', 'spark_executor_memory')
-spark_driver_memory = config.get('SparkSection', 'spark_driver_memory')
-max_result_size = config.get('SparkSection', 'max_result_size')
-default_parallelism = config.get('SparkSection', 'default_parallelism')
+spark_executor_memory = sys.argv[4]
+spark_driver_memory = sys.argv[5]
+max_result_size = sys.argv[6]
+default_parallelism = sys.argv[7]
 
-min_word_count = config.get('ModelSection', 'min_word_count')
-num_iterations = config.get('ModelSection', 'num_iterations')
-vector_size = config.get('ModelSection', 'vector_size')
-debug_flag = config.get('Debug', 'debug')
+min_word_count = sys.argv[8]
+num_iterations = sys.argv[9]
+vector_size = sys.argv[10]
+debug_flag = sys.argv[11]
 
 conf = SparkConf().setAppName("WikiWord2Vec")
 sc = SparkContext(conf = conf)

@@ -2,6 +2,8 @@
 - hosts: word2vec
   become: yes
   become_user: hadoop
+  vars_files:
+    - setupvariables.yml
   tasks:
     - name: setup hdfs folders
       command: "{{ item }} chdir=/opt/word2vec/crawldb"
@@ -18,19 +20,19 @@
         - clean-hadoop
     - debug: var=ansible_default_ipv4.address
     - name: run spark job on training data set
-      command: /opt/word2vec/data_process/create-word2vec-model.sh
+      command: /opt/word2vec/data_process/create-word2vec-model.sh {{spark.spark_executor_memory}} {{spark.spark_driver_memory}} {{spark.max_result_size}} {{spark.default_parallelism}} {{model.min_word_count}} {{model.num_iterations}} {{model.vector_size}} {{mode.debug}}
       environment:
         PYTHONPATH: $SPARK_HOME/python:$SPARK_HOME/python/lib/py4j-0.9-src.zip:$PYTHONPATH
       tags:
         - create-word2vec-model
     - name: run spark job to create model
-      command: /opt/word2vec/data_process/use_word2vec_model.sh
+      command: /opt/word2vec/data_process/use_word2vec_model.sh {{spark.spark_executor_memory}} {{model.min_word_count}} {{model.num_iterations}} {{model.vector_size}} {{mode.debug}}
       environment:
         PYTHONPATH: $SPARK_HOME/python:$SPARK_HOME/python/lib/py4j-0.9-src.zip:$PYTHONPATH
       tags:
         - use-word2vec-model
     - name: run spark job to find synonyms
-      command: /opt/word2vec/data_process/find_relations.sh
+      command: /opt/word2vec/data_process/find_relations.sh {{spark.spark_executor_memory}} {{model.min_word_count}} {{model.num_iterations}} {{model.vector_size}} {{mode.debug}}
       environment:
         PYTHONPATH: $SPARK_HOME/python:$SPARK_HOME/python/lib/py4j-0.9-src.zip:$PYTHONPATH
       tags:
