@@ -4,7 +4,7 @@ spark:
   spark_executor_memory: 2g
   spark_driver_memory: 4g
   max_result_size: 1g
-  default_parallelism: 4
+  default_parallelism: 2
 model:
   min_word_count: 1
   num_iterations: 10

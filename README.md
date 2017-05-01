@@ -64,11 +64,14 @@ cleanup script before re-triggering run script again. The run script may fail du
 reasons like failed to shh, hadoop not available etc
 
 2. If the run script fails due to spark memory errors, you can modify the spark memory setting in
-`code/config.properties` push the code to a git feature branch for example `spark_test`. Modify 
-`word2vec_setup.yaml` git section `version=master` to point to `spark_test` branch and execute the 
-run script.
+`ansible-word2vec/setupvariables.yml` execute `ansible-word2vec/word2vec_cleanup.yaml` and
+`ansible-word2vec/run.sh` script.
 
-3. If hadoop goes into safe mode, goto the cluster namenode and execute
+3. To test intermediate code changes, you can push the code to a git feature branch for example `spark_test`. Modify 
+`word2vec_setup.yaml` git section `version=master` to point to `spark_test` branch and execute the 
+`ansible-word2vec/run.sh` script.
+
+4. If hadoop goes into safe mode, goto the cluster namenode and execute
 ```sh
     /opt/hadoop$ bin/hadoop dfsadmin -safemode leave
 ```

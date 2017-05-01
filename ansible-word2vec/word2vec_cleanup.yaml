@@ -2,6 +2,15 @@
 - hosts: word2vec
   become: yes
   tasks:
+    - name: cleanup hdfs folder
+      command: "{{ item }} chdir=/opt/hadoop"
+      with_items:
+      - /opt/hadoop/bin/hdfs dfs -rm -r -f /word2vec
+      become: yes
+      become_user: hadoop
+      become_method: sudo
+      tags:
+        - clean-hadoop
     - name: cleanup files
       command: "{{ item }} chdir=/opt"
       with_items:
